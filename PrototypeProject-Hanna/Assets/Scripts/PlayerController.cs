@@ -6,14 +6,14 @@ public class PlayerController : MonoBehaviour
     public float acceleration = 10f;    // Acceleration speed
     public float maxSpeed = 15f;        // Maximum movement speed
     public float brakeForce = 20f;      // Braking force
-    public float turnSpeed = 5f;        // Rotation speed when changing direction
     public bool isFacingRight = true;   // Tracks current facing direction
+    public float stopThreshold = 0.1f; // Speed below which the bike is considered "stopped"
 
     // Ground check
     public LayerMask groundLayer;       // Assign this to the "Ground" layer in the Inspector
     public Transform groundCheck;       // Empty GameObject placed slightly below the bike
     public float groundCheckRadius = 0.2f; // Radius for ground detection
-    private bool isGrounded;
+    public bool isGrounded { get; private set; } // Public getter for grounded state
 
     // Components
     private Rigidbody2D rb;
@@ -36,7 +36,10 @@ public class PlayerController : MonoBehaviour
         CheckGrounded();
 
         // Check for direction change
-        HandleDirectionChange();
+        if (isGrounded)
+        {
+            HandleDirectionChange();
+        }
     }
 
     void FixedUpdate()
@@ -71,14 +74,17 @@ public class PlayerController : MonoBehaviour
 
     private void HandleDirectionChange()
     {
-        // Flip the bike if the player changes direction
-        if (moveInput > 0 && !isFacingRight)
+        // Flip the bike if the player changes direction, is grounded, and has stopped or nearly stopped
+        if (Mathf.Abs(rb.linearVelocity.x) < stopThreshold)
         {
-            Flip();
-        }
-        else if (moveInput < 0 && isFacingRight)
-        {
-            Flip();
+            if (moveInput > 0 && !isFacingRight)
+            {
+                Flip();
+            }
+            else if (moveInput < 0 && isFacingRight)
+            {
+                Flip();
+            }
         }
     }
 
@@ -91,12 +97,19 @@ public class PlayerController : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+
+        Debug.Log("Player flipped direction.");
     }
 
     private void CheckGrounded()
     {
         // Use a Physics2D.OverlapCircle to check for the ground layer
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    public bool GetIsGrounded()
+    {
+        return isGrounded;
     }
 
     private void OnDrawGizmosSelected()

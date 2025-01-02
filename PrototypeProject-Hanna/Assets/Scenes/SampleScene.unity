@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 171096694}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04, z: 0}
+  m_LocalPosition: {x: 1.15, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,6 +1036,8 @@ GameObject:
   - component: {fileID: 1746241283}
   - component: {fileID: 1746241282}
   - component: {fileID: 1746241281}
+  - component: {fileID: 1746241285}
+  - component: {fileID: 1746241286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1055,11 +1057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0b063f7a284c14c8008dc8617be1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 60
-  maxSpeed: 15
-  brakeForce: 20
-  turnSpeed: 5
+  acceleration: 30
+  maxSpeed: 20
+  brakeForce: 10
   isFacingRight: 0
+  stopThreshold: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1148,6 +1150,35 @@ Transform:
   - {fileID: 171096695}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1746241285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746241280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475ac4cff4747054bb9b3c2d97c1724b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 300
+  showGroundedDebugGizmo: 1
+  debugGizmoRadius: 0.25
+--- !u!114 &1746241286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746241280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3868385bed637644bf8282b9879e6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetHeightOffset: 1
+  resetKey: 120
 --- !u!1 &1820738827
 GameObject:
   m_ObjectHideFlags: 0
