@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      motorCycleMan_0: -5739173822099792715
+      motorCycleMan_1: 3322426031680828138
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
