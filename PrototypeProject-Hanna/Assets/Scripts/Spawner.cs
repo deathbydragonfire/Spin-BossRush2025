@@ -15,6 +15,9 @@ public class Spawner : MonoBehaviour
     public float minXOffset = -1f;
     public float maxXOffset = 1f;
 
+    // Kill time for spawned hazards
+    public float hazardKillTime = 5f;
+
     // Internal timer
     private float timer;
 
@@ -45,8 +48,15 @@ public class Spawner : MonoBehaviour
             // Instantiate the prefab at the calculated position and the spawner's rotation
             GameObject spawnedObject = Instantiate(objectToSpawn, worldSpawnPosition, transform.rotation);
 
-            // Parent the spawned object to the spinning platform
+            // Set the parent to the spinning platform
             spawnedObject.transform.SetParent(spinningPlatform, true);
+
+            // Set the kill time of the spawned hazard
+            Hazard hazardScript = spawnedObject.GetComponent<Hazard>();
+            if (hazardScript != null)
+            {
+                hazardScript.SetKillTime(hazardKillTime);
+            }
         }
         else
         {
