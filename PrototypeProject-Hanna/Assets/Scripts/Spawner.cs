@@ -1,66 +1,73 @@
+using System.Collections;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // The spinning platform to parent spawned objects to
+    // The spinning platform to parent spawned hazards to
     public Transform spinningPlatform;
 
-    // Prefab to spawn
-    public GameObject objectToSpawn;
+    // List of available hazard patterns
+    public HazardPattern[] hazardPatterns;
 
-    // Spawn interval in seconds
-    public float spawnInterval = 2f;
-
-    // Random X offset range (local X-axis)
-    public float minXOffset = -1f;
-    public float maxXOffset = 1f;
-
-    // Kill time for spawned hazards
-    public float hazardKillTime = 5f;
-
-    // Internal timer
-    private float timer;
-
-    void Update()
+    public void StartPattern(int patternIndex)
     {
-        // Increment the timer
-        timer += Time.deltaTime;
-
-        // Check if it's time to spawn a new object
-        if (timer >= spawnInterval)
+        if (hazardPatterns != null && patternIndex >= 0 && patternIndex < hazardPatterns.Length)
         {
-            SpawnObject();
-            timer = 0f; // Reset the timer
-        }
-    }
-
-    void SpawnObject()
-    {
-        if (objectToSpawn != null && spinningPlatform != null)
-        {
-            // Generate a random X offset (local space)
-            float randomXOffset = Random.Range(minXOffset, maxXOffset);
-
-            // Calculate the spawn position with the offset in local space
-            Vector3 localSpawnPosition = new Vector3(randomXOffset, 0, 0);
-            Vector3 worldSpawnPosition = transform.TransformPoint(localSpawnPosition);
-
-            // Instantiate the prefab at the calculated position and the spawner's rotation
-            GameObject spawnedObject = Instantiate(objectToSpawn, worldSpawnPosition, transform.rotation);
-
-            // Set the parent to the spinning platform
-            spawnedObject.transform.SetParent(spinningPlatform, true);
-
-            // Set the kill time of the spawned hazard
-            Hazard hazardScript = spawnedObject.GetComponent<Hazard>();
-            if (hazardScript != null)
-            {
-                hazardScript.SetKillTime(hazardKillTime);
-            }
+            StartCoroutine(SpawnPattern(hazardPatterns[patternIndex]));
         }
         else
         {
-            Debug.LogWarning("Spinning platform or object to spawn is not assigned!");
+            Debug.LogWarning("Invalid pattern index or no patterns assigned!");
         }
     }
+
+    void Start()
+    {
+        GetComponent<Spawner>().StartPattern(0); // Start the first pattern
+    }
+
+
+    private IEnumerator SpawnPattern(HazardPattern pattern)
+    {
+        Debug.Log($"Starting pattern: {pattern.name}");
+
+        foreach (var spawn in pattern.spawnData)
+        {
+            if (spawn.hazardPrefab == null)
+            {
+                Debug.LogWarning("A hazard prefab in the pattern is missing!");
+                continue;
+            }
+
+            // Calculate spawn position
+            Vector3 worldSpawnPosition = transform.TransformPoint(spawn.localPosition);
+            Debug.Log($"Spawning hazard prefab {spawn.hazardPrefab.name} at {worldSpawnPosition}");
+
+            // Instantiate hazard
+            GameObject spawnedObject = Instantiate(spawn.hazardPrefab, worldSpawnPosition, transform.rotation);
+
+            // Parent it to the spinning platform
+            if (spinningPlatform != null)
+            {
+                spawnedObject.transform.SetParent(spinningPlatform, true);
+                Debug.Log("Hazard parented to spinning platform.");
+            }
+
+            // Set kill time
+            float killTime = spawn.overrideKillTime.HasValue ? spawn.overrideKillTime.Value : pattern.defaultKillTime;
+            Hazard hazardScript = spawnedObject.GetComponent<Hazard>();
+            if (hazardScript != null)
+            {
+                hazardScript.SetKillTime(killTime);
+                Debug.Log($"Set hazard kill time to {killTime}");
+            }
+            else
+            {
+                Debug.LogWarning("Hazard prefab does not have a Hazard script attached.");
+            }
+        }
+
+        yield return null; // Allow the coroutine to finish immediately
+    }
+
 }
