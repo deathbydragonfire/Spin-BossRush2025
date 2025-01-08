@@ -22,7 +22,7 @@ public class PlayerController3D : MonoBehaviour
         }
 
         // Find all colliders on objects in the specified layer
-        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         playableAreaColliders = allObjects
             .Where(obj => obj.layer == LayerMask.NameToLayer(playableAreaLayerName))
             .Select(obj => obj.GetComponent<Collider>())
