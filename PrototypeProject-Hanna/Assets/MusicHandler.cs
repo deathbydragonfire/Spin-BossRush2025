@@ -1,69 +1,60 @@
-using System;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class MusicHandler : MonoBehaviour
 {
-    public AudioSource audioSource; // The AudioSource that plays music
-    public AudioClip[] musicTracks; // Array to hold your music tracks
-    private int currentTrackIndex = 0; // Keeps track of the current track being played
+    public AudioSource audioSource; // Reference to the AudioSource
+    public AudioClip[] normalTracks; // Normal tempo tracks
+    public AudioClip[] fastTracks;   // Fast tempo tracks
+    public AudioClip[] slowTracks;   // Slow tempo tracks
+
+    private string currentTempo = "normal"; // Tracks the current tempo
 
     void Start()
     {
-        if (musicTracks.Length > 0)
+        PlayTrackAtTempo(0, "normal"); // Start with the first track at normal tempo
+    }
+
+    public void PlayTrackAtTempo(int trackIndex, string tempo)
+    {
+        // Calculate the percentage of the track completed
+        float trackProgress = audioSource.time / audioSource.clip.length;
+
+        // Determine which track list to use
+        switch (tempo)
         {
-            PlayTrack(currentTrackIndex); // Start with the first track
+            case "fast":
+                audioSource.clip = fastTracks[trackIndex];
+                break;
+            case "slow":
+                audioSource.clip = slowTracks[trackIndex];
+                break;
+            default: // "normal"
+                audioSource.clip = normalTracks[trackIndex];
+                break;
         }
+
+        // Play the new track and set its playback position
+        audioSource.Play();
+        audioSource.time = trackProgress * audioSource.clip.length; // Synchronize playback position
+        currentTempo = tempo; // Update the current tempo
     }
 
     void Update()
     {
-        // If the current track finishes, move to the next one
-        if (!audioSource.isPlaying && musicTracks.Length > 0)
+        // Example input handling for tempo changes
+        if (Input.GetKeyDown(KeyCode.Q)) // Speed up
         {
-            NextTrack();
+            PlayTrackAtTempo(0, "fast"); // Adjust to fast tempo
         }
+
+        if (Input.GetKeyDown(KeyCode.E)) // Slow down
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                AdjustPlaybackSpeedUp(audioSource.pitch + 0.1f); // Speed up by 0.1
-            }
-
-            // Check for slow down (E key)
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                AdjustPlaybackSpeedDown(audioSource.pitch - 0.1f); // Slow down by 0.1
-            }
-
+            PlayTrackAtTempo(0, "slow"); // Adjust to slow tempo
         }
-    }
 
-    public void PlayTrack(int trackIndex)
-    {
-        if (trackIndex >= 0 && trackIndex < musicTracks.Length)
+        if (Input.GetKeyDown(KeyCode.Space)) // Reset to normal
         {
-            audioSource.clip = musicTracks[trackIndex]; // Set the current track
-            audioSource.Play(); // Play the track
+            PlayTrackAtTempo(0, "normal"); // Adjust to normal tempo
         }
-    }
-
-    public void NextTrack()
-    {
-        currentTrackIndex = (currentTrackIndex + 1) % musicTracks.Length; // Move to the next track (loop back to start)
-        PlayTrack(currentTrackIndex);
-    }
-
-    public void AdjustPlaybackSpeedUp(float speed)
-    {
-        speed = Mathf.Clamp(speed, 0.5f, 2.0f); // Clamp speed
-        audioSource.pitch = speed;
-        Debug.Log("Playback Speed Increased: " + speed);
-    }
-
-    public void AdjustPlaybackSpeedDown(float speed)
-    {
-        speed = Mathf.Clamp(speed, 0.5f, 2.0f); // Clamp speed
-        audioSource.pitch = speed;
-        Debug.Log("Playback Speed Decreased: " + speed);
     }
 }
