@@ -207,6 +207,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 378709440828857224, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
+      propertyPath: maxAngle
+      value: 298.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 378709440828857224, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
+      propertyPath: maxRadius
+      value: 14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 378709440828857224, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
+      propertyPath: minRadius
+      value: 8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 378709440828857224, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
       propertyPath: playableArea
       value: 
       objectReference: {fileID: 2020584835}
@@ -224,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1575526403528132125, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5709496
+      value: 8.68
       objectReference: {fileID: 0}
     - target: {fileID: 1575526403528132125, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -232,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1575526403528132125, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.68
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 1575526403528132125, guid: 3fd43374c51716f4390688b939f17d28, type: 3}
       propertyPath: m_LocalRotation.w
