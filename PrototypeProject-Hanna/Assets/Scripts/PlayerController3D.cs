@@ -1,16 +1,14 @@
 using UnityEngine;
-using System.Linq; // Required for LINQ methods like Select and Where
 
 public class PlayerController3D : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f; // Speed of the player
-
-    [Header("Playable Area Settings")]
-    public string playableAreaLayerName = "PlayableArea"; // Name of the layer for playable areas
+    public float moveSpeed = 5f; // Speed of movement along the radius
+    public float rotationSpeed = 100f; // Speed of rotation along the circumference
+    public float minRadius = 0.5f; // Minimum distance from the center to avoid getting stuck
 
     private CharacterController characterController;
-    private Collider[] playableAreaColliders;
+    private Vector3 discCenter = Vector3.zero; // Center of the spinning disc
 
     void Start()
     {
@@ -20,64 +18,60 @@ public class PlayerController3D : MonoBehaviour
         {
             Debug.LogError("CharacterController is required for PlayerController3D to function.");
         }
-
-        // Find all colliders on objects in the specified layer
-        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-        playableAreaColliders = allObjects
-            .Where(obj => obj.layer == LayerMask.NameToLayer(playableAreaLayerName))
-            .Select(obj => obj.GetComponent<Collider>())
-            .Where(collider => collider != null)
-            .ToArray();
-
-        if (playableAreaColliders.Length == 0)
-        {
-            Debug.LogError($"No Colliders found on objects in the '{playableAreaLayerName}' layer.");
-        }
     }
 
     void Update()
     {
-        if (playableAreaColliders != null && playableAreaColliders.Length > 0)
-        {
-            MovePlayer();
-        }
+        MovePlayerOnDisc();
     }
 
-    private void MovePlayer()
+    private void MovePlayerOnDisc()
     {
         // Get input from the player
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxis("Horizontal"); // Left/Right input
+        float vertical = Input.GetAxis("Vertical");     // Up/Down input
 
-        // Combine input into a direction vector
-        Vector3 direction = new Vector3(horizontal, 0, vertical);
+        // Get the player's current position
+        Vector3 playerPosition = transform.position;
 
-        if (direction.magnitude > 0.1f)
+        // Movement vector for the CharacterController
+        Vector3 movement = Vector3.zero;
+
+        // Move along the radius (toward or away from the center)
+        if (Mathf.Abs(vertical) > 0.1f)
         {
-            // Normalize the direction vector to avoid diagonal speed increase
-            direction = direction.normalized;
+            Vector3 directionToCenter = (playerPosition - discCenter).normalized;
 
-            // Calculate potential new position
-            Vector3 movement = direction * moveSpeed * Time.deltaTime;
-            Vector3 potentialPosition = transform.position + movement;
-
-            // Check if the new position is within any playable area collider
-            if (IsWithinPlayableArea(potentialPosition))
+            // Prevent movement toward the center if within the minimum radius
+            float distanceToCenter = Vector3.Distance(playerPosition, discCenter);
+            if (distanceToCenter > minRadius)
             {
-                characterController.Move(movement);
+                Vector3 radiusMovement = -directionToCenter * vertical * moveSpeed * Time.deltaTime; // Negative for inward movement
+                movement += new Vector3(radiusMovement.x, 0, radiusMovement.z); // Ignore Y-axis
             }
         }
-    }
 
-    private bool IsWithinPlayableArea(Vector3 position)
-    {
-        foreach (Collider collider in playableAreaColliders)
+        // Move along the circumference (rotate around the disc's center)
+        if (Mathf.Abs(horizontal) > 0.1f)
         {
-            if (collider.bounds.Contains(position))
-            {
-                return true;
-            }
+            // Calculate the rotation angle
+            float angle = -horizontal * rotationSpeed * Time.deltaTime;
+
+            // Offset the player from the center of the disc
+            Vector3 offset = playerPosition - discCenter;
+
+            // Apply rotation around the center
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
+            Vector3 rotatedOffset = rotation * offset;
+
+            // Calculate the new position after rotation
+            Vector3 newPosition = discCenter + rotatedOffset;
+
+            // Add the change in position to the movement vector
+            movement += new Vector3(newPosition.x - playerPosition.x, 0, newPosition.z - playerPosition.z); // Ignore Y-axis
         }
-        return false;
+
+        // Apply the movement using the CharacterController
+        characterController.Move(movement);
     }
 }
