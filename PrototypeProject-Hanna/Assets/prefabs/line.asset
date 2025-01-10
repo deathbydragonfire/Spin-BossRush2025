@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: line
   m_EditorClassIdentifier: 
   defaultDelay: 0
-  defaultKillTime: 2
+  defaultKillTime: 10
   spawnData:
   - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
     localPosition: {x: 0, y: 0, z: 0}
   - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
-    localPosition: {x: 3, y: 0, z: 0}
+    localPosition: {x: -3, y: 0, z: 0}
   - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
-    localPosition: {x: 6, y: 0, z: 0}
+    localPosition: {x: -6, y: 0, z: 0}
   - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
-    localPosition: {x: 9, y: 0, z: 0}
+    localPosition: {x: -9, y: 0, z: 0}
   - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
-    localPosition: {x: 12, y: 0, z: 0}
+    localPosition: {x: -12, y: 0, z: 0}
