@@ -1,0 +1,80 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+# [Aa]ssets/AssetStoreTools*
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*~
+*.nib
+*.plist
+*.log
+*.pid
+*.seed
+*.crash
+*.db
+*.core
+*.gz
+
+# ===================== #
+# VS Code configuration #
+# ===================== #
+.vscode/
+
+# ==================== #
+# Crashlytics Settings #
+# ==================== #
+.crashlytics/
+
+# ================== #
+# MacOS related files #
+# ================== #
+*.DS_Store
+
+# ================== #
+# Logs and databases #
+# ================== #
+*.log
+*.sql
+*.sqlite
+
+# ======================= #
+# Built application files #
+# ======================= #
+*.apk
+*.aab
+*.unitypackage
