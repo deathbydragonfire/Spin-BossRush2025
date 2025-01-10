@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MusicHandler : MonoBehaviour
@@ -13,60 +14,53 @@ public class MusicHandler : MonoBehaviour
     public float tempoBurnRate = 10f; // Meter lost per second while slowing down
 
     private string currentTempo = "normal"; // Tracks the current tempo
-    private bool isSpeedingUp = false; // Tracks if the player is holding the speed-up key
-    private bool isSlowingDown = false; // Tracks if the player is holding the slow-down key
+    public static event Action OnTrackEnd; // Event triggered when a track ends
 
-    void Start()
+    private void Start()
     {
         PlayTrackAtTempo(0, "normal"); // Start with the first track at normal tempo
     }
 
-    void Update()
+    private void Update()
     {
         HandleInput();
         UpdateTempoMeter();
+        CheckTrackEnd(); // Check if the current track has ended
     }
 
-    void HandleInput()
+    private void HandleInput()
     {
-        // Speed up while holding Q
-        if (Input.GetKey(KeyCode.Q))
+        float speedInput = Input.GetAxis("Speed"); // Define "Speed" in Input Manager
+
+        if (speedInput > 0) // Positive input for speeding up
         {
-            isSpeedingUp = true;
-            isSlowingDown = false; // Prevent simultaneous actions
             PlayTrackAtTempo(0, "fast");
         }
-        // Slow down while holding E, only if tempo meter is sufficient
-        else if (Input.GetKey(KeyCode.E) && tempoMeter > 0)
+        else if (speedInput < 0 && tempoMeter > 0) // Negative input for slowing down
         {
-            isSpeedingUp = false;
-            isSlowingDown = true;
             PlayTrackAtTempo(0, "slow");
         }
-        // Return to normal when no key is held
-        else
+        else // Neutral input for normal tempo
         {
-            isSpeedingUp = false;
-            isSlowingDown = false;
             PlayTrackAtTempo(0, "normal");
         }
     }
 
-    void UpdateTempoMeter()
+    private void UpdateTempoMeter()
     {
-        // Gain tempo while speeding up
-        if (isSpeedingUp)
+        float speedInput = Input.GetAxis("Speed");
+
+        if (speedInput > 0) // Positive input for speeding up
         {
             tempoMeter = Mathf.Clamp(tempoMeter + tempoGainRate * Time.deltaTime, 0, maxTempoMeter);
         }
-        // Lose tempo while slowing down
-        else if (isSlowingDown)
+        else if (speedInput < 0) // Negative input for slowing down
         {
             tempoMeter = Mathf.Clamp(tempoMeter - tempoBurnRate * Time.deltaTime, 0, maxTempoMeter);
         }
 
         // Debug to track tempo meter value
-        Debug.Log("Tempo Meter: " + tempoMeter);
+        //Debug.Log("Tempo Meter: " + tempoMeter);
     }
 
     public void PlayTrackAtTempo(int trackIndex, string tempo)
@@ -97,6 +91,15 @@ public class MusicHandler : MonoBehaviour
 
             // Update current tempo
             currentTempo = tempo;
+        }
+    }
+
+    private void CheckTrackEnd()
+    {
+        if (!audioSource.isPlaying && audioSource.time >= audioSource.clip.length)
+        {
+            OnTrackEnd?.Invoke(); // Trigger the track-end event
+            Debug.Log("Track has ended!");
         }
     }
 }

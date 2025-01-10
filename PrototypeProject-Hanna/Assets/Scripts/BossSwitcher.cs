@@ -16,12 +16,12 @@ public class BossSwitcher : MonoBehaviour
 
     private void OnEnable()
     {
-        MusicHandler.OnSongEnd += SwitchBoss;
+        MusicHandler.OnTrackEnd += SwitchBoss;
     }
 
     private void OnDisable()
     {
-        MusicHandler.OnSongEnd -= SwitchBoss;
+        MusicHandler.OnTrackEnd -= SwitchBoss;
     }
 
     private void SwitchBoss()
