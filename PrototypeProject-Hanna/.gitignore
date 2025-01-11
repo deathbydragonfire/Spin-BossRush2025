@@ -17,6 +17,11 @@
 # Recordings can get excessive in size
 /[Rr]ecordings/
 
+# Ignore Unity layout files
+/[Pp]rojectSettings/EditorLayoutSettings.asset
+/[Pp]rojectSettings/Layouts/
+/[Uu]serSettings/Layouts/
+
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
@@ -70,3 +75,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Ignore personal editor preferences and layouts
+*.layout
+*.wlt
