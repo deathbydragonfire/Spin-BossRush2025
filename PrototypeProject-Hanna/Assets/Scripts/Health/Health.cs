@@ -39,7 +39,7 @@ public abstract class Health : MonoBehaviour
 
     public void TakeHealByCurrentHP(float heal)
     {
-        health = Mathf.Min(health - (health * (heal/100f)) , maxHealth);
+        health = Mathf.Min(health + (health * (heal/100f)) , maxHealth);
         UIUpdate();
     }
 
@@ -51,7 +51,19 @@ public abstract class Health : MonoBehaviour
 
     public void TakeHealByMaxHP(float heal)
     {
-        health = Mathf.Max(health - (maxHealth * (heal / 100f)), maxHealth);
+        health = Mathf.Max(health + ((maxHealth - health) * (heal / 100f)), maxHealth);
+        UIUpdate();
+    }
+
+    public void TakeDamageByMissingHP(float damage)
+    {
+        health = Mathf.Max(health - ((maxHealth - health) * (damage / 100f)), 0f);
+        UIUpdate();
+    }
+
+    public void TakeHealByMissingHP(float heal)
+    {
+        health = Mathf.Min(health + (health * (heal / 100f)), maxHealth);
         UIUpdate();
     }
 
