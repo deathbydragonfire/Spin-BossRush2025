@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1307554727937554659}
   - component: {fileID: 6008749685095752641}
-  - component: {fileID: 338403070134866201}
+  - component: {fileID: 249702073032527119}
   m_Layer: 0
-  m_Name: MusicHandler (1)
+  m_Name: MusicHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,10 +42,10 @@ AudioSource:
   m_GameObject: {fileID: 5138591478380080201}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6051769257473303451, guid: f60717145ecaa93429fce73393638ac2, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f60717145ecaa93429fce73393638ac2, type: 2}
   m_audioClip: {fileID: 8300000, guid: d55e0d80a338515479c233d2c4b9ee3f, type: 3}
   m_Resource: {fileID: 8300000, guid: d55e0d80a338515479c233d2c4b9ee3f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -130,7 +130,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &338403070134866201
+--- !u!114 &249702073032527119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,16 +139,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5138591478380080201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc276801ada18714f803b6308a694617, type: 3}
+  m_Script: {fileID: 11500000, guid: b56a92ac3ed89cb4ca7a9e18e5b87048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6008749685095752641}
-  normalTracks:
-  - {fileID: 8300000, guid: d55e0d80a338515479c233d2c4b9ee3f, type: 3}
-  fastTracks:
-  - {fileID: 8300000, guid: ac80cb2a8d7bca045a88ad55576a1f7e, type: 3}
-  slowTracks:
-  - {fileID: 8300000, guid: 872e45549c3234e4587f80481991a9a3, type: 3}
+  normalTracks: []
+  fastTracks: []
+  slowTracks: []
   tempoMeter: 0
   maxTempoMeter: 100
   tempoGainRate: 10

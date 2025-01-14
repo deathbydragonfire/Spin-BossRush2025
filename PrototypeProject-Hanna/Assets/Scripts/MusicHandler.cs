@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MusicHandler : MonoBehaviour
@@ -38,7 +37,7 @@ public class MusicHandler : MonoBehaviour
         UpdateTempoMeter();
         UpdatePlaybackSpeed(); // Adjust playback speed dynamically
         UpdateSpinSpeed();     // Adjust spin speed dynamically
-    }
+}
 
     void HandleInput()
     {
@@ -92,8 +91,7 @@ public class MusicHandler : MonoBehaviour
 
     void UpdateSpinSpeed()
     {
-        float
- spinSpeed = normalSpinSpeed; // Default to normal spin speed
+        float spinSpeed = normalSpinSpeed; // Default to normal spin speed
 
         if (isSpeedingUp)
         {
