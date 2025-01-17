@@ -1,120 +1,87 @@
-<<<<<<< HEAD
-=======
-using System;
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
 using UnityEngine;
 
 public class MusicHandler : MonoBehaviour
 {
-    public AudioSource audioSource; // Reference to the AudioSource
-    public AudioClip[] normalTracks; // Normal tempo tracks
-    public AudioClip[] fastTracks;   // Fast tempo tracks
-    public AudioClip[] slowTracks;   // Slow tempo tracks
+    public AudioSource audioSource; // Attach the AudioSource component here
+    public Transform record; // The spinning record GameObject
+    public float normalSpinSpeed = 100f; // Default spin speed in degrees per second
+    public float speedUpMultiplier = 1.5f; // Speed-up factor
+    public float slowDownMultiplier = 0.5f; // Slow-down factor
 
-    public float tempoMeter = 0f; // The current tempo meter
-    public float maxTempoMeter = 100f; // Maximum meter value
-    public float tempoGainRate = 10f; // Meter gained per second while speeding up
-    public float tempoBurnRate = 10f; // Meter lost per second while slowing down
+    private float currentSpinSpeed;
+    private bool isSpeedingUp = false;
+    private bool isSlowingDown = false;
 
-    private string currentTempo = "normal"; // Tracks the current tempo
-    public static event Action OnTrackEnd; // Event triggered when a track ends
-
-    private void Start()
+    void Start()
     {
-        PlayTrackAtTempo(0, "normal"); // Start with the first track at normal tempo
+        // Initialize spin speed to normal
+        currentSpinSpeed = normalSpinSpeed;
     }
 
-    private void Update()
+    void Update()
     {
-        HandleInput();
-        UpdateTempoMeter();
-<<<<<<< HEAD
-        UpdatePlaybackSpeed(); // Adjust playback speed dynamically
-        UpdateSpinSpeed();     // Adjust spin speed dynamically
-}
-=======
-        CheckTrackEnd(); // Check if the current track has ended
-    }
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
+        // Check for speed-up input
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StartSpeedingUp();
+        }
+        else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            StopSpeedingUp();
+        }
 
-    private void HandleInput()
-    {
-        float speedInput = Input.GetAxis("Speed"); // Define "Speed" in Input Manager
+        // Check for slow-down input
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartSlowingDown();
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            StopSlowingDown();
+        }
 
-        if (speedInput > 0) // Positive input for speeding up
-        {
-            PlayTrackAtTempo(0, "fast");
-        }
-        else if (speedInput < 0 && tempoMeter > 0) // Negative input for slowing down
-        {
-            PlayTrackAtTempo(0, "slow");
-        }
-        else // Neutral input for normal tempo
-        {
-            PlayTrackAtTempo(0, "normal");
-        }
+        // Rotate the record based on the current spin speed
+        RotateRecord();
     }
 
-    private void UpdateTempoMeter()
+    void StartSpeedingUp()
     {
-        float speedInput = Input.GetAxis("Speed");
-
-        if (speedInput > 0) // Positive input for speeding up
-        {
-            tempoMeter = Mathf.Clamp(tempoMeter + tempoGainRate * Time.deltaTime, 0, maxTempoMeter);
-        }
-        else if (speedInput < 0) // Negative input for slowing down
-        {
-            tempoMeter = Mathf.Clamp(tempoMeter - tempoBurnRate * Time.deltaTime, 0, maxTempoMeter);
-        }
-
-        // Debug to track tempo meter value
-        //Debug.Log("Tempo Meter: " + tempoMeter);
+        isSpeedingUp = true;
+        AdjustPlaybackAndSpinSpeed(speedUpMultiplier);
     }
 
-    public void PlayTrackAtTempo(int trackIndex, string tempo)
+    void StopSpeedingUp()
     {
-        // Switch tracks only if tempo changes
-        if (tempo != currentTempo)
-        {
-            // Calculate track progress as a percentage
-            float trackProgress = audioSource.time / audioSource.clip.length;
-
-            // Set the appropriate track
-            switch (tempo)
-            {
-                case "fast":
-                    audioSource.clip = fastTracks[trackIndex];
-                    break;
-                case "slow":
-                    audioSource.clip = slowTracks[trackIndex];
-                    break;
-                default: // "normal"
-                    audioSource.clip = normalTracks[trackIndex];
-                    break;
-            }
-
-            // Play the new track and sync progress
-            audioSource.Play();
-            audioSource.time = trackProgress * audioSource.clip.length;
-
-            // Update current tempo
-            currentTempo = tempo;
-        }
+        isSpeedingUp = false;
+        AdjustPlaybackAndSpinSpeed(1.0f);
     }
 
-    private void CheckTrackEnd()
+    void StartSlowingDown()
     {
-<<<<<<< HEAD
-        float spinSpeed = normalSpinSpeed; // Default to normal spin speed
+        isSlowingDown = true;
+        AdjustPlaybackAndSpinSpeed(slowDownMultiplier);
+    }
 
-        if (isSpeedingUp)
-=======
-        if (!audioSource.isPlaying && audioSource.time >= audioSource.clip.length)
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
+    void StopSlowingDown()
+    {
+        isSlowingDown = false;
+        AdjustPlaybackAndSpinSpeed(1.0f);
+    }
+
+    void AdjustPlaybackAndSpinSpeed(float multiplier)
+    {
+        // Adjust music playback speed
+        audioSource.pitch = multiplier;
+
+        // Adjust spin speed of the record
+        currentSpinSpeed = normalSpinSpeed * multiplier;
+    }
+
+    void RotateRecord()
+    {
+        if (record != null)
         {
-            OnTrackEnd?.Invoke(); // Trigger the track-end event
-            Debug.Log("Track has ended!");
+            record.Rotate(Vector3.up, currentSpinSpeed * Time.deltaTime);
         }
     }
 }

@@ -609,7 +609,6 @@ Transform:
   - {fileID: 502196329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &213790278
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,8 +720,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
 --- !u!1001 &287165847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -780,7 +777,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332f10dca63bf8249922ce1fca23699c, type: 3}
-<<<<<<< HEAD
 --- !u!1 &289907258
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,8 +856,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
 --- !u!1 &502196328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,7 +1413,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-<<<<<<< HEAD
 --- !u!1 &910831262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,15 +1435,11 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &910831263
-=======
---- !u!114 &883252564
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 910831262}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1557,7 +1546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-=======
   m_GameObject: {fileID: 883252562}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1565,7 +1553,6 @@ RectTransform:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
 --- !u!1 &1170634472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,8 +2709,6 @@ SceneRoots:
   - {fileID: 170769646}
   - {fileID: 1253233590}
   - {fileID: 287165847}
-<<<<<<< HEAD
   - {fileID: 910831268}
   - {fileID: 289907261}
-=======
->>>>>>> c67864f66a66abf3cc20a9091e2227cfe3efd59c
+
