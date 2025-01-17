@@ -2,26 +2,36 @@ using UnityEngine;
 
 public class MusicHandler : MonoBehaviour
 {
-    public AudioSource audioSource; // Attach the AudioSource component here
+    public AudioSource audioSource; // Reference to the AudioSource component
     public Transform record; // The spinning record GameObject
-    public float normalSpinSpeed = 100f; // Default spin speed in degrees per second
+
+    [Header("Playback Settings")]
+    public float normalPlaybackSpeed = 1.0f; // Default playback speed
     public float speedUpMultiplier = 1.5f; // Speed-up factor
     public float slowDownMultiplier = 0.5f; // Slow-down factor
 
-    private float currentSpinSpeed;
+    [Header("Tempo Meter Settings")]
+    public float maxTempo = 100f; // Maximum tempo meter value
+    public float tempoBurnRate = 10f; // How quickly tempo burns when slowing down
+    public float tempoBuildRate = 5f; // How quickly tempo builds when speeding up
+    private float currentTempo; // Current tempo meter value
+
+    private float currentPlaybackSpeed; // Current playback speed
+    private float currentSpinSpeed; // Current spin speed
     private bool isSpeedingUp = false;
-    private bool isSlowingDown = false;
 
     void Start()
     {
-        // Initialize spin speed to normal
-        currentSpinSpeed = normalSpinSpeed;
+        // Initialize values
+        currentPlaybackSpeed = normalPlaybackSpeed;
+        currentSpinSpeed = 100f; // Default spin speed
+        currentTempo = maxTempo; // Start with a full tempo meter
     }
 
     void Update()
     {
-        // Check for speed-up input
-        if (Input.GetKeyDown(KeyCode.Q))
+        // Handle input for speeding up and slowing down
+        if (Input.GetKey(KeyCode.Q))
         {
             StartSpeedingUp();
         }
@@ -30,8 +40,7 @@ public class MusicHandler : MonoBehaviour
             StopSpeedingUp();
         }
 
-        // Check for slow-down input
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             StartSlowingDown();
         }
@@ -40,7 +49,7 @@ public class MusicHandler : MonoBehaviour
             StopSlowingDown();
         }
 
-        // Rotate the record based on the current spin speed
+        // Rotate the record
         RotateRecord();
     }
 
@@ -48,33 +57,51 @@ public class MusicHandler : MonoBehaviour
     {
         isSpeedingUp = true;
         AdjustPlaybackAndSpinSpeed(speedUpMultiplier);
+
+        // Build tempo while speeding up
+        currentTempo = Mathf.Min(currentTempo + tempoBuildRate * Time.deltaTime, maxTempo);
     }
 
     void StopSpeedingUp()
     {
         isSpeedingUp = false;
-        AdjustPlaybackAndSpinSpeed(1.0f);
+        AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
     }
 
     void StartSlowingDown()
     {
-        isSlowingDown = true;
-        AdjustPlaybackAndSpinSpeed(slowDownMultiplier);
+        if (currentTempo > 0)
+        {
+            AdjustPlaybackAndSpinSpeed(slowDownMultiplier);
+
+            // Burn tempo while slowing down
+            currentTempo = Mathf.Max(currentTempo - tempoBurnRate * Time.deltaTime, 0);
+
+            // Stop slowing if tempo reaches zero
+            if (currentTempo <= 0)
+            {
+                StopSlowingDown();
+            }
+        }
+        else
+        {
+            StopSlowingDown();
+        }
     }
 
     void StopSlowingDown()
     {
-        isSlowingDown = false;
-        AdjustPlaybackAndSpinSpeed(1.0f);
+        AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
     }
 
     void AdjustPlaybackAndSpinSpeed(float multiplier)
     {
-        // Adjust music playback speed
-        audioSource.pitch = multiplier;
+        // Adjust playback speed
+        currentPlaybackSpeed = normalPlaybackSpeed * multiplier;
+        audioSource.pitch = currentPlaybackSpeed;
 
-        // Adjust spin speed of the record
-        currentSpinSpeed = normalSpinSpeed * multiplier;
+        // Adjust spin speed
+        currentSpinSpeed = 100f * multiplier; // Adjust this value as needed
     }
 
     void RotateRecord()
@@ -83,5 +110,15 @@ public class MusicHandler : MonoBehaviour
         {
             record.Rotate(Vector3.up, currentSpinSpeed * Time.deltaTime);
         }
+    }
+
+    public float GetCurrentTempo()
+    {
+        return currentTempo;
+    }
+
+    public float GetMaxTempo()
+    {
+        return maxTempo;
     }
 }
