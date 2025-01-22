@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &268396686685695304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1409329969321955888, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409329969321955888, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409329969321955888, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.041
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501261335065485500, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6564635310000902180, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_Name
+      value: StageTruss Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418577282152359673, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418577282152359673, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104513770600586668, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104513770600586668, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104513770600586668, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}

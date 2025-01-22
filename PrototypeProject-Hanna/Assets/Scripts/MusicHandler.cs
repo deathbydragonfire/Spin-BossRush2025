@@ -18,7 +18,6 @@ public class MusicHandler : MonoBehaviour
 
     private float currentPlaybackSpeed; // Current playback speed
     private float currentSpinSpeed; // Current spin speed
-    private bool isSpeedingUp = false;
 
     void Start()
     {
@@ -44,7 +43,7 @@ public class MusicHandler : MonoBehaviour
         {
             StartSlowingDown();
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.E)) 
         {
             StopSlowingDown();
         }
@@ -55,7 +54,7 @@ public class MusicHandler : MonoBehaviour
 
     void StartSpeedingUp()
     {
-        isSpeedingUp = true;
+       ;
         AdjustPlaybackAndSpinSpeed(speedUpMultiplier);
 
         // Build tempo while speeding up
@@ -64,7 +63,7 @@ public class MusicHandler : MonoBehaviour
 
     void StopSpeedingUp()
     {
-        isSpeedingUp = false;
+        
         AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
     }
 
