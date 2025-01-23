@@ -5,15 +5,6 @@ TextureImporter:
   - first:
       213: -8642925310149936383
     second: idlestarR0008_0
-  - first:
-      213: 3376461247498139445
-    second: idlestarR0008_1
-  - first:
-      213: 7611359391917039766
-    second: idlestarR0008_2
-  - first:
-      213: -2433011955799281113
-    second: idlestarR0008_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,10 +116,10 @@ TextureImporter:
       name: idlestarR0008_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1016
-        width: 1008
-        height: 8
+        x: 254
+        y: 144
+        width: 622
+        height: 794
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,77 +134,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: idlestarR0008_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1017
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 537bff68d999bde20800000000000000
-      internalID: 3376461247498139445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idlestarR0008_2
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 1014
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6906c0d4a0bf0a960800000000000000
-      internalID: 7611359391917039766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idlestarR0008_3
-      rect:
-        serializedVersion: 2
-        x: 1018
-        y: 257
-        width: 6
-        height: 758
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7223e4054843c3ed0800000000000000
-      internalID: -2433011955799281113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -222,11 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      idlestarR0008_0: -8642925310149936383
-      idlestarR0008_1: 3376461247498139445
-      idlestarR0008_2: 7611359391917039766
-      idlestarR0008_3: -2433011955799281113
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

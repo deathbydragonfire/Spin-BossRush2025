@@ -5,12 +5,6 @@ TextureImporter:
   - first:
       213: 602364038344714869
     second: idlestarR0002_0
-  - first:
-      213: 8728748570431632185
-    second: idlestarR0002_1
-  - first:
-      213: 7440779044104047310
-    second: idlestarR0002_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,10 +116,10 @@ TextureImporter:
       name: idlestarR0002_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1016
-        width: 1008
-        height: 8
+        x: 248
+        y: 144
+        width: 643
+        height: 818
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,55 +134,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: idlestarR0002_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1017
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 933b642f39eb22970800000000000000
-      internalID: 8728748570431632185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idlestarR0002_2
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 1014
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eca0eff1e15f24760800000000000000
-      internalID: 7440779044104047310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -197,10 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      idlestarR0002_0: 602364038344714869
-      idlestarR0002_1: 8728748570431632185
-      idlestarR0002_2: 7440779044104047310
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,6 +7,7 @@ public class PlayerController3D : MonoBehaviour
     public float rotationSpeed = 100f; // Speed of rotation along the circumference
     public float minRadius = 0.5f; // Minimum distance from the center
     public float maxRadius = 5f; // Maximum distance from the center
+    private Animator animator;
 
     private CharacterController characterController;
     private Vector3 discCenter = Vector3.zero; // Center of the spinning disc
@@ -14,6 +15,7 @@ public class PlayerController3D : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
 
         if (characterController == null)
         {
@@ -40,7 +42,7 @@ public class PlayerController3D : MonoBehaviour
 
         // Adjust vertical input to account for negative Z-axis alignment
         vertical = -vertical;
-
+        animator.SetBool("IsRunning", horizontal > 0);
         // Move along the radius (toward or away from the center)
         if (Mathf.Abs(vertical) > 0.1f)
         {
@@ -65,6 +67,9 @@ public class PlayerController3D : MonoBehaviour
         // Move along the circumference (rotate around the disc's center)
         if (Mathf.Abs(horizontal) > 0.1f)
         {
+            
+            
+            
             // Calculate the rotation angle
             float angle = -horizontal * rotationSpeed * Time.deltaTime;
 
@@ -81,6 +86,7 @@ public class PlayerController3D : MonoBehaviour
             // Restrict circumferential movement to the front (-Z) half
             if (newPosition.z <= 0) // Only allow movement if the resulting position is in the front (-Z) half
             {
+                
                 movement += new Vector3(newPosition.x - playerPosition.x, 0, newPosition.z - playerPosition.z);
             }
         }
