@@ -8,6 +8,11 @@ public class PlayerController3D : MonoBehaviour
     public float minRadius = 0.5f; // Minimum distance from the center
     public float maxRadius = 5f; // Maximum distance from the center
     private Animator animator;
+    private bool continueCombo = false;
+
+    private int comboStep = 0; // Current step in the combo
+    private float comboTimer = 0f; // Timer to track the combo window
+    [SerializeField] private float comboResetTime = 1f; // Time window to continue the combo
 
     private CharacterController characterController;
     private Vector3 discCenter = Vector3.zero; // Center of the spinning disc
@@ -26,6 +31,14 @@ public class PlayerController3D : MonoBehaviour
     void Update()
     {
         MovePlayerOnDisc();
+        if (Input.GetButtonDown("Attack"))
+        {
+            Debug.Log("attack input");
+            continueCombo = true;
+            HandleComboAttack();
+        }
+
+        
     }
 
     private void MovePlayerOnDisc()
@@ -94,6 +107,49 @@ public class PlayerController3D : MonoBehaviour
         // Apply the movement using the CharacterController
         characterController.Move(movement);
     }
+
+    private void HandleComboAttack()
+    {
+        // Check the current combo step
+        if (comboStep == 0) // First attack
+        {
+            Debug.Log("attack1");
+            animator.SetTrigger("Attack1");
+            comboStep = 1;
+            continueCombo = false;
+        }
+        else if (comboStep == 1 && comboTimer > 0) // Second attack
+        {
+            Debug.Log("attack2");
+            animator.SetTrigger("Attack2");
+            comboStep = 2;
+            continueCombo = false;
+        }
+        else if (comboStep == 2 && comboTimer > 0) // Third attack
+        {
+            Debug.Log("attack3");
+            animator.SetTrigger("Attack3");
+            comboStep = 0; // Reset combo after the third attack
+            continueCombo = false;
+        }
+
+        // Reset the combo timer for the next input
+        comboTimer = comboResetTime;
+    }
+
+        public void ResetCombo()
+        {
+            if (!continueCombo)
+            {
+                comboStep = 0;
+                comboTimer = 0f;
+                Debug.Log("Combo Reset");
+            } else
+                {
+                Debug.Log("Combo Continues");
+               }
+            continueCombo = false;
+         }
 
     private void OnDrawGizmos()
     {

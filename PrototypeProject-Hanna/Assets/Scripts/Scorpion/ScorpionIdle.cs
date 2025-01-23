@@ -25,7 +25,7 @@ public class ScorpionIdle : StateMachineBehaviour
 
     private void Timer()
     {
-        Debug.Log(Mathf.Round(duration * 100) / 100f);
+        //Debug.Log(Mathf.Round(duration * 100) / 100f);
         duration-= Time.deltaTime;
         if(duration <= 0)
         {
