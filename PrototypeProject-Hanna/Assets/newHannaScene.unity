@@ -4245,21 +4245,17 @@ MonoBehaviour:
   - {fileID: 988574882}
   - {fileID: 636059387}
   - {fileID: 1370920976}
-<<<<<<< HEAD
-  dimmingPanel: {fileID: 1804051981}
-  LaserHitBoxPrefab: {fileID: 6609555268195769837, guid: 2525bc9de94297042b68e4f89afb1a65, type: 3}
-  casketPrefab: {fileID: 4192388085879996511, guid: 1d95f5880b06dcd4aa1c6be87917c4be, type: 3}
-  recordCenter: {fileID: 2020584838}
-  recordRadius: 20
-  VIPAreaPrefab: {fileID: 1105096212}
-  vipDuration: 5
-  damagePeriod: 2
-  vipSpeed: 10
-  record: {fileID: 2020584838}
-=======
-  dimmingPanel: {fileID: 0}
-  LaserHitBoxPrefab: {fileID: 0}
->>>>>>> a27fe9a55081451f34469b072d23d1e1a527663f
+dimmingPanel: {fileID: 1804051981}
+LaserHitBoxPrefab: {fileID: 6609555268195769837, guid: 2525bc9de94297042b68e4f89afb1a65, type: 3}
+casketPrefab: {fileID: 4192388085879996511, guid: 1d95f5880b06dcd4aa1c6be87917c4be, type: 3}
+recordCenter: {fileID: 2020584838}
+recordRadius: 20
+VIPAreaPrefab: {fileID: 1105096212}
+vipDuration: 5
+damagePeriod: 2
+vipSpeed: 10
+record: {fileID: 2020584838}
+
 --- !u!1 &2020584830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d89bfab137d00445b5d2fb0d084c745, type: 3}
