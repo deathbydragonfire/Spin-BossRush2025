@@ -553,6 +553,7 @@ MonoBehaviour:
   maxTempo: 100
   tempoBurnRate: 30
   tempoBuildRate: 5
+  currentSpinSpeed: 0
 --- !u!1 &213790278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,11 +2121,6 @@ CanvasRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4648002386289114053, guid: 4aa7d01a544a30647bbda5128b4a1779, type: 3}
   m_PrefabInstance: {fileID: 1941804272}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1105096212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5860907431260660136, guid: 959e766e0b01ac145b51e95a06b8651c, type: 3}
-  m_PrefabInstance: {fileID: 4445394188018768480}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1105096213 stripped
 Transform:
@@ -4245,17 +4241,18 @@ MonoBehaviour:
   - {fileID: 988574882}
   - {fileID: 636059387}
   - {fileID: 1370920976}
-dimmingPanel: {fileID: 1804051981}
-LaserHitBoxPrefab: {fileID: 6609555268195769837, guid: 2525bc9de94297042b68e4f89afb1a65, type: 3}
-casketPrefab: {fileID: 4192388085879996511, guid: 1d95f5880b06dcd4aa1c6be87917c4be, type: 3}
-recordCenter: {fileID: 2020584838}
-recordRadius: 20
-VIPAreaPrefab: {fileID: 1105096212}
-vipDuration: 5
-damagePeriod: 2
-vipSpeed: 10
-record: {fileID: 2020584838}
-
+  dimmingPanel: {fileID: 0}
+  LaserHitBoxPrefab: {fileID: 0}
+  casketPrefab: {fileID: 0}
+  recordCenter: {fileID: 0}
+  recordRadius: 5
+  VIPAreaPrefab: {fileID: 0}
+  vipDuration: 5
+  damagePeriod: 2
+  vipSpeed: 10
+  damageAmount: 1
+  damageCooldown: 1
+  record: {fileID: 0}
 --- !u!1 &2020584830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3d89bfab137d00445b5d2fb0d084c745, type: 3}
