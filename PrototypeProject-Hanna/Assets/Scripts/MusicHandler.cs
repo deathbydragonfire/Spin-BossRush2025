@@ -1,9 +1,10 @@
 using UnityEngine;
+using System.Collections;
 
 public class MusicHandler : MonoBehaviour
 {
     public AudioSource audioSource; // Reference to the AudioSource component
-    public Transform record; // The spinning record GameObject
+    public UnityEngine.Transform record; // The spinning record GameObject
 
     [Header("Playback Settings")]
     public float normalPlaybackSpeed = 1.0f; // Default playback speed
@@ -17,7 +18,11 @@ public class MusicHandler : MonoBehaviour
     private float currentTempo; // Current tempo meter value
 
     private float currentPlaybackSpeed; // Current playback speed
-    private float currentSpinSpeed; // Current spin speed
+    public float currentSpinSpeed; // Current spin speed
+    public void PushAndPull(float pullSpeed, float pushSpeed, float duration)
+    {
+        StartCoroutine(PushAndPullSequence(pullSpeed, pushSpeed, duration));
+    }
 
     void Start()
     {
@@ -43,7 +48,7 @@ public class MusicHandler : MonoBehaviour
         {
             StartSlowingDown();
         }
-        else if (Input.GetKeyUp(KeyCode.E)) 
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             StopSlowingDown();
         }
@@ -54,7 +59,7 @@ public class MusicHandler : MonoBehaviour
 
     void StartSpeedingUp()
     {
-       ;
+        ;
         AdjustPlaybackAndSpinSpeed(speedUpMultiplier);
 
         // Build tempo while speeding up
@@ -63,7 +68,7 @@ public class MusicHandler : MonoBehaviour
 
     void StopSpeedingUp()
     {
-        
+
         AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
     }
 
@@ -119,5 +124,18 @@ public class MusicHandler : MonoBehaviour
     public float GetMaxTempo()
     {
         return maxTempo;
+    }
+    public IEnumerator PushAndPullSequence(float pullSpeed, float pushSpeed, float duration)
+    {
+        // Step 1: Pull the record (reverse spin direction)
+        AdjustPlaybackAndSpinSpeed(-pullSpeed); // Negative speed for pulling
+        yield return new WaitForSeconds(duration / 2f); // Half the duration for pulling
+
+        // Step 2: Push the record (increase spin speed forward)
+        AdjustPlaybackAndSpinSpeed(pushSpeed);
+        yield return new WaitForSeconds(duration / 2f);
+
+        // Step 3: Reset to normal playback and spin speed
+        AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
     }
 }

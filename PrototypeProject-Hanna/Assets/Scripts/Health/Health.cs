@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+
 public abstract class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth; // Maximum health
@@ -47,11 +48,22 @@ public abstract class Health : MonoBehaviour
 
     private void UIUpdate()
     {
+        // Display the current health in the console for testing
+        Debug.Log("Current Health: " + health);
+
         // Update health UI here (e.g., health bar)
     }
 
     internal void TakeDamage(float damage)
     {
-        throw new NotImplementedException();
+        health = Mathf.Max(health - damage, 0f); // Reduce health, ensure it doesn't go below 0
+        UIUpdate(); // Update the UI if needed
+
+        if (health <= 0)
+        {
+            HandleDeath(); // Trigger death logic
+        }
+
+        Debug.Log($"Took damage: {damage}. Current health: {health}"); // For testing
     }
 }

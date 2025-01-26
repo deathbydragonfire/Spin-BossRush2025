@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      djspawnanimation0003_0: 3750934316675832978
+      djspawnanimation0003_1: -3876547706565124089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

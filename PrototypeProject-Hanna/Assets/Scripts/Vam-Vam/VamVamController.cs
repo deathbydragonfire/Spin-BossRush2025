@@ -42,7 +42,11 @@ public class VamVamController : MonoBehaviour
     public float vipDuration = 5f; // How long the VIP area stays active
     public float damagePeriod = 2f; // How long the damage period lasts
     public float vipSpeed = 10f; // Speed at which the VIP area moves around the record
+    public float damageAmount = 1f; // The amount of damage dealt outside the VIP Area
+    public float damageCooldown = 1f; // Time (in seconds) between damage applications
+    private float lastDamageTime = 0f; // Last time damage was applied
     private bool isVipActive = false; // To track if the attack is active
+
 
     public UnityEngine.Transform record; // Reference to the spinning record object
 
@@ -303,46 +307,36 @@ public class VamVamController : MonoBehaviour
     {
         isVipActive = true;
 
-        // Spawn the VIP Area
-        GameObject vipArea = Instantiate(VIPAreaPrefab);
-        vipArea.transform.position = record.position + Vector3.up * 0.1f; // Position slightly above the record
+        // Activate the VIP Area
+        VIPAreaPrefab.SetActive(true);
 
-        float rotationTime = vipDuration;
-        float angle = 0f;
-
-        // VIP Area moves around the record
-        while (rotationTime > 0)
-        {
-            angle += vipSpeed * Time.deltaTime;
-            float x = record.position.x + Mathf.Cos(angle) * record.localScale.x / 2f;
-            float z = record.position.z + Mathf.Sin(angle) * record.localScale.z / 2f;
-            vipArea.transform.position = new Vector3(x, record.position.y + 0.1f, z);
-
-            rotationTime -= Time.deltaTime;
-            yield return null;
-        }
+        // Wait for the duration of the VIP attack
+        yield return new WaitForSeconds(vipDuration);
 
         // Damage period
-        vipArea.GetComponent<Renderer>().material.color = Color.red; // Change color to indicate danger
+        VIPAreaPrefab.GetComponent<Renderer>().material.color = Color.red; // Change color to indicate danger
         float damageTime = damagePeriod;
 
         while (damageTime > 0)
         {
-            if (!IsPlayerInVIPArea(player, vipArea))
+            if (!IsPlayerInVIPArea(player, VIPAreaPrefab) && Time.time >= lastDamageTime + damageCooldown)
             {
                 // Deal damage to the player if outside the VIP Area
-                player.GetComponent<Health>()?.TakeDamage(10f); // Adjust damage value as needed
+                player.GetComponent<Health>()?.TakeDamage(damageAmount);
+                lastDamageTime = Time.time; // Update the last damage time
             }
             damageTime -= Time.deltaTime;
             yield return null;
         }
 
-        // Clean up VIP area
-        Destroy(vipArea);
+        // Deactivate the VIP Area
+        VIPAreaPrefab.GetComponent<Renderer>().material.color = Color.white; // Reset color
+        VIPAreaPrefab.SetActive(false);
+
         isVipActive = false;
     }
 
-    private bool IsPlayerInVIPArea(UnityEngine.Transform player, GameObject vipArea)
+private bool IsPlayerInVIPArea(UnityEngine.Transform player, GameObject vipArea)
     {
         // Get the bounds of the Mesh Collider
         MeshCollider meshCollider = vipArea.GetComponent<MeshCollider>();
@@ -359,3 +353,4 @@ public class VamVamController : MonoBehaviour
         return bounds.Contains(player.position);
     }
 }
+

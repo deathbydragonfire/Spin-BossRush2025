@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      djdeathanimation0013_0: 5749994615831674885
+      djdeathanimation0013_1: 9048799218035891754
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

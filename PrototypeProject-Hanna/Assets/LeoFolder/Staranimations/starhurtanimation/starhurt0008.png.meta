@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      starhurt0008_0: -6323345328977434575
+      starhurt0008_1: -8853069671275820626
+      starhurt0008_10: -334834848325944157
+      starhurt0008_11: 3696230600202839208
+      starhurt0008_12: 5949860805185532594
+      starhurt0008_13: 5532611410057953953
+      starhurt0008_14: 1036030662491339123
+      starhurt0008_2: 1191979825021949885
+      starhurt0008_3: -6319799508187574400
+      starhurt0008_4: -7882337388693242319
+      starhurt0008_5: -6029735848647300101
+      starhurt0008_6: 99544029913575589
+      starhurt0008_7: 4334888435253712652
+      starhurt0008_8: 5505302004442946352
+      starhurt0008_9: 158693930503750344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
