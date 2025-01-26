@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 57bc27330d4d67b4894f61ec5f676e2a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6070405434621392646
+    second: starhurt0010_0
+  - first:
+      213: -1964301803798142136
+    second: starhurt0010_1
+  - first:
+      213: 6963267811245750983
+    second: starhurt0010_2
+  - first:
+      213: -7886743881707000831
+    second: starhurt0010_3
+  - first:
+      213: -6779385315564403185
+    second: starhurt0010_4
+  - first:
+      213: -2718480051753010150
+    second: starhurt0010_5
+  - first:
+      213: -925266198022454926
+    second: starhurt0010_6
+  - first:
+      213: -8830168575872009278
+    second: starhurt0010_7
+  - first:
+      213: -316717300614386510
+    second: starhurt0010_8
+  - first:
+      213: 197931938452061908
+    second: starhurt0010_9
+  - first:
+      213: -8163606309817920151
+    second: starhurt0010_10
+  - first:
+      213: -6000915014028045020
+    second: starhurt0010_11
+  - first:
+      213: 8251723650408985356
+    second: starhurt0010_12
+  - first:
+      213: -2534294233013304340
+    second: starhurt0010_13
+  - first:
+      213: -8385403308169719645
+    second: starhurt0010_14
+  - first:
+      213: 5614066399611095641
+    second: starhurt0010_15
+  - first:
+      213: 7420891287567622932
+    second: starhurt0010_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: starhurt0010_0
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 904
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607753594996e3450800000000000000
+      internalID: 6070405434621392646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 872
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843e3f0bae56db4e0800000000000000
+      internalID: -1964301803798142136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_2
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 854
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7caf63d6e2f72a060800000000000000
+      internalID: 6963267811245750983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 808
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c6e50b938ac8290800000000000000
+      internalID: -7886743881707000831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 813
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06c84669f8cae1a0800000000000000
+      internalID: -6779385315564403185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 817
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cb64acbc4064ad0800000000000000
+      internalID: -2718480051753010150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 745
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27102309b4bc823f0800000000000000
+      internalID: -925266198022454926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 766
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbf458e670f47580800000000000000
+      internalID: -8830168575872009278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 759
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bca8aa0b4bca9bf0800000000000000
+      internalID: -316717300614386510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 697
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4deb321ac023fb200800000000000000
+      internalID: 197931938452061908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_10
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 738
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9655a29505b05be80800000000000000
+      internalID: -8163606309817920151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_11
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 740
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425dc85c69778bca0800000000000000
+      internalID: -6000915014028045020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 616
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c033157c0f2048270800000000000000
+      internalID: 8251723650408985356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_13
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 624
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3cbe482d064dcd0800000000000000
+      internalID: -2534294233013304340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_14
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 160
+        width: 754
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a098267e1011ab80800000000000000
+      internalID: -8385403308169719645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_15
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 564
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a864655ab29ed40800000000000000
+      internalID: 5614066399611095641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starhurt0010_16
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 569
+        width: 61
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4136248fe4d4cf660800000000000000
+      internalID: 7420891287567622932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      starhurt0010_0: 6070405434621392646
+      starhurt0010_1: -1964301803798142136
+      starhurt0010_10: -8163606309817920151
+      starhurt0010_11: -6000915014028045020
+      starhurt0010_12: 8251723650408985356
+      starhurt0010_13: -2534294233013304340
+      starhurt0010_14: -8385403308169719645
+      starhurt0010_15: 5614066399611095641
+      starhurt0010_16: 7420891287567622932
+      starhurt0010_2: 6963267811245750983
+      starhurt0010_3: -7886743881707000831
+      starhurt0010_4: -6779385315564403185
+      starhurt0010_5: -2718480051753010150
+      starhurt0010_6: -925266198022454926
+      starhurt0010_7: -8830168575872009278
+      starhurt0010_8: -316717300614386510
+      starhurt0010_9: 197931938452061908
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
