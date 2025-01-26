@@ -56,6 +56,7 @@ public class PlayerController3D : MonoBehaviour
         // Adjust vertical input to account for negative Z-axis alignment
         vertical = -vertical;
         animator.SetBool("IsRunning", horizontal > 0);
+        animator.SetBool("isBackwards", horizontal < 0);
         // Move along the radius (toward or away from the center)
         if (Mathf.Abs(vertical) > 0.1f)
         {
