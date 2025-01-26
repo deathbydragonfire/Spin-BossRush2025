@@ -17,7 +17,7 @@ public class MusicHandler : MonoBehaviour
     public float tempoBuildRate = 5f; // How quickly tempo builds when speeding up
     private float currentTempo; // Current tempo meter value
 
-    private float currentPlaybackSpeed; // Current playback speed
+    public float currentPlaybackSpeed; // Current playback speed
     public float currentSpinSpeed; // Current spin speed
     public void PushAndPull(float pullSpeed, float pushSpeed, float duration)
     {
@@ -125,7 +125,7 @@ public class MusicHandler : MonoBehaviour
     {
         return maxTempo;
     }
-    public IEnumerator PushAndPullSequence(float pullSpeed, float pushSpeed, float duration)
+    private IEnumerator PushAndPullSequence(float pullSpeed, float pushSpeed, float duration)
     {
         // Step 1: Pull the record (reverse spin direction)
         AdjustPlaybackAndSpinSpeed(-pullSpeed); // Negative speed for pulling

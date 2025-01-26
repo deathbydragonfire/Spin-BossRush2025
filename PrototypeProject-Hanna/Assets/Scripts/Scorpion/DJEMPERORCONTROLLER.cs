@@ -21,6 +21,16 @@ public class DJEmperorController : MonoBehaviour
     public float stingCooldown = 4f; // Cooldown between sting attacks
     public float stingSpeed = 10f; // Speed at which the sting moves
     private bool canSting = true; // Cooldown tracker
+                                  // ERA-ERA Attack
+    public float pullDuration = 2f; // Duration of the pull phase
+    public float pushDuration = 2f; // Duration of the push phase
+    public float pullStrength = 10f; // Strength of the pull
+    public float pushStrength = 10f; // Strength of the push
+
+
+    private bool isPerformingEraEra = false;
+
+
 
 
     void Update()
@@ -33,6 +43,14 @@ public class DJEmperorController : MonoBehaviour
                 PerformSting();
             }
         }
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.L)) // Press "L" to test ERA-ERA
+            {
+                PerformEraEra();
+            }
+        }
+
     }
 
 
@@ -41,6 +59,13 @@ public class DJEmperorController : MonoBehaviour
         if (canSting && Vector3.Distance(transform.position, player.position) <= stingRange)
         {
             StartCoroutine(StingRoutine());
+        }
+    }
+      public void PerformEraEra()
+    {
+        if (!isPerformingEraEra)
+        {
+            StartCoroutine(EraEraRoutine());
         }
     }
 
