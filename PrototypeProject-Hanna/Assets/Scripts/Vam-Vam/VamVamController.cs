@@ -1,14 +1,20 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Experimental.GlobalIllumination;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class VamVamController : MonoBehaviour
 {
     // General Settings
-    public Transform player; // Reference to the player's position
+    public UnityEngine.Transform player; // Reference to the player's position
     public float vamVamSpeed = 5f; // Speed for Vam-Vam's movement
     public bool isAttacking = false; // Whether Vam-Vam is performing an attack
+    public Camera mainCamera;
 
     // Slash Attack Settings
     public GameObject slashHitboxParent; // Parent object for Slash hitboxes
@@ -17,7 +23,7 @@ public class VamVamController : MonoBehaviour
 
     // Concert Attack Settings
     public GameObject stageTrussPrefab; // The stage truss prefab
-    public Transform playableArea; // Bounds of the playable area
+    public UnityEngine.Transform playableArea; // Bounds of the playable area
     public LineRenderer laserPrefab; // Prefab for lasers
     public int totalLasers = 9; // Total lasers to fire
     public float laserFireDelay = 0.5f; // Delay between each laser
@@ -27,6 +33,32 @@ public class VamVamController : MonoBehaviour
     public List<GameObject> laserLights;
     public GameObject dimmingPanel;
     public GameObject LaserHitBoxPrefab;
+    public GameObject casketPrefab; // Assign the casket prefab in the inspector
+    public UnityEngine.Transform recordCenter; // Center point of the record
+    public float recordRadius = 5f; // Radius of the playable area
+
+
+    public GameObject VIPAreaPrefab; // Flat circle object for VIP area
+    public float vipDuration = 5f; // How long the VIP area stays active
+    public float damagePeriod = 2f; // How long the damage period lasts
+    public float vipSpeed = 10f; // Speed at which the VIP area moves around the record
+    public float damageAmount = 1f; // The amount of damage dealt outside the VIP Area
+    public float damageCooldown = 1f; // Time (in seconds) between damage applications
+    private float lastDamageTime = 0f; // Last time damage was applied
+    private bool isVipActive = false; // To track if the attack is active
+
+
+    public UnityEngine.Transform record; // Reference to the spinning record object
+
+
+
+
+    void Start()
+    {
+        VIPAreaPrefab.SetActive(false); // Ensure the circle is initially inactive
+    }
+
+
     void Update()
     {
         // Testing triggers
@@ -39,7 +71,16 @@ public class VamVamController : MonoBehaviour
         {
             PerformConcertAttack();
         }
+        if (Input.GetKeyDown(KeyCode.V)) // Press C for Concert
+        {
+            StartVIPAreaAttack();
+        }
     }
+
+
+
+
+
 
     // Slash Attack
     public void PerformSlashAttack()
@@ -49,6 +90,14 @@ public class VamVamController : MonoBehaviour
             StartCoroutine(SlashSequence());
         }
     }
+    public void StartVIPAreaAttack()
+    {
+        if (!isAttacking)
+        {
+            StartCoroutine(VIPAreaSequence());
+        }
+    }
+
 
     private Vector3 GetRandomPositionNearPlayer(float radius)
     {
@@ -136,9 +185,9 @@ public class VamVamController : MonoBehaviour
         GameObject truss = Instantiate(stageTrussPrefab, new Vector3(0, 10f, 0), Quaternion.identity);
 
         // Find all laser light children in the instantiated truss
-        Transform[] trussLights = truss.GetComponentsInChildren<Transform>();
-        var activeLaserLights = new List<Transform>();
-        foreach (Transform child in trussLights)
+        UnityEngine.Transform[] trussLights = truss.GetComponentsInChildren<UnityEngine.Transform>();
+        var activeLaserLights = new List<UnityEngine.Transform>();
+        foreach (UnityEngine.Transform child in trussLights)
         {
             if (child.name.Contains("LaserLight")) // Adjust this to match the name of your laser light objects
             {
@@ -175,7 +224,6 @@ public class VamVamController : MonoBehaviour
 
         isAttacking = false;
     }
-
 
 
     private IEnumerator DescendToSecondPosition(float speed)
@@ -218,7 +266,7 @@ public class VamVamController : MonoBehaviour
         {
             // Choose a random laser light as the origin
             int randomIndex = Random.Range(0, laserLights.Count);
-            Transform chosenLaserLight = laserLights[randomIndex].transform;
+            UnityEngine.Transform chosenLaserLight = laserLights[randomIndex].transform;
 
             // Generate a random position near the player
             Vector3 laserTarget = GetRandomPositionNearPlayer(targetRadius);
@@ -255,7 +303,54 @@ public class VamVamController : MonoBehaviour
             Destroy(laser.gameObject);
         }
     }
+    private IEnumerator VIPAreaSequence()
+    {
+        isVipActive = true;
 
+        // Activate the VIP Area
+        VIPAreaPrefab.SetActive(true);
+
+        // Wait for the duration of the VIP attack
+        yield return new WaitForSeconds(vipDuration);
+
+        // Damage period
+        VIPAreaPrefab.GetComponent<Renderer>().material.color = Color.red; // Change color to indicate danger
+        float damageTime = damagePeriod;
+
+        while (damageTime > 0)
+        {
+            if (!IsPlayerInVIPArea(player, VIPAreaPrefab) && Time.time >= lastDamageTime + damageCooldown)
+            {
+                // Deal damage to the player if outside the VIP Area
+                player.GetComponent<Health>()?.TakeDamage(damageAmount);
+                lastDamageTime = Time.time; // Update the last damage time
+            }
+            damageTime -= Time.deltaTime;
+            yield return null;
+        }
+
+        // Deactivate the VIP Area
+        VIPAreaPrefab.GetComponent<Renderer>().material.color = Color.white; // Reset color
+        VIPAreaPrefab.SetActive(false);
+
+        isVipActive = false;
+    }
+
+private bool IsPlayerInVIPArea(UnityEngine.Transform player, GameObject vipArea)
+    {
+        // Get the bounds of the Mesh Collider
+        MeshCollider meshCollider = vipArea.GetComponent<MeshCollider>();
+        if (meshCollider == null)
+        {
+            Debug.LogError("VIP Area does not have a MeshCollider!");
+            return false;
+        }
+
+        // Calculate the bounds of the Mesh Collider
+        Bounds bounds = meshCollider.bounds;
+
+        // Check if the player's position is within the bounds
+        return bounds.Contains(player.position);
+    }
 }
-
 

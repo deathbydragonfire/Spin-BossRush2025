@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MusicHandler : MonoBehaviour
 {
@@ -7,8 +8,8 @@ public class MusicHandler : MonoBehaviour
 
     [Header("Playback Settings")]
     public float normalPlaybackSpeed = 1.0f; // Default playback speed
-    public float speedUpMultiplier = 1.5f; // Speed-up factor
-    public float slowDownMultiplier = 0.5f; // Slow-down factor
+    public float speedUpMultiplier = 1.5f; // Speed-up factor for player input
+    public float slowDownMultiplier = 0.5f; // Slow-down factor for player input
 
     [Header("Tempo Meter Settings")]
     public float maxTempo = 100f; // Maximum tempo meter value
@@ -16,8 +17,10 @@ public class MusicHandler : MonoBehaviour
     public float tempoBuildRate = 5f; // How quickly tempo builds when speeding up
     private float currentTempo; // Current tempo meter value
 
-    private float currentPlaybackSpeed; // Current playback speed
-    private float currentSpinSpeed; // Current spin speed
+    private float baseMultiplier = 1f; // Base multiplier for external effects (e.g., Zap Riot)
+    private float playerMultiplier = 1f; // Multiplier for player input
+    public float currentPlaybackSpeed; // Current playback speed
+    public float currentSpinSpeed; // Current spin speed
 
     void Start()
     {
@@ -29,81 +32,51 @@ public class MusicHandler : MonoBehaviour
 
     void Update()
     {
-        // Handle input for speeding up and slowing down
-        if (Input.GetKey(KeyCode.Q))
-        {
-            StartSpeedingUp();
-        }
-        else if (Input.GetKeyUp(KeyCode.Q))
-        {
-            StopSpeedingUp();
-        }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            StartSlowingDown();
-        }
-        else if (Input.GetKeyUp(KeyCode.E)) 
-        {
-            StopSlowingDown();
-        }
-
-        // Rotate the record
-        RotateRecord();
+        HandlePlayerInputs(); // Allow player inputs to adjust speed
+        ApplyCombinedSpeed(); // Combine base multiplier and player multiplier
+        RotateRecord(); // Rotate the record
     }
 
-    void StartSpeedingUp()
+    public void AdjustPlaybackAndSpinSpeed(float multiplier)
     {
-       ;
-        AdjustPlaybackAndSpinSpeed(speedUpMultiplier);
-
-        // Build tempo while speeding up
-        currentTempo = Mathf.Min(currentTempo + tempoBuildRate * Time.deltaTime, maxTempo);
+        baseMultiplier = multiplier; // Update the base multiplier
+        ApplyCombinedSpeed(); // Recalculate the combined speed
     }
 
-    void StopSpeedingUp()
+    public void SetBaseMultiplier(float multiplier)
     {
-        
-        AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
+        baseMultiplier = multiplier; // Update the base multiplier for external effects
     }
 
-    void StartSlowingDown()
+    private void HandlePlayerInputs()
     {
-        if (currentTempo > 0)
+        if (Input.GetKey(KeyCode.Q)) // Speed up
         {
-            AdjustPlaybackAndSpinSpeed(slowDownMultiplier);
-
-            // Burn tempo while slowing down
-            currentTempo = Mathf.Max(currentTempo - tempoBurnRate * Time.deltaTime, 0);
-
-            // Stop slowing if tempo reaches zero
-            if (currentTempo <= 0)
-            {
-                StopSlowingDown();
-            }
+            playerMultiplier = speedUpMultiplier;
+        }
+        else if (Input.GetKey(KeyCode.E)) // Slow down
+        {
+            playerMultiplier = slowDownMultiplier;
         }
         else
         {
-            StopSlowingDown();
+            playerMultiplier = 1f; // Reset to default multiplier
         }
     }
 
-    void StopSlowingDown()
+    private void ApplyCombinedSpeed()
     {
-        AdjustPlaybackAndSpinSpeed(normalPlaybackSpeed);
+        float combinedMultiplier = baseMultiplier * playerMultiplier;
+
+        // Adjust playback speed (can be negative for reverse playback)
+        currentPlaybackSpeed = normalPlaybackSpeed * Mathf.Abs(combinedMultiplier);
+        audioSource.pitch = Mathf.Sign(combinedMultiplier) * currentPlaybackSpeed; // Reverse audio if multiplier is negative
+
+        // Adjust spin speed (reverse if multiplier is negative)
+        currentSpinSpeed = 100f * combinedMultiplier; // Adjust as needed
     }
 
-    void AdjustPlaybackAndSpinSpeed(float multiplier)
-    {
-        // Adjust playback speed
-        currentPlaybackSpeed = normalPlaybackSpeed * multiplier;
-        audioSource.pitch = currentPlaybackSpeed;
-
-        // Adjust spin speed
-        currentSpinSpeed = 100f * multiplier; // Adjust this value as needed
-    }
-
-    void RotateRecord()
+    private void RotateRecord()
     {
         if (record != null)
         {
