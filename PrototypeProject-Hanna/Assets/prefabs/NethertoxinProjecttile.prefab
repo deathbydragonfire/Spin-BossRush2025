@@ -185,5 +185,5 @@ MonoBehaviour:
   time: 2
   mask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 6144
   nethertoxinPrefab: {fileID: 5061207371050950686, guid: ae2f7d08582e8414baba0c04469a20c2, type: 3}

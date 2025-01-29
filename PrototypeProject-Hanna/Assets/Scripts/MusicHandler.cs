@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MusicHandler : MonoBehaviour
 {
@@ -22,19 +23,55 @@ public class MusicHandler : MonoBehaviour
     public float currentPlaybackSpeed; // Current playback speed
     public float currentSpinSpeed; // Current spin speed
 
-    void Start()
+    [Header("Boss Track Management")]
+    public List<AudioClip> bossTracks; // List of tracks for each boss
+    private Dictionary<AudioClip, string> trackBossMap = new Dictionary<AudioClip, string>();
+    private int currentTrackIndex = 0; // Index of the current track
+    public BossManager bossManager; // Reference to the BossManager for handling boss logic
+    private bool isInitialized = false;
+
+    IEnumerator Start()
     {
-        // Initialize values
+        Debug.Log("[MusicHandler] Waiting for scene to stabilize...");
+
+        // Small delay to allow everything to load in properly
+        yield return new WaitForSeconds(0.2f);
+
+        Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
         currentPlaybackSpeed = normalPlaybackSpeed;
-        currentSpinSpeed = 100f; // Default spin speed
-        currentTempo = maxTempo; // Start with a full tempo meter
+        currentSpinSpeed = 100f;
+        currentTempo = maxTempo;
+        currentTrackIndex = 0;
+
+        if (bossManager != null && bossTracks.Count > 0)
+        {
+            trackBossMap.Clear();
+            for (int i = 0; i < bossTracks.Count; i++)
+            {
+                trackBossMap[bossTracks[i]] = bossManager.GetBossNameByIndex(i);
+            }
+
+            yield return new WaitForSeconds(0.1f); // Additional delay before first track
+            PlayNextTrack();
+        }
     }
+
+
+
+
 
     void Update()
     {
         HandlePlayerInputs(); // Allow player inputs to adjust speed
         ApplyCombinedSpeed(); // Combine base multiplier and player multiplier
         RotateRecord(); // Rotate the record
+        if (!SimplePauseMenu.IsGamePaused) // Only run this if NOT paused
+        {
+            if (!audioSource.isPlaying && bossTracks.Count > 0)
+            {
+                PlayNextTrack();
+            }
+        }
     }
 
     public void AdjustPlaybackAndSpinSpeed(float multiplier)
@@ -93,4 +130,66 @@ public class MusicHandler : MonoBehaviour
     {
         return maxTempo;
     }
+
+    private void PlayNextTrack()
+    {
+        if (bossTracks.Count == 0) return;
+
+        if (currentTrackIndex == 0 && audioSource.isPlaying)
+        {
+            Debug.LogWarning("[MusicHandler] Preventing unnecessary track skip on the first play.");
+            return; // Ensures the first track isn't skipped on start
+        }
+
+        currentTrackIndex = (currentTrackIndex + 1) % bossTracks.Count;
+
+        AudioClip nextTrack = bossTracks[currentTrackIndex];
+
+        if (audioSource != null)
+        {
+            audioSource.clip = nextTrack;
+            audioSource.Play();
+        }
+
+        if (trackBossMap.TryGetValue(nextTrack, out string bossName))
+        {
+            Debug.Log($"[MusicHandler] Now playing: {nextTrack.name} -> Summoning {bossName}");
+
+            if (bossManager != null)
+            {
+                bossManager.DeactivateAllBosses(); // <---- Make sure all bosses are turned off first!
+                bossManager.ActivateBoss(bossName);
+            }
+        }
+    }
+
+
+
+    public void RemoveTrackAndBoss(string bossName)
+    {
+        int bossIndex = bossManager.bosses.FindIndex(b => b.boss.name.Equals(bossName, System.StringComparison.OrdinalIgnoreCase));
+
+        if (bossIndex != -1)
+        {
+            AudioClip trackToRemove = bossTracks[bossIndex];
+            bossTracks.Remove(trackToRemove);
+            trackBossMap.Remove(trackToRemove);
+            bossManager.bosses[bossIndex].isDefeated = true;
+
+            if (bossTracks.Count > 0)
+            {
+                PlayNextTrack();
+            }
+            else
+            {
+                audioSource.Stop(); // Stop if no tracks remain
+            }
+        }
+        else
+        {
+            Debug.LogError($"Boss with name {bossName} not found!");
+        }
+    }
 }
+
+

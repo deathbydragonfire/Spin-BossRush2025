@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Boss 2
+  - record
+  - Backstop
   layers:
   - Default
   - TransparentFX
@@ -14,11 +16,11 @@ TagManager:
   - UI
   - Ground
   - PlayableArea
-  - 
+  - Backstop
   - Player
   - 
   - Vinil
-  - 
+  - record
   - 
   - 
   - 

@@ -6,6 +6,7 @@ public class SimplePauseMenu : MonoBehaviour
     public AudioSource musicSource; // Reference to the music
     public AudioClip recordScratch; // Record scratch sound effect
     private bool isPaused = false;
+    public static bool IsGamePaused { get; private set; } // This allows other scripts to check if the game is paused
 
     void Update()
     {
@@ -25,42 +26,38 @@ public class SimplePauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        // Play record scratch sound
         if (recordScratch != null)
         {
             AudioSource.PlayClipAtPoint(recordScratch, Vector3.zero);
         }
 
-        // Show pause menu
         pauseMenuCanvas.SetActive(true);
 
-        // Pause music
         if (musicSource != null)
         {
             musicSource.Pause();
         }
 
-        // Pause the game
         Time.timeScale = 0;
+        IsGamePaused = true; // Tell other scripts the game is paused
         isPaused = true;
     }
 
     public void ResumeGame()
     {
-        // Hide pause menu
         Debug.Log("Resume button clicked");
         pauseMenuCanvas.SetActive(false);
 
-        // Resume music
         if (musicSource != null)
         {
             musicSource.UnPause();
         }
 
-        // Resume the game
         Time.timeScale = 1;
+        IsGamePaused = false; // Tell other scripts the game is running again
         isPaused = false;
     }
+
 
     public void QuitGame()
     {

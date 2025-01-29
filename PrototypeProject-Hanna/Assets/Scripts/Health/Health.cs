@@ -1,11 +1,25 @@
 using System;
 using UnityEngine;
 
-
 public abstract class Health : MonoBehaviour
 {
-    [SerializeField] private float maxHealth; // Maximum health
+    [SerializeField] public float maxHealth; // Maximum health
     private float health; // Current health
+
+    public float CurrentHP // Public property to access current health
+    {
+        get => health;
+        set
+        {
+            health = Mathf.Clamp(value, 0, maxHealth);
+            UIUpdate();
+
+            if (health <= 0)
+            {
+                HandleDeath();
+            }
+        }
+    }
 
     [Header("Death Screen")]
     public DeathScreenHandler deathScreenHandler; // Reference to the death screen manager
@@ -15,22 +29,15 @@ public abstract class Health : MonoBehaviour
         health = maxHealth; // Initialize health
         UIUpdate();
     }
+
     public void TakeDamageByCurrentHP(float damage)
     {
-        health = Mathf.Max(health - (health * (damage / 100f)), 0f);
-        UIUpdate();
-
-        if (health <= 0)
-        {
-            HandleDeath();
-        }
+        CurrentHP = Mathf.Max(health - (health * (damage / 100f)), 0f);
     }
-
 
     public void TakeHeal(float heal)
     {
-        health = Mathf.Min(health + heal, maxHealth); // Increase health
-        UIUpdate();
+        CurrentHP = Mathf.Min(health + heal, maxHealth); // Increase health
     }
 
     private void HandleDeath()
@@ -56,14 +63,7 @@ public abstract class Health : MonoBehaviour
 
     internal void TakeDamage(float damage)
     {
-        health = Mathf.Max(health - damage, 0f); // Reduce health, ensure it doesn't go below 0
-        UIUpdate(); // Update the UI if needed
-
-        if (health <= 0)
-        {
-            HandleDeath(); // Trigger death logic
-        }
-
+        CurrentHP = Mathf.Max(health - damage, 0f); // Reduce health, ensure it doesn't go below 0
         Debug.Log($"Took damage: {damage}. Current health: {health}"); // For testing
     }
 }
