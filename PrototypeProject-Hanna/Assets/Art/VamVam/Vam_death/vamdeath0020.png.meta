@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: ad6734fa6be714f45b9000b397ac8661
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5799789985893132627
+    second: vamdeath0020_0
+  - first:
+      213: -3940023747283885106
+    second: vamdeath0020_1
+  - first:
+      213: 7149141793331954502
+    second: vamdeath0020_2
+  - first:
+      213: 5029953836460112365
+    second: vamdeath0020_3
+  - first:
+      213: 8894212112812643319
+    second: vamdeath0020_4
+  - first:
+      213: -8611150601936777746
+    second: vamdeath0020_5
+  - first:
+      213: 3075500573746676357
+    second: vamdeath0020_6
+  - first:
+      213: -5476260504725002800
+    second: vamdeath0020_7
+  - first:
+      213: 3941664787349976415
+    second: vamdeath0020_8
+  - first:
+      213: -4312740748590916360
+    second: vamdeath0020_9
+  - first:
+      213: 7720721550304688204
+    second: vamdeath0020_10
+  - first:
+      213: -4104377578915565676
+    second: vamdeath0020_11
+  - first:
+      213: -4104317838625163286
+    second: vamdeath0020_12
+  - first:
+      213: 5925612612636594006
+    second: vamdeath0020_13
+  - first:
+      213: -9048603292597451393
+    second: vamdeath0020_14
+  - first:
+      213: 6401637186526492792
+    second: vamdeath0020_15
+  - first:
+      213: 8844221118344035248
+    second: vamdeath0020_16
+  - first:
+      213: 7196209664389292535
+    second: vamdeath0020_17
+  - first:
+      213: -4119353286233393330
+    second: vamdeath0020_18
+  - first:
+      213: 8497819634026997701
+    second: vamdeath0020_19
+  - first:
+      213: -8367382350718326606
+    second: vamdeath0020_20
+  - first:
+      213: -3376455681821359848
+    second: vamdeath0020_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vamdeath0020_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 238
+        width: 779
+        height: 780
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6d8f68cb1038fa0800000000000000
+      internalID: -5799789985893132627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_1
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 219
+        width: 135
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec36a88e6493259c0800000000000000
+      internalID: -3940023747283885106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_2
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 234
+        width: 55
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6434370559ad63360800000000000000
+      internalID: 7149141793331954502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_3
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 223
+        width: 120
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de971da4d5cfdc540800000000000000
+      internalID: 5029953836460112365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_4
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 215
+        width: 78
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f39c250bc69e6b70800000000000000
+      internalID: 8894212112812643319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_5
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 227
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedca20c62c0f7880800000000000000
+      internalID: -8611150601936777746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_6
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 211
+        width: 114
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5824ea42a7f5eaa20800000000000000
+      internalID: 3075500573746676357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 204
+        width: 33
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d56d5ed51a6004b0800000000000000
+      internalID: -5476260504725002800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_8
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 204
+        width: 45
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5539a18d3b93b630800000000000000
+      internalID: 3941664787349976415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_9
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 204
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fcd2e793211624c0800000000000000
+      internalID: -4312740748590916360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_10
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 188
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c483d970853852b60800000000000000
+      internalID: 7720721550304688204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_11
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 196
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fe8a086525a07c0800000000000000
+      internalID: -4104377578915565676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_12
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 188
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7b27fdba88a07c0800000000000000
+      internalID: -4104317838625163286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_13
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 196
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f47c4a6410c3250800000000000000
+      internalID: 5925612612636594006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_14
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 188
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f758c473f37ec6280800000000000000
+      internalID: -9048603292597451393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_15
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 176
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878b7d39a1f27d850800000000000000
+      internalID: 6401637186526492792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_16
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 180
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb77e99f3cfcba70800000000000000
+      internalID: 8844221118344035248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_17
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 172
+        width: 106
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1282700921ed360800000000000000
+      internalID: 7196209664389292535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 0
+        width: 722
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4778bde20e15d6c0800000000000000
+      internalID: -4119353286233393330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_19
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 168
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7e48b0fe15ee570800000000000000
+      internalID: 8497819634026997701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_20
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 165
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8af85951611eb80800000000000000
+      internalID: -8367382350718326606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamdeath0020_21
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 160
+        width: 69
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8114035527b6421d0800000000000000
+      internalID: -3376455681821359848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vamdeath0020_0: -5799789985893132627
+      vamdeath0020_1: -3940023747283885106
+      vamdeath0020_10: 7720721550304688204
+      vamdeath0020_11: -4104377578915565676
+      vamdeath0020_12: -4104317838625163286
+      vamdeath0020_13: 5925612612636594006
+      vamdeath0020_14: -9048603292597451393
+      vamdeath0020_15: 6401637186526492792
+      vamdeath0020_16: 8844221118344035248
+      vamdeath0020_17: 7196209664389292535
+      vamdeath0020_18: -4119353286233393330
+      vamdeath0020_19: 8497819634026997701
+      vamdeath0020_2: 7149141793331954502
+      vamdeath0020_20: -8367382350718326606
+      vamdeath0020_21: -3376455681821359848
+      vamdeath0020_3: 5029953836460112365
+      vamdeath0020_4: 8894212112812643319
+      vamdeath0020_5: -8611150601936777746
+      vamdeath0020_6: 3075500573746676357
+      vamdeath0020_7: -5476260504725002800
+      vamdeath0020_8: 3941664787349976415
+      vamdeath0020_9: -4312740748590916360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

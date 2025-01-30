@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 070cf5cde25446a47a70542b9662a99c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8398317306864654170
+    second: electroshockidle0030_0
+  - first:
+      213: 4104005448887242499
+    second: electroshockidle0030_1
+  - first:
+      213: 8472970934475648704
+    second: electroshockidle0030_2
+  - first:
+      213: -924509033815950475
+    second: electroshockidle0030_3
+  - first:
+      213: 13389390124910525
+    second: electroshockidle0030_4
+  - first:
+      213: -6240271378320330286
+    second: electroshockidle0030_5
+  - first:
+      213: 2443456428779512939
+    second: electroshockidle0030_6
+  - first:
+      213: 6030933009165155037
+    second: electroshockidle0030_7
+  - first:
+      213: 4196817357544843592
+    second: electroshockidle0030_8
+  - first:
+      213: 5660422583915691534
+    second: electroshockidle0030_9
+  - first:
+      213: -2358985074416085499
+    second: electroshockidle0030_10
+  - first:
+      213: -3610562512440500691
+    second: electroshockidle0030_11
+  - first:
+      213: -6764913169262636801
+    second: electroshockidle0030_12
+  - first:
+      213: -1361559650764007218
+    second: electroshockidle0030_13
+  - first:
+      213: 2251838019218551398
+    second: electroshockidle0030_14
+  - first:
+      213: 5027393494910691840
+    second: electroshockidle0030_15
+  - first:
+      213: -2617954645931089156
+    second: electroshockidle0030_16
+  - first:
+      213: -1162355620452576792
+    second: electroshockidle0030_17
+  - first:
+      213: -641731025362874599
+    second: electroshockidle0030_18
+  - first:
+      213: 4743150194785237196
+    second: electroshockidle0030_19
+  - first:
+      213: -3989565811745215
+    second: electroshockidle0030_20
+  - first:
+      213: -5746570084203541836
+    second: electroshockidle0030_21
+  - first:
+      213: -4079248364706943618
+    second: electroshockidle0030_22
+  - first:
+      213: -3588205353369467032
+    second: electroshockidle0030_23
+  - first:
+      213: 1273956212026830862
+    second: electroshockidle0030_24
+  - first:
+      213: -3474862527136073469
+    second: electroshockidle0030_25
+  - first:
+      213: 684790050872234093
+    second: electroshockidle0030_26
+  - first:
+      213: -702871730052011752
+    second: electroshockidle0030_27
+  - first:
+      213: -7303618688699803846
+    second: electroshockidle0030_28
+  - first:
+      213: 7306912462833296822
+    second: electroshockidle0030_29
+  - first:
+      213: -4929260917966129036
+    second: electroshockidle0030_30
+  - first:
+      213: 3584482431941054101
+    second: electroshockidle0030_31
+  - first:
+      213: -2633269272915889011
+    second: electroshockidle0030_32
+  - first:
+      213: -6494184566173027498
+    second: electroshockidle0030_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: electroshockidle0030_0
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 960
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57deaa2811dc8470800000000000000
+      internalID: 8398317306864654170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_1
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 947
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f0139363b54f830800000000000000
+      internalID: 4104005448887242499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 928
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce61a55c2a069570800000000000000
+      internalID: 8472970934475648704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_3
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 892
+        width: 63
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bb2c79eeb7b23f0800000000000000
+      internalID: -924509033815950475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_4
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 911
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7872254919f2000800000000000000
+      internalID: 13389390124910525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_5
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 896
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1fd296e3a1669a0800000000000000
+      internalID: -6240271378320330286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_6
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 772
+        width: 204
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b642c8d0da6e8e120800000000000000
+      internalID: 2443456428779512939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_7
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 859
+        width: 63
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda777b5e9d22b350800000000000000
+      internalID: 6030933009165155037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_8
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 878
+        width: 59
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84967a7a6271e3a30800000000000000
+      internalID: 4196817357544843592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_9
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 865
+        width: 55
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0eb4e0995cdd8e40800000000000000
+      internalID: 5660422583915691534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_10
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 846
+        width: 58
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5061bf0c293334fd0800000000000000
+      internalID: -2358985074416085499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_11
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 833
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e54a64684b4edc0800000000000000
+      internalID: -3610562512440500691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_12
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 792
+        width: 73
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff01db980533e12a0800000000000000
+      internalID: -6764913169262636801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_13
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 816
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8d4b326b4ca1de0800000000000000
+      internalID: -1361559650764007218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_14
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 821
+        width: 38
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662bd3b6fb2204f10800000000000000
+      internalID: 2251838019218551398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_15
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 813
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ae2425fb3e4c540800000000000000
+      internalID: 5027393494910691840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_16
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 802
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2a13bbe182babd0800000000000000
+      internalID: -2617954645931089156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_17
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 805
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1de3cb8bb7edfe0800000000000000
+      internalID: -1162355620452576792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_18
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 780
+        width: 71
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f06ef480d1817f0800000000000000
+      internalID: -641731025362874599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_19
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 781
+        width: 57
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8bf7cc8fd03d140800000000000000
+      internalID: 4743150194785237196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 790
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14e9bf2d283d1fff0800000000000000
+      internalID: -3989565811745215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_21
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 766
+        width: 52
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba492e74f41040b0800000000000000
+      internalID: -5746570084203541836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_22
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 755
+        width: 76
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7dac0f99399367c0800000000000000
+      internalID: -4079248364706943618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_23
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 739
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86702430e32243ec0800000000000000
+      internalID: -3588205353369467032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_24
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 763
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00f245dc600ea110800000000000000
+      internalID: 1273956212026830862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_25
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 748
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309fcb231fec6cfc0800000000000000
+      internalID: -3474862527136073469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_26
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 727
+        width: 82
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6016ff4cecd08900800000000000000
+      internalID: 684790050872234093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_27
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 719
+        width: 73
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819e59fa2e5ee36f0800000000000000
+      internalID: -702871730052011752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_28
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 744
+        width: 71
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37d425bf7554aa90800000000000000
+      internalID: -7303618688699803846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_29
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 691
+        width: 55
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5ad08db2e576560800000000000000
+      internalID: 7306912462833296822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 700
+        width: 89
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478b96bbf4fb79bb0800000000000000
+      internalID: -4929260917966129036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_31
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 688
+        width: 82
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e897bc7c3aeb130800000000000000
+      internalID: 3584482431941054101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_32
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 671
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84b5e54c8fb47bd0800000000000000
+      internalID: -2633269272915889011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electroshockidle0030_33
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 651
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653be637b8500e5a0800000000000000
+      internalID: -6494184566173027498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      electroshockidle0030_0: 8398317306864654170
+      electroshockidle0030_1: 4104005448887242499
+      electroshockidle0030_10: -2358985074416085499
+      electroshockidle0030_11: -3610562512440500691
+      electroshockidle0030_12: -6764913169262636801
+      electroshockidle0030_13: -1361559650764007218
+      electroshockidle0030_14: 2251838019218551398
+      electroshockidle0030_15: 5027393494910691840
+      electroshockidle0030_16: -2617954645931089156
+      electroshockidle0030_17: -1162355620452576792
+      electroshockidle0030_18: -641731025362874599
+      electroshockidle0030_19: 4743150194785237196
+      electroshockidle0030_2: 8472970934475648704
+      electroshockidle0030_20: -3989565811745215
+      electroshockidle0030_21: -5746570084203541836
+      electroshockidle0030_22: -4079248364706943618
+      electroshockidle0030_23: -3588205353369467032
+      electroshockidle0030_24: 1273956212026830862
+      electroshockidle0030_25: -3474862527136073469
+      electroshockidle0030_26: 684790050872234093
+      electroshockidle0030_27: -702871730052011752
+      electroshockidle0030_28: -7303618688699803846
+      electroshockidle0030_29: 7306912462833296822
+      electroshockidle0030_3: -924509033815950475
+      electroshockidle0030_30: -4929260917966129036
+      electroshockidle0030_31: 3584482431941054101
+      electroshockidle0030_32: -2633269272915889011
+      electroshockidle0030_33: -6494184566173027498
+      electroshockidle0030_4: 13389390124910525
+      electroshockidle0030_5: -6240271378320330286
+      electroshockidle0030_6: 2443456428779512939
+      electroshockidle0030_7: 6030933009165155037
+      electroshockidle0030_8: 4196817357544843592
+      electroshockidle0030_9: 5660422583915691534
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

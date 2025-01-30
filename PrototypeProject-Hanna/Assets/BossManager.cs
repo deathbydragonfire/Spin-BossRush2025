@@ -37,6 +37,12 @@ public class BossManager : MonoBehaviour
         {
             CycleToNextBoss();
         }
+
+        if (Input.GetKeyDown(KeyCode.P)) //Debugging tool, remove me
+        {
+            CycleToNextBoss();
+        }
+        
     }
 
     void PlayNextTrack()

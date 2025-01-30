@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: d4cdfffa05f62e147a74d51e17ea0627
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 62717307271163638
+    second: ZAPmidcombo0027_0
+  - first:
+      213: 2292644310446271510
+    second: ZAPmidcombo0027_1
+  - first:
+      213: -3725813308383878858
+    second: ZAPmidcombo0027_2
+  - first:
+      213: -2243212996181196065
+    second: ZAPmidcombo0027_3
+  - first:
+      213: -7860075536705191794
+    second: ZAPmidcombo0027_4
+  - first:
+      213: 5999345338080963321
+    second: ZAPmidcombo0027_5
+  - first:
+      213: 3312161860852903893
+    second: ZAPmidcombo0027_6
+  - first:
+      213: 5332602248798159287
+    second: ZAPmidcombo0027_7
+  - first:
+      213: 1069134952852716496
+    second: ZAPmidcombo0027_8
+  - first:
+      213: -8197964065621527932
+    second: ZAPmidcombo0027_9
+  - first:
+      213: -7727194416115454029
+    second: ZAPmidcombo0027_10
+  - first:
+      213: 7968178258887296582
+    second: ZAPmidcombo0027_11
+  - first:
+      213: 8160475061172665369
+    second: ZAPmidcombo0027_12
+  - first:
+      213: 7125875078153255135
+    second: ZAPmidcombo0027_13
+  - first:
+      213: -4736986165172700308
+    second: ZAPmidcombo0027_14
+  - first:
+      213: 3042502264556224661
+    second: ZAPmidcombo0027_15
+  - first:
+      213: 6911399309317367127
+    second: ZAPmidcombo0027_16
+  - first:
+      213: 2286260325530023931
+    second: ZAPmidcombo0027_17
+  - first:
+      213: 8529463675724626551
+    second: ZAPmidcombo0027_18
+  - first:
+      213: 4831091731804457508
+    second: ZAPmidcombo0027_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_0
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 349
+        width: 15
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feaa250f01ded000800000000000000
+      internalID: 62717307271163638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 307
+        width: 10
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c68787adb11df10800000000000000
+      internalID: 2292644310446271510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_2
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 0
+        width: 24
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6312b5649804b4cc0800000000000000
+      internalID: -3725813308383878858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_3
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 23
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2841f3aa18ed0e0800000000000000
+      internalID: -2243212996181196065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_4
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 0
+        width: 328
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8003fe91f66be290800000000000000
+      internalID: -7860075536705191794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_5
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 21
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa26319cc4f14350800000000000000
+      internalID: 5999345338080963321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_6
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 0
+        width: 17
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfebb2f9a927fd20800000000000000
+      internalID: 3312161860852903893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 0
+        width: 14
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b14010fd75310a40800000000000000
+      internalID: 5332602248798159287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_8
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 11
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db7db9339456de00800000000000000
+      internalID: 1069134952852716496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_9
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 13
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4823633fd1bfa3e80800000000000000
+      internalID: -8197964065621527932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_10
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 12
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf6e057e9d73c490800000000000000
+      internalID: -7727194416115454029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_11
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 0
+        width: 12
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 646c7f3c8e7a49e60800000000000000
+      internalID: 7968178258887296582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_12
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 0
+        width: 17
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c71a305d4df3170800000000000000
+      internalID: 8160475061172665369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_13
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 0
+        width: 17
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8322b01a134e260800000000000000
+      internalID: 7125875078153255135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 17
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bf0fe2e28d24eb0800000000000000
+      internalID: -4736986165172700308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_15
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 33
+        width: 10
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590023390b3293a20800000000000000
+      internalID: 3042502264556224661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_16
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 0
+        width: 13
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755edbcbd093aef50800000000000000
+      internalID: 6911399309317367127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_17
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 0
+        width: 14
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7394727ad6abf10800000000000000
+      internalID: 2286260325530023931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_18
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 0
+        width: 14
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77af924a50ebe5670800000000000000
+      internalID: 8529463675724626551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZAPmidcombo0027_19
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 0
+        width: 13
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a0887755c7b0340800000000000000
+      internalID: 4831091731804457508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ZAPmidcombo0027_0: 62717307271163638
+      ZAPmidcombo0027_1: 2292644310446271510
+      ZAPmidcombo0027_10: -7727194416115454029
+      ZAPmidcombo0027_11: 7968178258887296582
+      ZAPmidcombo0027_12: 8160475061172665369
+      ZAPmidcombo0027_13: 7125875078153255135
+      ZAPmidcombo0027_14: -4736986165172700308
+      ZAPmidcombo0027_15: 3042502264556224661
+      ZAPmidcombo0027_16: 6911399309317367127
+      ZAPmidcombo0027_17: 2286260325530023931
+      ZAPmidcombo0027_18: 8529463675724626551
+      ZAPmidcombo0027_19: 4831091731804457508
+      ZAPmidcombo0027_2: -3725813308383878858
+      ZAPmidcombo0027_3: -2243212996181196065
+      ZAPmidcombo0027_4: -7860075536705191794
+      ZAPmidcombo0027_5: 5999345338080963321
+      ZAPmidcombo0027_6: 3312161860852903893
+      ZAPmidcombo0027_7: 5332602248798159287
+      ZAPmidcombo0027_8: 1069134952852716496
+      ZAPmidcombo0027_9: -8197964065621527932
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

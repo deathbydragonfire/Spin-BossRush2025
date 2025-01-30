@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 9a7b6f4ae69357a49a436c6e393c85a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6891495325294862757
+    second: djspawnanimation0007_0
+  - first:
+      213: 4537858708900198344
+    second: djspawnanimation0007_1
+  - first:
+      213: -2236132378476657733
+    second: djspawnanimation0007_2
+  - first:
+      213: -5123445039771761040
+    second: djspawnanimation0007_3
+  - first:
+      213: 5640377939633519978
+    second: djspawnanimation0007_4
+  - first:
+      213: 9120280402001590548
+    second: djspawnanimation0007_5
+  - first:
+      213: 5032284708959155582
+    second: djspawnanimation0007_6
+  - first:
+      213: 6926953887486470516
+    second: djspawnanimation0007_7
+  - first:
+      213: 7024846929486793593
+    second: djspawnanimation0007_8
+  - first:
+      213: -4063352292282926133
+    second: djspawnanimation0007_9
+  - first:
+      213: 3812192861778946525
+    second: djspawnanimation0007_10
+  - first:
+      213: -885991156266553822
+    second: djspawnanimation0007_11
+  - first:
+      213: 264016918581033966
+    second: djspawnanimation0007_12
+  - first:
+      213: 9193307327137043901
+    second: djspawnanimation0007_13
+  - first:
+      213: 3912674885027826077
+    second: djspawnanimation0007_14
+  - first:
+      213: 6234300609652392404
+    second: djspawnanimation0007_15
+  - first:
+      213: -5543191981875797653
+    second: djspawnanimation0007_16
+  - first:
+      213: -3196847328915636123
+    second: djspawnanimation0007_17
+  - first:
+      213: -2307024769684864838
+    second: djspawnanimation0007_18
+  - first:
+      213: -2867724099511586413
+    second: djspawnanimation0007_19
+  - first:
+      213: -2491497039930779545
+    second: djspawnanimation0007_20
+  - first:
+      213: -5311286181918641992
+    second: djspawnanimation0007_21
+  - first:
+      213: -3576426311482720936
+    second: djspawnanimation0007_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: djspawnanimation0007_0
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 391
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ed88ca38d7c50a0800000000000000
+      internalID: -6891495325294862757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 117
+        width: 290
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7b8e00476b9fe30800000000000000
+      internalID: 4537858708900198344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 311
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb346260379a7f0e0800000000000000
+      internalID: -2236132378476657733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 203
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076ca2aa1edd5e8b0800000000000000
+      internalID: -5123445039771761040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 102
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d3ec22ad5a64e40800000000000000
+      internalID: 5640377939633519978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 92
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419f24d44beb19e70800000000000000
+      internalID: 9120280402001590548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 103
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75f326d74446d540800000000000000
+      internalID: 5032284708959155582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 111
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479642f2cdb712060800000000000000
+      internalID: 6926953887486470516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_8
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 108
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bcd8920154d7160800000000000000
+      internalID: 7024846929486793593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_9
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 107
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbf4356e921c97c0800000000000000
+      internalID: -4063352292282926133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_10
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 94
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd92d9db531a7e430800000000000000
+      internalID: 3812192861778946525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_11
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 110
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e2890dcb354b3f0800000000000000
+      internalID: -885991156266553822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 80
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb37b61df9f9a300800000000000000
+      internalID: 264016918581033966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 90
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5dff84e40359f70800000000000000
+      internalID: 9193307327137043901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_14
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 84
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d990da3e31d9c4630800000000000000
+      internalID: 3912674885027826077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_15
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 85
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1055daf5fa48650800000000000000
+      internalID: 6234300609652392404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_16
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 78
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b61ef76f240a213b0800000000000000
+      internalID: -5543191981875797653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 36
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560c3deba4482a3d0800000000000000
+      internalID: -3196847328915636123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_18
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 61
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab008e2f13dcbffd0800000000000000
+      internalID: -2307024769684864838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_19
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 69
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391f8c6102cc338d0800000000000000
+      internalID: -2867724099511586413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_20
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 65
+        width: 34
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7681df784ac6c6dd0800000000000000
+      internalID: -2491497039930779545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_21
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 46
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b07c42ab558a46b0800000000000000
+      internalID: -5311286181918641992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djspawnanimation0007_22
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 45
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d36bae73bfd5ec0800000000000000
+      internalID: -3576426311482720936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      djspawnanimation0007_0: -6891495325294862757
+      djspawnanimation0007_1: 4537858708900198344
+      djspawnanimation0007_10: 3812192861778946525
+      djspawnanimation0007_11: -885991156266553822
+      djspawnanimation0007_12: 264016918581033966
+      djspawnanimation0007_13: 9193307327137043901
+      djspawnanimation0007_14: 3912674885027826077
+      djspawnanimation0007_15: 6234300609652392404
+      djspawnanimation0007_16: -5543191981875797653
+      djspawnanimation0007_17: -3196847328915636123
+      djspawnanimation0007_18: -2307024769684864838
+      djspawnanimation0007_19: -2867724099511586413
+      djspawnanimation0007_2: -2236132378476657733
+      djspawnanimation0007_20: -2491497039930779545
+      djspawnanimation0007_21: -5311286181918641992
+      djspawnanimation0007_22: -3576426311482720936
+      djspawnanimation0007_3: -5123445039771761040
+      djspawnanimation0007_4: 5640377939633519978
+      djspawnanimation0007_5: 9120280402001590548
+      djspawnanimation0007_6: 5032284708959155582
+      djspawnanimation0007_7: 6926953887486470516
+      djspawnanimation0007_8: 7024846929486793593
+      djspawnanimation0007_9: -4063352292282926133
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

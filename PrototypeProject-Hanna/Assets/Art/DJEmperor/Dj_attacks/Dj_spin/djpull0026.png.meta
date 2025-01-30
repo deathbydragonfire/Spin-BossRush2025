@@ -1,0 +1,1976 @@
+fileFormatVersion: 2
+guid: 290b58a960baa2a46907353a27df2427
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5924183162252839752
+    second: djpull0026_0
+  - first:
+      213: -2086992275142572571
+    second: djpull0026_1
+  - first:
+      213: -399688364124135772
+    second: djpull0026_2
+  - first:
+      213: 3687611226532743884
+    second: djpull0026_3
+  - first:
+      213: 8164104823773947052
+    second: djpull0026_4
+  - first:
+      213: -7805609749837083981
+    second: djpull0026_5
+  - first:
+      213: -3998757373421106627
+    second: djpull0026_6
+  - first:
+      213: 4753649860066216111
+    second: djpull0026_7
+  - first:
+      213: 4074550315917022300
+    second: djpull0026_8
+  - first:
+      213: 8264860710754332152
+    second: djpull0026_9
+  - first:
+      213: -5169745622578800044
+    second: djpull0026_10
+  - first:
+      213: -4778556349424525066
+    second: djpull0026_11
+  - first:
+      213: -3014839204129436953
+    second: djpull0026_12
+  - first:
+      213: -8797809588866518828
+    second: djpull0026_13
+  - first:
+      213: 1627473492313063886
+    second: djpull0026_14
+  - first:
+      213: -1261621311851117727
+    second: djpull0026_15
+  - first:
+      213: 1911115073944864043
+    second: djpull0026_16
+  - first:
+      213: -3228598671186626604
+    second: djpull0026_17
+  - first:
+      213: 6022236333124212930
+    second: djpull0026_18
+  - first:
+      213: 8767533143710154072
+    second: djpull0026_19
+  - first:
+      213: -3708597815460219711
+    second: djpull0026_20
+  - first:
+      213: -3905935920071731352
+    second: djpull0026_21
+  - first:
+      213: 7408235270697203233
+    second: djpull0026_22
+  - first:
+      213: -5254627108392353944
+    second: djpull0026_23
+  - first:
+      213: -7091419433291385494
+    second: djpull0026_24
+  - first:
+      213: 7277150323516588498
+    second: djpull0026_25
+  - first:
+      213: 2705035967089273242
+    second: djpull0026_26
+  - first:
+      213: 3095210780356961326
+    second: djpull0026_27
+  - first:
+      213: -2530385829765221020
+    second: djpull0026_28
+  - first:
+      213: -6849280393128834408
+    second: djpull0026_29
+  - first:
+      213: -6596206426339866896
+    second: djpull0026_30
+  - first:
+      213: -2015896099912460515
+    second: djpull0026_31
+  - first:
+      213: 1861610259527081828
+    second: djpull0026_32
+  - first:
+      213: -708011847246385345
+    second: djpull0026_33
+  - first:
+      213: -7724573232521931248
+    second: djpull0026_34
+  - first:
+      213: -6338132685621574423
+    second: djpull0026_35
+  - first:
+      213: 8792317380678938241
+    second: djpull0026_36
+  - first:
+      213: 236999209689917143
+    second: djpull0026_37
+  - first:
+      213: -8832788912434336482
+    second: djpull0026_38
+  - first:
+      213: -5621841985871464512
+    second: djpull0026_39
+  - first:
+      213: -7589620451405277769
+    second: djpull0026_40
+  - first:
+      213: 2137271861476187622
+    second: djpull0026_41
+  - first:
+      213: -4692215342570824897
+    second: djpull0026_42
+  - first:
+      213: 3954577290253934878
+    second: djpull0026_43
+  - first:
+      213: -5374458195029639025
+    second: djpull0026_44
+  - first:
+      213: -2869000655212314174
+    second: djpull0026_45
+  - first:
+      213: 4358612054027010444
+    second: djpull0026_46
+  - first:
+      213: 667339827826430224
+    second: djpull0026_47
+  - first:
+      213: -1119938551931329076
+    second: djpull0026_48
+  - first:
+      213: -5169548603567851329
+    second: djpull0026_49
+  - first:
+      213: 5080396362909442303
+    second: djpull0026_50
+  - first:
+      213: 2511993145540370150
+    second: djpull0026_51
+  - first:
+      213: 1716507015163521886
+    second: djpull0026_52
+  - first:
+      213: 2766019568471788461
+    second: djpull0026_53
+  - first:
+      213: 3082186774135378592
+    second: djpull0026_54
+  - first:
+      213: 5014389277992731863
+    second: djpull0026_55
+  - first:
+      213: 3429192587577027302
+    second: djpull0026_56
+  - first:
+      213: -3055767489460430849
+    second: djpull0026_57
+  - first:
+      213: 8486510104143179839
+    second: djpull0026_58
+  - first:
+      213: 6276869171312187152
+    second: djpull0026_59
+  - first:
+      213: -1956122932075820003
+    second: djpull0026_60
+  - first:
+      213: -7270927915100112741
+    second: djpull0026_61
+  - first:
+      213: 4474629869804848898
+    second: djpull0026_62
+  - first:
+      213: 7823263836537341036
+    second: djpull0026_63
+  - first:
+      213: 4048462293752418823
+    second: djpull0026_64
+  - first:
+      213: 7036439915101483829
+    second: djpull0026_65
+  - first:
+      213: -8405721969584459899
+    second: djpull0026_66
+  - first:
+      213: 4862993773505880389
+    second: djpull0026_67
+  - first:
+      213: -8511540856755420988
+    second: djpull0026_68
+  - first:
+      213: -7434381210879191257
+    second: djpull0026_69
+  - first:
+      213: -7157513654866535674
+    second: djpull0026_70
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: djpull0026_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 407
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b4e6ac23de63250800000000000000
+      internalID: 5924183162252839752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 336
+        width: 238
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5842745938903e0800000000000000
+      internalID: -2086992275142572571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_2
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 238
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae168bec85047af0800000000000000
+      internalID: -399688364124135772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 185
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca0a3b6fd60d2330800000000000000
+      internalID: 3687611226532743884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 197
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4691af41abc4170800000000000000
+      internalID: 8164104823773947052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 188
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba82a5d947eca390800000000000000
+      internalID: -7805609749837083981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 182
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ac24eea5f8188c0800000000000000
+      internalID: -3998757373421106627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_7
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 184
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa805df9c5b58f140800000000000000
+      internalID: 4753649860066216111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_8
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 172
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5490b7ace5bb8830800000000000000
+      internalID: 4074550315917022300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd289ef60fa2b270800000000000000
+      internalID: 8264860710754332152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 175
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a5f0b2fbf5148b0800000000000000
+      internalID: -5169745622578800044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_11
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 174
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f02d5d61582fadb0800000000000000
+      internalID: -4778556349424525066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_12
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 175
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea81f697b32926d0800000000000000
+      internalID: -3014839204129436953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 162
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0f51eaac6e7e580800000000000000
+      internalID: -8797809588866518828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 168
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec14faeb482f59610800000000000000
+      internalID: 1627473492313063886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_15
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 165
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1634d0ae912dd7ee0800000000000000
+      internalID: -1261621311851117727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_16
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 164
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25c063c805a58a10800000000000000
+      internalID: 1911115073944864043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 157
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d77f994d96b133d0800000000000000
+      internalID: -3228598671186626604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_18
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 158
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8d15da908439350800000000000000
+      internalID: 6022236333124212930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_19
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 148
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85dbe4b11f88ca970800000000000000
+      internalID: 8767533143710154072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_20
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c434b29fe9688cc0800000000000000
+      internalID: -3708597815460219711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_21
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 140
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8679fa8a9f35bc9c0800000000000000
+      internalID: -3905935920071731352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_22
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 116
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1263d6a6ab65fc660800000000000000
+      internalID: 7408235270697203233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 122
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fb2213c70d317b0800000000000000
+      internalID: -5254627108392353944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_24
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 102
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a657d5de897369d90800000000000000
+      internalID: -7091419433291385494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 107
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1435ac9a1adf460800000000000000
+      internalID: 7277150323516588498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_26
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 109
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99e20351e73a8520800000000000000
+      internalID: 2705035967089273242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_27
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 101
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24e22c3ec564fa20800000000000000
+      internalID: 3095210780356961326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_28
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 103
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46579209e7342ecd0800000000000000
+      internalID: -2530385829765221020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_29
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 107
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a028085c772f0a0800000000000000
+      internalID: -6849280393128834408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_30
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 111
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f60dd414319574a0800000000000000
+      internalID: -6596206426339866896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_31
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 105
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d175f948d291604e0800000000000000
+      internalID: -2015896099912460515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_32
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 94
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f9555faa4c5d910800000000000000
+      internalID: 1861610259527081828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_33
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 109
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f6c14e9f2ac26f0800000000000000
+      internalID: -708011847246385345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_34
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 97
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0161a02529dccc490800000000000000
+      internalID: -7724573232521931248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_35
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 96
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4cb3e37ed6a08a0800000000000000
+      internalID: -6338132685621574423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_36
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 97
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e6cd3f216940a70800000000000000
+      internalID: 8792317380678938241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_37
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6ad99868df94300800000000000000
+      internalID: 236999209689917143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_38
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 87
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1da7524841ab6580800000000000000
+      internalID: -8832788912434336482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_39
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 81
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c731c8ef743bf1b0800000000000000
+      internalID: -5621841985871464512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_40
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 79
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5d2f539604ca690800000000000000
+      internalID: -7589620451405277769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_41
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 70
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edd9bb2f6d19ad10800000000000000
+      internalID: 2137271861476187622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_42
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 72
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b9d60a107e1eeb0800000000000000
+      internalID: -4692215342570824897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11a96ed71b71e630800000000000000
+      internalID: 3954577290253934878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 71
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8042192fb61a65b0800000000000000
+      internalID: -5374458195029639025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_45
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 62
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c105bdca134f28d0800000000000000
+      internalID: -2869000655212314174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_46
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 67
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81040af196ec7c30800000000000000
+      internalID: 4358612054027010444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_47
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 65
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0119016a90ed24900800000000000000
+      internalID: 667339827826430224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_48
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 67
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc52ed912dd2570f0800000000000000
+      internalID: -1119938551931329076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_49
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 60
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8b83b3fe21248b0800000000000000
+      internalID: -5169548603567851329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_50
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 39
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff067613391318640800000000000000
+      internalID: 5080396362909442303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_51
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 35
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee562ee4746cd220800000000000000
+      internalID: 2511993145540370150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ba94d290242d710800000000000000
+      internalID: 1716507015163521886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_53
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 34
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab4a8c7420e26620800000000000000
+      internalID: 2766019568471788461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_54
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 23
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a21fbb7a8026ca20800000000000000
+      internalID: 3082186774135378592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_55
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 29
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4c8402b70b69540800000000000000
+      internalID: 5014389277992731863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_56
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 23
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea6ee06d70f69f20800000000000000
+      internalID: 3429192587577027302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_57
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 26
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7168298abb795d0800000000000000
+      internalID: -3055767489460430849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_58
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30b73ce9f326c570800000000000000
+      internalID: 8486510104143179839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_59
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 15
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017d9a9414beb1750800000000000000
+      internalID: 6276869171312187152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_60
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 14
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c00a8ae847ad4e0800000000000000
+      internalID: -1956122932075820003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_61
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b987cf09599781b90800000000000000
+      internalID: -7270927915100112741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2070213b824191e30800000000000000
+      internalID: 4474629869804848898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_63
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 11
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64c7f88201d19c60800000000000000
+      internalID: 7823263836537341036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 9
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7021da9a1070f2830800000000000000
+      internalID: 4048462293752418823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_65
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533f00772d476a160800000000000000
+      internalID: 7036439915101483829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_66
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 4
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fa8327760e85b80800000000000000
+      internalID: -8405721969584459899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_67
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54121ce5213dc7340800000000000000
+      internalID: 4862993773505880389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_68
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c08ed5dfaee0e980800000000000000
+      internalID: -8511540856755420988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_69
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72715b08da5c3d890800000000000000
+      internalID: -7434381210879191257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: djpull0026_70
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b1ca6c0476bac90800000000000000
+      internalID: -7157513654866535674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      djpull0026_0: 5924183162252839752
+      djpull0026_1: -2086992275142572571
+      djpull0026_10: -5169745622578800044
+      djpull0026_11: -4778556349424525066
+      djpull0026_12: -3014839204129436953
+      djpull0026_13: -8797809588866518828
+      djpull0026_14: 1627473492313063886
+      djpull0026_15: -1261621311851117727
+      djpull0026_16: 1911115073944864043
+      djpull0026_17: -3228598671186626604
+      djpull0026_18: 6022236333124212930
+      djpull0026_19: 8767533143710154072
+      djpull0026_2: -399688364124135772
+      djpull0026_20: -3708597815460219711
+      djpull0026_21: -3905935920071731352
+      djpull0026_22: 7408235270697203233
+      djpull0026_23: -5254627108392353944
+      djpull0026_24: -7091419433291385494
+      djpull0026_25: 7277150323516588498
+      djpull0026_26: 2705035967089273242
+      djpull0026_27: 3095210780356961326
+      djpull0026_28: -2530385829765221020
+      djpull0026_29: -6849280393128834408
+      djpull0026_3: 3687611226532743884
+      djpull0026_30: -6596206426339866896
+      djpull0026_31: -2015896099912460515
+      djpull0026_32: 1861610259527081828
+      djpull0026_33: -708011847246385345
+      djpull0026_34: -7724573232521931248
+      djpull0026_35: -6338132685621574423
+      djpull0026_36: 8792317380678938241
+      djpull0026_37: 236999209689917143
+      djpull0026_38: -8832788912434336482
+      djpull0026_39: -5621841985871464512
+      djpull0026_4: 8164104823773947052
+      djpull0026_40: -7589620451405277769
+      djpull0026_41: 2137271861476187622
+      djpull0026_42: -4692215342570824897
+      djpull0026_43: 3954577290253934878
+      djpull0026_44: -5374458195029639025
+      djpull0026_45: -2869000655212314174
+      djpull0026_46: 4358612054027010444
+      djpull0026_47: 667339827826430224
+      djpull0026_48: -1119938551931329076
+      djpull0026_49: -5169548603567851329
+      djpull0026_5: -7805609749837083981
+      djpull0026_50: 5080396362909442303
+      djpull0026_51: 2511993145540370150
+      djpull0026_52: 1716507015163521886
+      djpull0026_53: 2766019568471788461
+      djpull0026_54: 3082186774135378592
+      djpull0026_55: 5014389277992731863
+      djpull0026_56: 3429192587577027302
+      djpull0026_57: -3055767489460430849
+      djpull0026_58: 8486510104143179839
+      djpull0026_59: 6276869171312187152
+      djpull0026_6: -3998757373421106627
+      djpull0026_60: -1956122932075820003
+      djpull0026_61: -7270927915100112741
+      djpull0026_62: 4474629869804848898
+      djpull0026_63: 7823263836537341036
+      djpull0026_64: 4048462293752418823
+      djpull0026_65: 7036439915101483829
+      djpull0026_66: -8405721969584459899
+      djpull0026_67: 4862993773505880389
+      djpull0026_68: -8511540856755420988
+      djpull0026_69: -7434381210879191257
+      djpull0026_7: 4753649860066216111
+      djpull0026_70: -7157513654866535674
+      djpull0026_8: 4074550315917022300
+      djpull0026_9: 8264860710754332152
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
