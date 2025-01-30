@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public abstract class Health : MonoBehaviour
@@ -16,13 +16,13 @@ public abstract class Health : MonoBehaviour
 
             if (health <= 0)
             {
-                HandleDeath();
+                HandleDeath(); // ✅ Call the appropriate death behavior (player OR boss)
             }
         }
     }
 
     [Header("Death Screen")]
-    public DeathScreenHandler deathScreenHandler; // Reference to the death screen manager
+    public DeathScreenHandler deathScreenHandler; // Reference to the death screen manager (ONLY for Player)
 
     void Start()
     {
@@ -40,30 +40,19 @@ public abstract class Health : MonoBehaviour
         CurrentHP = Mathf.Min(health + heal, maxHealth); // Increase health
     }
 
-    private void HandleDeath()
+    protected virtual void HandleDeath() // ✅ Now this can be overridden by subclasses
     {
-        Debug.Log("Player is dead!"); // Debug log for testing
-        if (deathScreenHandler != null)
-        {
-            deathScreenHandler.TriggerDeathScreen(); // Call the death screen handler
-        }
-        else
-        {
-            Debug.LogWarning("DeathScreenHandler is not assigned!");
-        }
+        Debug.Log($"{gameObject.name} has died! (DEFAULT HANDLING - Should be overridden)");
     }
 
     private void UIUpdate()
     {
-        // Display the current health in the console for testing
-        Debug.Log("Current Health: " + health);
-
-        // Update health UI here (e.g., health bar)
+        Debug.Log("Current Health: " + health); // ✅ Debug health updates
     }
 
     internal void TakeDamage(float damage)
     {
-        CurrentHP = Mathf.Max(health - damage, 0f); // Reduce health, ensure it doesn't go below 0
-        Debug.Log($"Took damage: {damage}. Current health: {health}"); // For testing
+        CurrentHP = Mathf.Max(health - damage, 0f);
+        Debug.Log($"{gameObject.name} took {damage} damage! Current HP: {health}");
     }
 }

@@ -83,19 +83,16 @@ public class VamVamController : MonoBehaviour
 
 
     // Slash Attack
-    public void PerformSlashAttack()
+    public IEnumerator PerformSlashAttack()
     {
-        if (!isAttacking)
-        {
-            StartCoroutine(SlashSequence());
-        }
+        yield return StartCoroutine(SlashSequence());
+        yield return null; // Ensures a return value in all paths
     }
-    public void StartVIPAreaAttack()
+
+    public IEnumerator StartVIPAreaAttack()
     {
-        if (!isAttacking)
-        {
-            StartCoroutine(VIPAreaSequence());
-        }
+        yield return StartCoroutine(VIPAreaSequence());
+        yield return null; // Ensures a return value in all paths
     }
 
 
@@ -116,7 +113,7 @@ public class VamVamController : MonoBehaviour
     }
 
 
-    private IEnumerator SlashSequence()
+    public IEnumerator SlashSequence()
     {
         isAttacking = true;
 
@@ -152,22 +149,21 @@ public class VamVamController : MonoBehaviour
     }
 
     // Hover in the upper corner
-    private void HoverInCorner()
+    public void HoverInCorner()
     {
         Vector3 hoverPosition = new Vector3(-5f, 5f, 0f); // Adjust position as needed
         transform.position = Vector3.Lerp(transform.position, hoverPosition, Time.deltaTime * vamVamSpeed);
     }
 
     // Concert Attack
-    public void PerformConcertAttack()
+    public IEnumerator PerformConcertAttack()
     {
-        if (!isAttacking)
-        {
-            StartCoroutine(ConcertSequence());
-        }
+        yield return StartCoroutine(ConcertSequence());
+        yield return null; // Ensures a return value in all paths
     }
 
-    private IEnumerator ConcertSequence()
+
+    public IEnumerator ConcertSequence()
     {
         isAttacking = true;
 
@@ -226,7 +222,7 @@ public class VamVamController : MonoBehaviour
     }
 
 
-    private IEnumerator DescendToSecondPosition(float speed)
+    public IEnumerator DescendToSecondPosition(float speed)
     {
         Vector3 secondPosition = new Vector3(0.25f, 2.13f, -13.25f);
         while (Vector3.Distance(transform.position, secondPosition) > 0.1f)
@@ -236,7 +232,7 @@ public class VamVamController : MonoBehaviour
         }
     }
 
-    private IEnumerator TrussAscend(GameObject truss)
+    public IEnumerator TrussAscend(GameObject truss)
     {
         // Target position off the top of the screen
         Vector3 targetPosition = new Vector3(truss.transform.position.x, 10f, truss.transform.position.z);
@@ -252,7 +248,7 @@ public class VamVamController : MonoBehaviour
         Destroy(truss);
     }
 
-    private IEnumerator FireLasers()
+    public IEnumerator FireLasers()
     {
         float targetRadius = 3f; // Radius around the player
 
@@ -303,7 +299,7 @@ public class VamVamController : MonoBehaviour
             Destroy(laser.gameObject);
         }
     }
-    private IEnumerator VIPAreaSequence()
+    public IEnumerator VIPAreaSequence()
     {
         isVipActive = true;
 
@@ -336,7 +332,7 @@ public class VamVamController : MonoBehaviour
         isVipActive = false;
     }
 
-private bool IsPlayerInVIPArea(UnityEngine.Transform player, GameObject vipArea)
+    public bool IsPlayerInVIPArea(UnityEngine.Transform player, GameObject vipArea)
     {
         // Get the bounds of the Mesh Collider
         MeshCollider meshCollider = vipArea.GetComponent<MeshCollider>();

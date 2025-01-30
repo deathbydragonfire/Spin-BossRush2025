@@ -25,6 +25,7 @@ public class DJEmperorController : MonoBehaviour
     public float stingCooldown = 4f; // Cooldown between sting attacks
     public float stingSpeed = 10f; // Speed at which the sting moves
     private bool canSting = true; // Cooldown tracker
+    public float stingAttackRange = 5f; // Adjust this as neede
 
     public GameObject eraStingPrefab; // Prefab for the ERA-Sting object
     public float eraStingRange = 5f; // Range within which the ERA-Sting can target the player
@@ -138,7 +139,7 @@ public class DJEmperorController : MonoBehaviour
         isSlamming = false;
     }
 
-    private IEnumerator ERAERASequence()
+    public  IEnumerator ERAERASequence()
     {
         isPerformingERA = true;
 
@@ -170,7 +171,7 @@ public class DJEmperorController : MonoBehaviour
 
 
 
-    private IEnumerator PerformERASlam()
+    public  IEnumerator PerformERASlam()
     {
         Debug.Log("Performing ERA-Slam!");
 
@@ -226,7 +227,7 @@ public class DJEmperorController : MonoBehaviour
         yield return null;
     }
 
-    private IEnumerator StingRoutine()
+    public  IEnumerator StingRoutine()
     {
         canSting = false;
 
