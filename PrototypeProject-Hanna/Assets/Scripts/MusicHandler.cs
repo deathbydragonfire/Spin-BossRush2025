@@ -87,11 +87,11 @@ public class MusicHandler : MonoBehaviour
 
     private void HandlePlayerInputs()
     {
-        if (Input.GetKey(KeyCode.Q)) // Speed up
+        if (Input.GetAxis("Speed") > 0) // Speed up
         {
             playerMultiplier = speedUpMultiplier;
         }
-        else if (Input.GetKey(KeyCode.E)) // Slow down
+        else if (Input.GetAxis("Speed") < 0) // Slow down
         {
             playerMultiplier = slowDownMultiplier;
         }

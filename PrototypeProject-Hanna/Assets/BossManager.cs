@@ -151,4 +151,9 @@ public class BossManager : MonoBehaviour
         }
 
     }
+
+    public float GetCurrentBossHP()
+    {
+        return bosses[currentBossIndex].currentHP;
+    }
 }
