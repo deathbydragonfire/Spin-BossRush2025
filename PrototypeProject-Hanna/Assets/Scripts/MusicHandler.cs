@@ -87,16 +87,16 @@ public class MusicHandler : MonoBehaviour
 
     private void HandlePlayerInputs()
     {
-        if (Input.GetKey(KeyCode.Q)) // ✅ Speed up when Q is held
+        if (Input.GetAxis("Speed") > 0) // 
         {
             playerMultiplier = speedUpMultiplier;
-            currentTempo += Time.deltaTime * tempoBuildRate; // ✅ Gain tempo while speeding up
-            currentTempo = Mathf.Min(currentTempo, maxTempo); // ✅ Clamp to max
+            currentTempo += Time.deltaTime * tempoBuildRate; // 
+            currentTempo = Mathf.Min(currentTempo, maxTempo); // 
         }
-        else if (Input.GetKey(KeyCode.E) && currentTempo > 0) // ✅ Only slow down if tempo is available
+        else if (Input.GetAxis("Speed") < 0 && currentTempo > 0) // 
         {
             playerMultiplier = slowDownMultiplier;
-            currentTempo -= Time.deltaTime * tempoBurnRate; // ✅ Reduce tempo over time
+            currentTempo -= Time.deltaTime * tempoBurnRate; //
             currentTempo = Mathf.Max(currentTempo, 0); // Prevent it from going negative
         }
         else

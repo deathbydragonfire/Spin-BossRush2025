@@ -16,13 +16,18 @@ public class DJLogic : MonoBehaviour
 
     void Start()
     {
+
+        if (controller == null)
+        {
+            Debug.LogError("DJLogic: Controller is not assigned!");
+            return;
+        }
         // Assign attack methods correctly using method references, NOT calling them
         attackMethods = new AttackMethod[]
         {
             controller.StingRoutine,
             controller.ERAERASequence
         };
-
         StartCoroutine(BossLogicLoop());
     }
 

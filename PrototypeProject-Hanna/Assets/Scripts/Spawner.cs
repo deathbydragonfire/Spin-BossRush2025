@@ -54,7 +54,7 @@ public class Spawner : MonoBehaviour
             }
 
             // Set kill time
-            float killTime = spawn.overrideKillTime.HasValue ? spawn.overrideKillTime.Value : pattern.defaultKillTime;
+            float killTime = spawn.useOverrideKillTime ? spawn.overrideKillTime : pattern.defaultKillTime;
             Hazard hazardScript = spawnedObject.GetComponent<Hazard>();
             if (hazardScript != null)
             {
@@ -69,5 +69,6 @@ public class Spawner : MonoBehaviour
 
         yield return null; // Allow the coroutine to finish immediately
     }
+
 
 }

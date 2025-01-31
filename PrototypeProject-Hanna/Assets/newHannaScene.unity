@@ -615,7 +615,7 @@ MonoBehaviour:
   speedUpMultiplier: 1.5
   slowDownMultiplier: 0.5
   maxTempo: 100
-  tempoBurnRate: 15
+  tempoBurnRate: 30
   tempoBuildRate: 7.5
   currentPlaybackSpeed: 0
   currentSpinSpeed: 0
@@ -5259,7 +5259,7 @@ MonoBehaviour:
   controller: {fileID: 1781894138}
   idleTime: 2
   player: {fileID: 883252572}
-  stingAttackRange: 20
+  stingAttackRange: 5
 --- !u!1001 &1786345693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5365,6 +5365,71 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 133228113}
   m_SourcePrefab: {fileID: 100100000, guid: d5a1e8add4f9be54c8ec621877910a8e, type: 3}
+--- !u!1 &1786392282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786392285}
+  - component: {fileID: 1786392284}
+  - component: {fileID: 1786392283}
+  m_Layer: 0
+  m_Name: HazardSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1786392283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786392282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772ddc09b627aac4d94fe57c4f658aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinningPlatform: {fileID: 2020584838}
+  hazardPatterns:
+  - {fileID: 11400000, guid: 308e038a91e7dc2459fd4283eee01ae6, type: 2}
+  - {fileID: 11400000, guid: 6958e9ebf0cabee4cb2027970aed7c6c, type: 2}
+  - {fileID: 11400000, guid: 81aa0baaf06e56c4787a4409724a147b, type: 2}
+  - {fileID: 11400000, guid: b40ae8eda9c9db846b2129ae6cc2ee6b, type: 2}
+--- !u!114 &1786392284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786392282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6845feae72907b743ac7a306791e2168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1786392283}
+  spawnInterval: 5
+--- !u!4 &1786392285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786392282}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.46525505, z: -0, w: 0.8851767}
+  m_LocalPosition: {x: -7.37, y: 0.15, z: -4.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 55.453, z: 0}
 --- !u!1 &1804051981
 GameObject:
   m_ObjectHideFlags: 0
@@ -6496,3 +6561,4 @@ SceneRoots:
   - {fileID: 84841984}
   - {fileID: 478385149}
   - {fileID: 624315337}
+  - {fileID: 1786392285}

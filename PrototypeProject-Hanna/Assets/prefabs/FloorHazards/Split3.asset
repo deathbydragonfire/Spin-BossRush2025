@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528b2b27684647f4397447d96e28424e, type: 3}
+  m_Name: Split3
+  m_EditorClassIdentifier: 
+  defaultDelay: 0.5
+  defaultKillTime: 5
+  spawnData:
+  - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
+    localPosition: {x: 5, y: 0, z: 0}
+    useOverrideDelay: 0
+    overrideDelay: 0
+    useOverrideKillTime: 0
+    overrideKillTime: 0
+  - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
+    localPosition: {x: 0, y: 0, z: -2.5}
+    useOverrideDelay: 0
+    overrideDelay: 0
+    useOverrideKillTime: 0
+    overrideKillTime: 0
+  - hazardPrefab: {fileID: 1323003545995992295, guid: 982ca27c89d3cb041a983240c8ca4c80, type: 3}
+    localPosition: {x: 5, y: 0, z: -5}
+    useOverrideDelay: 0
+    overrideDelay: 0
+    useOverrideKillTime: 0
+    overrideKillTime: 0

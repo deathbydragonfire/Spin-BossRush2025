@@ -8,11 +8,15 @@ public class HazardPattern : ScriptableObject
     {
         public GameObject hazardPrefab; // Hazard prefab to spawn
         public Vector3 localPosition;   // Position relative to the spawner
-        public float? overrideDelay;    // Optional override for delay
-        public float? overrideKillTime; // Optional override for kill time
+
+        [SerializeField] public bool useOverrideDelay = false;
+        [SerializeField] public float overrideDelay = 0.5f;
+
+        [SerializeField] public bool useOverrideKillTime = false;
+        [SerializeField] public float overrideKillTime = 5f;
     }
 
-    public float defaultDelay = 0.5f; // Default delay between spawns
-    public float defaultKillTime = 5f; // Default time before hazards are destroyed
-    public SpawnData[] spawnData;     // Array of spawn instructions
+    [SerializeField] public float defaultDelay = 0.5f; // Default delay between spawns
+    [SerializeField] public float defaultKillTime = 5f; // Default time before hazards are destroyed
+    [SerializeField] public SpawnData[] spawnData;     // Array of spawn instructions
 }
