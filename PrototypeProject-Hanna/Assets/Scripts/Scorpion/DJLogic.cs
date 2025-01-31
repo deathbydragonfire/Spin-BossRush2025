@@ -44,20 +44,26 @@ public class DJLogic : MonoBehaviour
         if (isAttacking) return; // Don't interrupt ongoing attacks
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
         List<int> validAttacks = new List<int>();
 
-        // Check if player is within range for Sting Attack
+        // Loop through all attack options
         for (int i = 0; i < attackMethods.Length; i++)
         {
-            if (i != 0 || distanceToPlayer <= stingAttackRange) // Only allow Sting if player is close
-            {
-                validAttacks.Add(i);
-            }
+            if (i == 0 && distanceToPlayer > stingAttackRange) continue; // Only allow Sting if player is close
+
+            validAttacks.Add(i); // Add attack to the list
+        }
+
+        // **Include Poison Attack as an Option (30% Chance)**
+        if (Random.value <= 0.3f) // 30% chance
+        {
+            controller.PerformPoisonAttack();
+            return; // Exit to prevent choosing another attack
         }
 
         if (validAttacks.Count == 0) return; // If no valid attacks, do nothing
 
+        // Pick a random attack from the valid list
         int randomIndex = validAttacks[Random.Range(0, validAttacks.Count)];
         StartCoroutine(PerformAttack(randomIndex));
     }

@@ -4901,7 +4901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d108f7fbd1b56c42bc1c67cf30bf2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeOfDuration: {x: 7, y: 15}
+  rangeOfDuration: {x: 7, y: 15.4}
   damage: 1
   damageRate: 0.1
   radius: 1.1

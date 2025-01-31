@@ -32,6 +32,12 @@ public class DJEmperorController : MonoBehaviour
     public float eraStingDamage = 20f; // Damage dealt by the ERA-Sting
     public float eraStingSpeed = 15f; // Speed at which the ERA-Sting moves
 
+    public GameObject poisonProjectilePrefab; // Assign in Inspector
+    public UnityEngine.Transform poisonSpawnPoint; // Assign where the projectile should start
+    public float poisonCooldown = 5f; // Cooldown between poison attacks
+    private bool canPoison = true; // Cooldown tracker
+
+
     public float pushPullDuration = 3f; // Duration of the push/pull effect
     public float pushPullStrength = 10f; // Strength of the push/pull effect
 
@@ -90,6 +96,56 @@ public class DJEmperorController : MonoBehaviour
             // Reset the timer if the player moves out of range
             playerProximityTimer = 0f;
         }
+    }
+    public void PerformPoisonAttack()
+    {
+        if (canPoison)
+        {
+            StartCoroutine(PoisonAttackRoutine());
+        }
+    }
+
+    public IEnumerator PoisonAttackRoutine()
+    {
+        canPoison = false;
+
+        int poisonCount = Random.Range(3, 6); // Fire between 3-5 projectiles
+
+        for (int i = 0; i < poisonCount; i++)
+        {
+            if (poisonProjectilePrefab != null && poisonSpawnPoint != null)
+            {
+                Debug.Log($"DJ EMPEROR fires poison shot {i + 1}");
+
+                // Spawn poison projectile
+                GameObject poisonProjectile = Instantiate(poisonProjectilePrefab, poisonSpawnPoint.position, Quaternion.identity);
+
+                // Give it a random spread angle for variety
+                float spreadAngle = Random.Range(-15f, 15f);
+                poisonProjectile.transform.Rotate(0, spreadAngle, 0);
+
+                // Ensure it has a script to handle its movement
+                NethertoxinProjectile projectile = poisonProjectile.GetComponent<NethertoxinProjectile>();
+                if (projectile != null)
+                {
+                    projectile.enabled = true; // Make sure it's active
+                }
+                else
+                {
+                    Debug.LogError("NethertoxinProjectile script missing on poisonPrefab!");
+                }
+
+                yield return new WaitForSeconds(0.3f); // Short delay between each shot
+            }
+            else
+            {
+                Debug.LogError("Poison prefab or spawn point not assigned!");
+            }
+        }
+
+        // Wait before DJ EMPEROR can use poison again
+        yield return new WaitForSeconds(poisonCooldown);
+        canPoison = true;
     }
 
     private void AdjustRecordSpeed(float adjustment)

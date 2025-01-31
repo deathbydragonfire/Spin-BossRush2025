@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BossHUDscreenmask_0: 3348221246956408255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

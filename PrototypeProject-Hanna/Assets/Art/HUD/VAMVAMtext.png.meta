@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VAMVAMtext_0: 4882659842525415084
+      VAMVAMtext_1: -3996767744763743074
+      VAMVAMtext_2: 9024841484272251367
+      VAMVAMtext_3: 905983983984932136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

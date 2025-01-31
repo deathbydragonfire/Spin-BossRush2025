@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tempo sliderhud_0: -284052183117457924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

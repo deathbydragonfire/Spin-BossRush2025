@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Misscelanioustext_0: 6102229791898236660
+      Misscelanioustext_1: -1369455747770403619
+      Misscelanioustext_2: -8968359173035096455
+      Misscelanioustext_3: 4276301537495776303
+      Misscelanioustext_4: 8193504806839723207
+      Misscelanioustext_5: -5281305310792925502
+      Misscelanioustext_6: 4582180271966909071
+      Misscelanioustext_7: 1137366258456471494
+      Misscelanioustext_8: 2356954676450259819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

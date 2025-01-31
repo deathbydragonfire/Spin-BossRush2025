@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Zapriottext_0: -2098390762347040960
+      Zapriottext_1: -4930490090291444120
+      Zapriottext_2: -552842594126997171
+      Zapriottext_3: 9104305188073189459
+      Zapriottext_4: 2484952899480872244
+      Zapriottext_5: 7169964801467846138
+      Zapriottext_6: -3894993195707703974
+      Zapriottext_7: 8471924390915502470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
