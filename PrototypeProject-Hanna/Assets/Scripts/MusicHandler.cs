@@ -29,7 +29,7 @@ public class MusicHandler : MonoBehaviour
     private int currentTrackIndex = 0; // Index of the current track
     public BossManager bossManager; // Reference to the BossManager for handling boss logic
     private bool isInitialized = false;
-
+    public bool isPaused = false; //  New flag to track pause state
     IEnumerator Start()
     {
         Debug.Log("[MusicHandler] Waiting for scene to stabilize...");
@@ -67,10 +67,12 @@ public class MusicHandler : MonoBehaviour
         RotateRecord(); // Rotate the record
         if (!SimplePauseMenu.IsGamePaused) // Only run this if NOT paused
         {
-            if (!audioSource.isPlaying && bossTracks.Count > 0)
+            if (!audioSource.isPlaying && bossTracks.Count > 0 && !SimplePauseMenu.IsGamePaused)
             {
                 PlayNextTrack();
             }
+
+
         }
     }
 

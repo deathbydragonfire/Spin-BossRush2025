@@ -15,6 +15,7 @@ public class DJEmperorController : MonoBehaviour
     public float eraSlamDelay = 1f; // Delay before the ERA-Slam happens
     public GameObject eraSlamEffectPrefab; // Visual effect for the ERA-Slam
     public float eraCooldown = 5f; // Cooldown before ERA-ERA can be used again
+    private Animator Dj_Emperor;
 
     private float playerProximityTimer = 0f; // Tracks how long the player has been close
     private bool isSlamming = false; // Prevents multiple slams at once

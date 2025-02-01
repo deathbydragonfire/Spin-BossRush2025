@@ -7,6 +7,11 @@ TagManager:
   - Boss 2
   - record
   - Backstop
+  - boss
+  - bosseffect
+  - zapeffect
+  - vameffect
+  - DJeffect
   layers:
   - Default
   - TransparentFX

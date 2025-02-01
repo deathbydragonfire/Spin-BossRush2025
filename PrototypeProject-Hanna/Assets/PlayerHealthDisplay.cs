@@ -2,16 +2,20 @@
 
 public class PlayerHealth : Health
 {
+    [Header("Death Screen")]
+    public DeathScreenHandler deathScreenHandler;
+
     protected override void HandleDeath()
     {
-        Debug.Log("Player is dead! Triggering Death Screen.");
+        Debug.Log("PLAYER HAS DIED!");
+
         if (deathScreenHandler != null)
         {
-            deathScreenHandler.TriggerDeathScreen(); // ✅ This ONLY happens for the player
+            deathScreenHandler.TriggerDeathScreen();
         }
         else
         {
-            Debug.LogWarning("DeathScreenHandler is not assigned!");
+            Debug.LogError("DeathScreenHandler is not assigned!");
         }
     }
 }

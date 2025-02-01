@@ -5,7 +5,7 @@ public class SimplePauseMenu : MonoBehaviour
     public GameObject pauseMenuCanvas; // Reference to the PauseMenuCanvas
     public AudioSource musicSource; // Reference to the music
     public AudioClip recordScratch; // Record scratch sound effect
-    private bool isPaused = false;
+    public bool isGamePaused = false;
     public static bool IsGamePaused { get; private set; } // This allows other scripts to check if the game is paused
 
     void Update()
@@ -13,7 +13,7 @@ public class SimplePauseMenu : MonoBehaviour
         // Toggle pause menu when Escape is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (isGamePaused)
             {
                 ResumeGame();
             }
@@ -40,24 +40,22 @@ public class SimplePauseMenu : MonoBehaviour
 
         Time.timeScale = 0;
         IsGamePaused = true; // Tell other scripts the game is paused
-        isPaused = true;
+        isGamePaused = true;
     }
 
     public void ResumeGame()
     {
-        Debug.Log("Resume button clicked");
         pauseMenuCanvas.SetActive(false);
 
         if (musicSource != null)
         {
-            musicSource.UnPause();
+            musicSource.UnPause(); //  Resume from where it left off
         }
 
         Time.timeScale = 1;
-        IsGamePaused = false; // Tell other scripts the game is running again
-        isPaused = false;
+        IsGamePaused = false;
+        isGamePaused = false;
     }
-
 
     public void QuitGame()
     {

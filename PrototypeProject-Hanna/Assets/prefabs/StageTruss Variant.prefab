@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageTruss Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6564635310000902180, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
+      propertyPath: m_TagString
+      value: vameffect
+      objectReference: {fileID: 0}
     - target: {fileID: 8418577282152359673, guid: e8fb4bd28688b7c44a718f0156df47a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.73

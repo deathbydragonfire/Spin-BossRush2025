@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2333630128767004795}
   m_Layer: 0
   m_Name: VIPArea
-  m_TagString: Untagged
+  m_TagString: vameffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

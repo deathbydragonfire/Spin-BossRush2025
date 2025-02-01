@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class BossManager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class BossManager : MonoBehaviour
     void Update()
     {
         // Check if the current track has ended
-        if (!audioSource.isPlaying && !isLooping)
+        if (!audioSource.isPlaying && !isLooping && !SimplePauseMenu.IsGamePaused)
         {
             CycleToNextBoss();
         }
@@ -42,7 +43,7 @@ public class BossManager : MonoBehaviour
         {
             CycleToNextBoss();
         }
-        
+
     }
 
     void PlayNextTrack()
@@ -79,7 +80,13 @@ public class BossManager : MonoBehaviour
 
     void CycleToNextBoss()
     {
-        // Save the current boss's state
+        // **CLEAN UP LINGERING EFFECTS BEFORE SWITCHING BOSSES**
+        foreach (GameObject effect in GameObject.FindGameObjectsWithTag("BossEffect"))
+        {
+            effect.SetActive(false); //  Instead of destroying, disable the objects
+        }
+
+        // Save the current boss's HP before deactivating
         BossData currentBossData = bosses[currentBossIndex];
         if (!currentBossData.isDefeated)
         {
@@ -90,7 +97,7 @@ public class BossManager : MonoBehaviour
         // Move to the next boss
         currentBossIndex = (currentBossIndex + 1) % bosses.Count;
 
-        // Check if all bosses but one are defeated
+        // Check if only one boss remains
         if (bosses.FindAll(b => !b.isDefeated).Count == 1)
         {
             isLooping = true;
@@ -99,38 +106,77 @@ public class BossManager : MonoBehaviour
         PlayNextTrack();
     }
 
+
+
     public void BossDefeated(GameObject boss)
     {
-        // Mark the boss as defeated
         BossData defeatedBoss = bosses.Find(b => b.boss == boss);
-        if (defeatedBoss != null)
+         if (defeatedBoss != null && !defeatedBoss.isDefeated)
         {
             defeatedBoss.isDefeated = true;
             defeatedBoss.boss.SetActive(false);
+            Debug.Log($" {boss.name} has been defeated. Removing its track...");
 
-            // Remove their track from the playlist if only one boss remains
-            if (bosses.FindAll(b => !b.isDefeated).Count == 1)
+            // Remove boss track from playlist
+            if (audioSource.clip == defeatedBoss.musicTrack)
             {
-                isLooping = true;
+                Debug.Log($" Stopping {audioSource.clip.name} since {boss.name} is defeated.");
+                audioSource.Stop();
             }
-        }
-    }
 
-    public void ActivateBoss(string bossName)
-    {
-        BossData bossData = bosses.Find(b => b.boss.name == bossName);
+            bosses.Remove(defeatedBoss); //  REMOVE boss from the active list
 
-        if (bossData != null)
-        {
-            Debug.Log($"[BossManager] Activating Boss: {bossName}");
-            bossData.boss.SetActive(true);
-            bossData.boss.GetComponent<Health>().CurrentHP = bossData.currentHP;
+            if (bosses.Count > 0)
+            {
+                Debug.Log(" Moving to next boss...");
+                StartCoroutine(WaitAndPlayNextTrack());
+            }
+            else
+            {
+                Debug.Log(" All bosses defeated! Stopping music.");
+                audioSource.Stop();
+            }
         }
         else
         {
-            Debug.LogError($"[ERROR] Boss not found: {bossName}");
+            Debug.LogError($" Boss {boss.name} not found in the list!");
         }
     }
+    private IEnumerator WaitAndPlayNextTrack()
+    {
+        Debug.Log(" Waiting before switching track...");
+        yield return new WaitForSeconds(1f); // Small delay
+
+        Debug.Log(" Attempting to switch tracks...");
+
+        if (bosses.FindAll(b => !b.isDefeated).Count > 0)
+        {
+            Debug.Log(" Playing next track!");
+            CycleToNextBoss(); //  This directly moves to the next boss
+        }
+        else
+        {
+            Debug.Log(" No more bosses! Stopping music.");
+            audioSource.Stop();
+        }
+    }
+
+   public void ActivateBoss(string bossName)
+{
+    BossData bossData = bosses.Find(b => b.boss.name == bossName);
+
+    if (bossData != null)
+    {
+        Debug.Log($"[BossManager] ACTIVATING BOSS: {bossName}");
+        bossData.boss.SetActive(true);
+
+   
+    }
+    else
+    {
+        Debug.LogError($"[ERROR] Boss not found: {bossName}");
+    }
+}
 
 
 

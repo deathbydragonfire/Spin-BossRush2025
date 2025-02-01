@@ -32,11 +32,18 @@ public class Nethertoxin : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider collider in colliders)
         {
-            Health targetHealth = collider.GetComponent<Health>();
-            if (targetHealth != null)
+            PlayerHealth playerHealth = collider.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null)
             {
-                targetHealth.TakeDamageByCurrentHP(damage);
+                Debug.Log($"Player takes {damage} from Nethertoxin!");
+                playerHealth.TakeDamageByCurrentHP(damage);
             }
+            else
+            {
+                Debug.Log($"{collider.name} is NOT the player. No damage applied.");
+            }
+
 
             // If the player touches the hazard, attach them to the Vinyldisk
             if (collider.CompareTag("Player"))
