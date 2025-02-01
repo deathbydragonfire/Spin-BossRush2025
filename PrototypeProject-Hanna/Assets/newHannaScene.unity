@@ -3043,20 +3043,20 @@ MonoBehaviour:
   staggerTime: 1.5
   player: {fileID: 883252572}
   record: {fileID: 2020584838}
-  moveSpeed: 5
+  moveSpeed: 20
   heightOffset: 4
   isAttacking: 0
-  lightningTrailPrefab: {fileID: 3029795994745682119, guid: dd56a816494ec2e43a3d1fdb653a0c7d, type: 3}
+  lightningTrailPrefab: {fileID: 4544735260979951593, guid: aaf05f80cc7ab04409d1be49517c164c, type: 3}
   trailSpawnInterval: 0.1
   lightningSpherePrefab: {fileID: 5490776105020984490, guid: f7580c379b4d7614882b8385f0a138a7, type: 3}
   sphereDuration: 3
   sphereDamageRate: 0.5
   sphereRadius: 5
-  dashDuration: 5
+  dashDuration: 2
   recordSpeedMultiplier: 2
   trailExtendedLifetime: 2
   rightPosition: {fileID: 971481121}
-  zapMoveSpeed: 10
+  zapMoveSpeed: 20
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   soloDuration: 6
   lightningUpTime: 1
   lightningStrikes: 10
-  intervalBetweenStrikes: 1.5
+  intervalBetweenStrikes: 1
   backPosition: {fileID: 1090986314}
   idleWaypoints:
   - {fileID: 1994413227}
@@ -3082,7 +3082,7 @@ MonoBehaviour:
   - {fileID: 2061138561}
   - {fileID: 1584626360}
   lightningDelay: 1
-  lightningPrefab: {fileID: 7488620004408453963, guid: f1b0baa5bc7651140aab635542f96627, type: 3}
+  lightningPrefab: {fileID: 4309166525254410046, guid: b6ae27aca9369f845b2892a29bc3e4b1, type: 3}
   recordLayer:
     serializedVersion: 2
     m_Bits: 4096
