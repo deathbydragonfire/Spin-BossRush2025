@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public abstract class Health : MonoBehaviour
 {
-    [SerializeField] public float maxHealth; 
+    [SerializeField] public float maxHealth;
     private float health;
+    public int currentHP = 100;
 
     //  Persistent HP storage for all bosses
     private static Dictionary<string, float> savedBossHP = new Dictionary<string, float>();
@@ -23,7 +24,7 @@ public abstract class Health : MonoBehaviour
                 HandleDeath();
             }
 
-            // 🚨 **If this is a boss, save its HP**
+            //  **If this is a boss, save its HP**
             if (savedBossHP.ContainsKey(gameObject.name))
             {
                 savedBossHP[gameObject.name] = health;
@@ -33,6 +34,19 @@ public abstract class Health : MonoBehaviour
 
     void Start()
     {
+        this.currentHP = 100; // Force-set HP to make sure it's not getting set to 0
+        Debug.Log("[Health] " + gameObject.name + " forced HP to 100.");
+
+        if (CurrentHP <= 0)
+        {
+            Debug.LogError($"[Health] {gameObject.name} has no starting HP! Defaulting to 100.");
+            CurrentHP = 100;
+        }
+
+        {
+            Debug.Log($"[Health] {gameObject.name} has started with {CurrentHP} HP.");
+        }
+
         //  **If the boss has saved HP, restore it**
         if (savedBossHP.ContainsKey(gameObject.name))
         {
@@ -88,5 +102,13 @@ public abstract class Health : MonoBehaviour
     private void UIUpdate()
     {
         Debug.Log($"[Health] {gameObject.name} HP: {health}");
+    }
+    public void InitializeHealth()
+    {
+        if (this.currentHP <= 0)
+        {
+            this.currentHP = 100; // Default HP
+            Debug.Log("[Health] Initialized HP for " + gameObject.name + " to 100.");
+        }
     }
 }

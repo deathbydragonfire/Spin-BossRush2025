@@ -12,6 +12,10 @@ TagManager:
   - zapeffect
   - vameffect
   - DJeffect
+  - PlayerAttack
+  - ZapRiotEffect
+  - ScorpionBossEffect
+  - VamVamPlaceholderEffect
   layers:
   - Default
   - TransparentFX

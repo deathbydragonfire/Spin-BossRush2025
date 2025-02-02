@@ -111,14 +111,6 @@ public class PlayerController : MonoBehaviour
     {
         return isGrounded;
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        // Visualize the ground check in the Editor
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        }
-    }
 }
+
+ 

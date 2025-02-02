@@ -27,21 +27,25 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Hit detected on: {other.gameObject.name}");
+        Debug.Log($"Hit detected on: {other.gameObject.name} (Layer: {other.gameObject.layer})");
 
         //  Make sure we are NOT trying to damage the object doing the attack!
         if (other.gameObject == gameObject) return;
 
-        Health targetHealth = other.GetComponent<Health>();
-
-        //  Ignore objects that don’t have Health (this prevents the error)
-        if (targetHealth == null)
+        // Check if the target is a boss OR specifically on the "fuckallwalls" layer
+        if (other.CompareTag("Boss") || other.gameObject.layer == LayerMask.NameToLayer("fuckallwalls"))
         {
-            Debug.Log($"{other.gameObject.name} has NO Health script! Skipping.");
-            return;
-        }
+            Health targetHealth = other.GetComponent<Health>();
 
-        Debug.Log($"Dealing {attackDamage} damage to {other.gameObject.name}");
-        targetHealth.TakeDamage(attackDamage);
+            //  Ignore objects that don’t have Health (this prevents the error)
+            if (targetHealth == null)
+            {
+                Debug.Log($"{other.gameObject.name} has NO Health script! Skipping.");
+                return;
+            }
+
+            Debug.Log($"Dealing {attackDamage} damage to {other.gameObject.name}");
+            targetHealth.TakeDamage(attackDamage);
+        }
     }
 }

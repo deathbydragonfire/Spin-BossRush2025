@@ -46,7 +46,7 @@ public class VamVamController : MonoBehaviour
     public float damageCooldown = 1f; // Time (in seconds) between damage applications
     private float lastDamageTime = 0f; // Last time damage was applied
     private bool isVipActive = false; // To track if the attack is active
-
+    private Animator VamVam;
 
     public UnityEngine.Transform record; // Reference to the spinning record object
 
@@ -56,6 +56,17 @@ public class VamVamController : MonoBehaviour
     void Start()
     {
         VIPAreaPrefab.SetActive(false); // Ensure the circle is initially inactive
+        {
+            if (VamVam == null)
+            {
+                VamVam = GetComponentInChildren<Animator>();
+                if (VamVam == null)
+                {
+                    Debug.LogError("Animator not found on Vam-Vam!");
+                }
+            }
+        }
+
     }
 
 
@@ -117,13 +128,21 @@ public class VamVamController : MonoBehaviour
     {
         isAttacking = true;
 
-        // Move in front of the player
-        Vector3 attackPosition = player.position + new Vector3(2f, 1f, 0); // Adjust X-offset for "in front"
+        // Move to attack position FIRST
+        Vector3 attackPosition = player.position + new Vector3(2f, 1f, 0); // Moves to the right of the player
         while (Vector3.Distance(transform.position, attackPosition) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, attackPosition, vamVamSpeed * Time.deltaTime);
             yield return null;
         }
+
+        // Now check if we need to flip
+        float direction = (player.position.x < transform.position.x) ? -1f : 1f;
+        transform.localScale = new Vector3(direction * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+        // Play slash animation
+        VamVam.SetBool("isSlashing", true);
+        VamVam.Play("vam_attack");
 
         // Pause before attacking
         yield return new WaitForSeconds(pauseDuration);
@@ -131,7 +150,7 @@ public class VamVamController : MonoBehaviour
         // Perform two swipes with hitbox activation
         Debug.Log("Swipe 1");
         slashHitboxParent.SetActive(true);
-        yield return new WaitForSeconds(0.5f); // Adjust as needed
+        yield return new WaitForSeconds(0.5f);
         slashHitboxParent.SetActive(false);
 
         Debug.Log("Swipe 2");
@@ -139,14 +158,19 @@ public class VamVamController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         slashHitboxParent.SetActive(false);
 
+        // Reset animation state
+        VamVam.SetBool("isSlashing", false);
+
         // Return to hover position
         HoverInCorner();
 
-        // Cooldown
+        // Cooldown before attacking again
         yield return new WaitForSeconds(attackCooldown);
 
         isAttacking = false;
     }
+
+
 
     // Hover in the upper corner
     public void HoverInCorner()
@@ -166,7 +190,8 @@ public class VamVamController : MonoBehaviour
     public IEnumerator ConcertSequence()
     {
         isAttacking = true;
-
+        VamVam.SetBool("isDancing", true);
+        VamVam.Play("vam_dance");
         // Step 1: Move Vam-Vam to her starting position
         Vector3 startPosition = new Vector3(8.48f, 4.18f, -3.01f);
         while (Vector3.Distance(transform.position, startPosition) > 0.1f)
@@ -206,7 +231,8 @@ public class VamVamController : MonoBehaviour
 
         // Step 5: Vam-Vam pauses briefly
         yield return new WaitForSeconds(2f);
-
+        VamVam.SetBool("isDancing", false);
+      
         // Step 6: Move Vam-Vam back to her starting position
         while (Vector3.Distance(transform.position, startPosition) > 0.1f)
         {

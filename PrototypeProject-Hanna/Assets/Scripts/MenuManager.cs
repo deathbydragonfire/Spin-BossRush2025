@@ -1,47 +1,36 @@
 using UnityEngine;
+using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject lorePanel;
+    public GameObject tutorialPanel;
     public GameObject mainMenuPanel;
-    public GameObject settingsPanel;
-    public GameObject volumePanel;
-    public GameObject controlsPanel;
 
-    public void OpenSettings()
+    void Start()
     {
+        // Ensure only the lore panel is visible at the start
+        lorePanel.SetActive(true);
+        tutorialPanel.SetActive(false);
         mainMenuPanel.SetActive(false);
-        settingsPanel.SetActive(true);
     }
-    public void AdjustVolume(float value)
 
+    public void ContinueFromLore()
     {
-        AudioListener.volume = value; // Adjusts global audio volume
-        Debug.Log($"Volume set to: {value}");
+        lorePanel.SetActive(false);
+        tutorialPanel.SetActive(true);
     }
 
-    public void OpenVolume()
+    public void ContinueFromTutorial()
     {
-        settingsPanel.SetActive(false);
-        volumePanel.SetActive(true);
-    }
-
-    public void OpenControls()
-    {
-        settingsPanel.SetActive(false);
-        controlsPanel.SetActive(true);
-    }
-
-    public void BackToSettings()
-    { 
-        Debug.Log("Back to Settings Triggered!");
-        controlsPanel.SetActive(false);
-        settingsPanel.SetActive(true);
-    }
-
-    public void BackToMainMenu()
-    {
-        settingsPanel.SetActive(false);
+        tutorialPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+    }
+
+    public void StartGame()
+    {
+        Debug.Log("Starting Game...");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("newHannaScene"); // Replace with actual scene name
     }
 
     public void QuitGame()

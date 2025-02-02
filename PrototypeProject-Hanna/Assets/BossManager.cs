@@ -2,16 +2,19 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
+[System.Serializable]  // <-- This makes the BossManager class serializable
 public class BossManager : MonoBehaviour
 {
-    [System.Serializable]
+    [System.Serializable]  // <-- This ensures BossData is visible in the Inspector
     public class BossData
     {
         public GameObject boss; // The boss GameObject
         public AudioClip musicTrack; // The associated music track
         [HideInInspector] public float currentHP; // Saved HP for the boss
         [HideInInspector] public bool isDefeated; // Whether the boss is defeated
+        public string spawnTriggerName; // <-- This should now be visible
     }
+
 
     public List<BossData> bosses; // List of all bosses and their tracks
     public AudioSource audioSource; // AudioSource for playing tracks
@@ -28,7 +31,6 @@ public class BossManager : MonoBehaviour
             bossData.boss.SetActive(false); // Deactivate all bosses initially
         }
 
-        PlayNextTrack();
     }
 
     void Update()
@@ -45,6 +47,10 @@ public class BossManager : MonoBehaviour
         }
 
     }
+    public void SetCurrentBossIndex(int index)
+{
+    currentBossIndex = index;
+}
 
     void PlayNextTrack()
     {
@@ -80,13 +86,23 @@ public class BossManager : MonoBehaviour
 
     void CycleToNextBoss()
     {
-        // **CLEAN UP LINGERING EFFECTS BEFORE SWITCHING BOSSES**
-        foreach (GameObject effect in GameObject.FindGameObjectsWithTag("BossEffect"))
+        if (bosses.Count == 0)
         {
-            effect.SetActive(false); //  Instead of destroying, disable the objects
+            Debug.Log("[BossManager] No more bosses left! Stopping music.");
+            audioSource.Stop();
+            return;
         }
 
-        // Save the current boss's HP before deactivating
+        Debug.Log($"[BossManager] Attempting to cycle from {bosses[currentBossIndex].boss.name}");
+
+        // Disable effects for the current boss
+        string currentBossTag = $"{bosses[currentBossIndex].boss.name}Effect";
+        foreach (GameObject effect in GameObject.FindGameObjectsWithTag(currentBossTag))
+        {
+            effect.SetActive(false);
+        }
+
+        // Save HP & Deactivate Boss
         BossData currentBossData = bosses[currentBossIndex];
         if (!currentBossData.isDefeated)
         {
@@ -94,89 +110,165 @@ public class BossManager : MonoBehaviour
             currentBossData.boss.SetActive(false);
         }
 
-        // Move to the next boss
-        currentBossIndex = (currentBossIndex + 1) % bosses.Count;
-
-        // Check if only one boss remains
-        if (bosses.FindAll(b => !b.isDefeated).Count == 1)
+        // **Find next valid boss** (skip defeated ones)
+        int initialIndex = currentBossIndex;
+        do
         {
-            isLooping = true;
+            currentBossIndex = (currentBossIndex + 1) % bosses.Count;
+            Debug.Log($"[BossManager] Checking boss: {bosses[currentBossIndex].boss.name} (Defeated: {bosses[currentBossIndex].isDefeated})");
+
+        } while (bosses[currentBossIndex].isDefeated && currentBossIndex != initialIndex);
+
+        // **If all bosses are dead, stop music**
+        if (bosses[currentBossIndex].isDefeated)
+        {
+            Debug.Log("[BossManager] No more bosses left! Stopping music.");
+            audioSource.Stop();
+            return;
         }
 
+        // **Ensure correct track is played**
         PlayNextTrack();
     }
+
 
 
 
     public void BossDefeated(GameObject boss)
     {
         BossData defeatedBoss = bosses.Find(b => b.boss == boss);
-         if (defeatedBoss != null && !defeatedBoss.isDefeated)
+        if (defeatedBoss != null && !defeatedBoss.isDefeated)
         {
             defeatedBoss.isDefeated = true;
-            defeatedBoss.boss.SetActive(false);
-            Debug.Log($" {boss.name} has been defeated. Removing its track...");
+            Debug.Log($"[BossManager] {boss.name} has been defeated. Removing its track...");
 
-            // Remove boss track from playlist
+            // Stop the track if it's playing
             if (audioSource.clip == defeatedBoss.musicTrack)
             {
-                Debug.Log($" Stopping {audioSource.clip.name} since {boss.name} is defeated.");
+                Debug.Log($"[BossManager] Stopping {audioSource.clip.name} since {boss.name} is defeated.");
                 audioSource.Stop();
             }
 
-            bosses.Remove(defeatedBoss); //  REMOVE boss from the active list
+            // **Defer track removal**
+            StartCoroutine(DeferredTrackRemoval(boss.name));
 
-            if (bosses.Count > 0)
-            {
-                Debug.Log(" Moving to next boss...");
-                StartCoroutine(WaitAndPlayNextTrack());
-            }
-            else
-            {
-                Debug.Log(" All bosses defeated! Stopping music.");
-                audioSource.Stop();
-            }
-        }
-        else
-        {
-            Debug.LogError($" Boss {boss.name} not found in the list!");
-        }
-    }
-    private IEnumerator WaitAndPlayNextTrack()
-    {
-        Debug.Log(" Waiting before switching track...");
-        yield return new WaitForSeconds(1f); // Small delay
-
-        Debug.Log(" Attempting to switch tracks...");
-
-        if (bosses.FindAll(b => !b.isDefeated).Count > 0)
-        {
-            Debug.Log(" Playing next track!");
-            CycleToNextBoss(); //  This directly moves to the next boss
-        }
-        else
-        {
-            Debug.Log(" No more bosses! Stopping music.");
-            audioSource.Stop();
+            // **Cycle to the next boss first**
+            CycleToNextBoss();
         }
     }
 
-   public void ActivateBoss(string bossName)
-{
-    BossData bossData = bosses.Find(b => b.boss.name == bossName);
-
-    if (bossData != null)
+    // **New Coroutine: Wait, then remove the track**
+    private IEnumerator DeferredTrackRemoval(string bossName)
     {
-        Debug.Log($"[BossManager] ACTIVATING BOSS: {bossName}");
+        yield return new WaitForSeconds(0.5f); // Short delay to allow cycling
+
+        MusicHandler musicHandler = FindObjectOfType<MusicHandler>();
+        if (musicHandler != null)
+        {
+            musicHandler.RemoveTrackAndBoss(bossName);
+        }
+        else
+        {
+            Debug.LogError("[BossManager] MusicHandler not found!");
+        }
+    }
+
+
+
+
+
+
+
+    public void ActivateBoss(string bossName)
+    {
+        Debug.Log($"[BossManager] Attempting to Activate: {bossName}");
+
+        // **Step 1: Ensure all bosses are turned OFF before activating a new one**
+        foreach (BossData boss in bosses)
+        {
+            if (boss.boss.activeSelf)
+            {
+                boss.boss.SetActive(false);
+                Debug.Log($"[BossManager] {boss.boss.name} forcibly deactivated.");
+            }
+        }
+
+        // **Step 2: Find and Activate the correct boss**
+        BossData bossData = bosses.Find(b => b.boss.name == bossName);
+        if (bossData == null)
+        {
+            Debug.LogError($"[ERROR] Boss not found: {bossName}");
+            return;
+        }
+
         bossData.boss.SetActive(true);
+        Debug.Log($"[BossManager] Activated: {bossName}");
 
-   
+        // **Step 3: Restore HP**
+        Health bossHealth = bossData.boss.GetComponent<Health>();
+        if (bossHealth != null)
+        {
+            bossHealth.CurrentHP = bossData.currentHP; // Restore HP
+            Debug.Log($"[BossManager] {bossName} HP restored to {bossHealth.CurrentHP}");
+        }
+
+        // **Step 4: Completely Restart AI Scripts**
+        MonoBehaviour[] scripts = bossData.boss.GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != null)
+            {
+                script.enabled = false;
+                script.enabled = true;
+            }
+        }
+        Debug.Log($"[BossManager] {bossName} AI Fully Reset!");
+
+        // **Step 5: Manually Trigger `Start()` for AI Scripts (If Needed)**
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != null)
+            {
+                System.Reflection.MethodInfo startMethod = script.GetType().GetMethod("Start", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public);
+                if (startMethod != null)
+                {
+                    startMethod.Invoke(script, null);
+                    Debug.Log($"[BossManager] Manually triggered Start() on {script.GetType().Name} for {bossName}");
+                }
+            }
+        }
+
+        // **Step 6: Restart Animator & Play Spawn Animation**
+        Animator bossAnimator = bossData.boss.GetComponentInChildren<Animator>();
+        if (bossAnimator != null)
+        {
+            bossAnimator.Rebind();
+            bossAnimator.Play(bossData.spawnTriggerName, 0, 0);
+            Debug.Log($"[BossManager] Played spawn animation for {bossName}");
+        }
+
+        // **Step 7: Reset Visual Effects**
+        string newBossTag = $"{bossName}Effect";
+        foreach (GameObject effect in GameObject.FindGameObjectsWithTag(newBossTag))
+        {
+            effect.SetActive(false);
+            effect.SetActive(true);
+            Debug.Log($"[BossManager] Reset effect: {effect.name}");
+        }
     }
-    else
+
+
+    private IEnumerator SetSpawnComplete(Animator animator)
     {
-        Debug.LogError($"[ERROR] Boss not found: {bossName}");
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        if (animator != null)
+        {
+            animator.SetBool("SpawnComplete", true); // **Tells the animator to go Idle**
+            Debug.Log("[BossManager] Forced transition to Idle.");
+        }
+
     }
-}
 
 
 

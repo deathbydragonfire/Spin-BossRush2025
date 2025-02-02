@@ -1,14 +1,23 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections;
 public class DJEMPERORHealth : Health
 {
-
 
     protected override void HandleDeath()
     {
         Debug.Log($" {gameObject.name} has been defeated! Attempting to switch track...");
 
-        gameObject.SetActive(false);
+        Animator bossAnimator = GetComponentInChildren<Animator>();
+        if (bossAnimator != null)
+        {
+            bossAnimator.SetTrigger("Death"); // Play the death animation
+            Debug.Log($"{gameObject.name} Death animation triggered.");
+        }
+        else
+        {
+            Debug.LogError($"{gameObject.name} has no Animator component!");
+        }
 
         BossManager bossManager = FindFirstObjectByType<BossManager>();
         if (bossManager != null)
@@ -21,27 +30,31 @@ public class DJEMPERORHealth : Health
             Debug.LogError(" BossManager not found!");
         }
 
-        ResetBossEffects();
+        // **Wait for death animation to finish before deactivating**
+        StartCoroutine(WaitAndDisable());
     }
 
-
-    private void ResetBossEffects()
+    private IEnumerator WaitAndDisable()
     {
-        Debug.Log(" Resetting DJ EMPEROR's lingering effects!");
+        Animator bossAnimator = GetComponentInChildren<Animator>();
 
-        // Reset record speed
-        MusicHandler musicHandler = FindFirstObjectByType<MusicHandler>();
-        if (musicHandler != null)
+        if (bossAnimator != null)
         {
-            musicHandler.SetBaseMultiplier(1f); // ✅ Restore normal speed
+            float deathAnimDuration = bossAnimator.GetCurrentAnimatorStateInfo(0).length;
+            Debug.Log($"Waiting {deathAnimDuration} seconds for death animation to finish.");
+            yield return new WaitForSeconds(deathAnimDuration);
+        }
+        else
+        {
+            yield return new WaitForSeconds(2f); // Default wait time
         }
 
-        //  Reset any ongoing attacks
-        DJEmperorController djController = GetComponent<DJEmperorController>();
-        if (djController != null)
-        {
-            djController.StopAllCoroutines(); // ✅ Cancel all attacks immediately
-        }
+        Debug.Log($"{gameObject.name} fully defeated. Disabling.");
+        gameObject.SetActive(false);
     }
-}
 
+
+
+
+
+}

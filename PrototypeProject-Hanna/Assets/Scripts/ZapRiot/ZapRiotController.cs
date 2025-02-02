@@ -37,7 +37,7 @@ public class ZapRiotController : MonoBehaviour
     public UnityEngine.Transform backPosition; // Position at the back of the record for the solo
     public UnityEngine.Transform[] idleWaypoints; // Array of 5 idle movement waypoints
     private int currentWaypointIndex = 0; // Track which one we're going to next
-
+    private Animator ZapRiot;
 
     public float lightningDelay = 1f; // Time between each lightning strike
     public GameObject lightningPrefab; // Prefab for the lightning bolt
@@ -45,10 +45,10 @@ public class ZapRiotController : MonoBehaviour
     void Start()
     {
         // Start spawning the lightning trail as Zap Riot moves
-        
 
-        
-         StartCoroutine(WaitForActivation());
+        ZapRiot = GetComponentInChildren<Animator>(); // Get animator from sprite child object
+
+        StartCoroutine(WaitForActivation());
         
 
     }
@@ -58,17 +58,17 @@ public class ZapRiotController : MonoBehaviour
 
         while (!gameObject.activeInHierarchy)
         {
-            yield return null; // ✅ Keep checking each frame
+            yield return null; //  Keep checking each frame
         }
 
         Debug.Log("Zap Riot is now active! Starting movement and attack logic.");
 
-        StartCoroutine(SpawnLightningTrail()); // ✅ Start Lightning Trail
-        StartCoroutine(IdleMovementLoop()); // ✅ Start Idle Movement
+        StartCoroutine(SpawnLightningTrail()); //  Start Lightning Trail
+        StartCoroutine(IdleMovementLoop()); //  Start Idle Movement
         ZapRiotLogic logicScript = GetComponent<ZapRiotLogic>();
         if (logicScript != null)
         {
-            StartCoroutine(logicScript.BossLogicLoop()); // ✅ Correct way to start it
+            StartCoroutine(logicScript.BossLogicLoop()); //  Correct way to start it
         }
         else
         {
@@ -82,9 +82,9 @@ public class ZapRiotController : MonoBehaviour
     {
         while (true)
         {
-            if (!isAttacking) // ✅ Only move when NOT attacking
+            if (!isAttacking) //  Only move when NOT attacking
             {
-                yield return StartCoroutine(MoveToNextWaypoint()); // ✅ Move to a new spot
+                yield return StartCoroutine(MoveToNextWaypoint()); //  Move to a new spot
 
                 // Pause briefly before picking another waypoint
                 yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
@@ -98,19 +98,78 @@ public class ZapRiotController : MonoBehaviour
     public IEnumerator PerformSlashSequence()
     {
         isAttacking = true;
-        Debug.Log("Zap Riot starts slashing!");
+        slashesDodged = 0; // Reset missed slashes count
+        int totalSlashes = 3;
+        float dashSpeed = 20f;
+        float dashStopDistance = 1f;
+        float slashDuration = 0.3f;
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        Animator animator = GetComponent<Animator>();
-        if (animator != null)
+        for (int i = 0; i < totalSlashes; i++)
         {
-            animator.SetTrigger("SlashAttack");
-            Debug.Log("Slash animation triggered!");
-            yield return new WaitForSeconds(1.5f);
-        }
-        else
-        {
-            Debug.LogWarning("No Animator found on Zap Riot! Skipping animation.");
-            yield return new WaitForSeconds(0.5f);
+            if (player == null)
+            {
+                Debug.LogWarning("Player reference missing!");
+                break;
+            }
+
+            // Lock onto the player's position for the attack
+            Vector3 attackPosition = player.position;
+            attackPosition.y = transform.position.y; // Maintain height
+
+            Debug.Log($"Zap Riot dashes to {attackPosition}");
+
+            // Flip sprite to face target
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = attackPosition.x < transform.position.x;
+            }
+
+            // Dash towards the attack position
+            while (Vector3.Distance(transform.position, attackPosition) > dashStopDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, attackPosition, dashSpeed * Time.deltaTime);
+                yield return null;
+            }
+
+            // Trigger the correct slash animation
+            string slashTrigger = i == 0 ? "SlashAttack1" : i == 1 ? "SlashAttack2" : "SlashAttack3";
+            ZapRiot.SetTrigger(slashTrigger);
+            Debug.Log($"Triggered animation: {slashTrigger}");
+
+            // Activate hitbox
+            if (slashHitbox != null)
+            {
+                float flipDirection = spriteRenderer.flipX ? -1f : 1f;
+                slashHitbox.transform.localScale = new Vector3(flipDirection * Mathf.Abs(slashHitbox.transform.localScale.x),
+                                                               slashHitbox.transform.localScale.y,
+                                                               slashHitbox.transform.localScale.z);
+
+                slashHitbox.SetActive(true);
+                yield return new WaitForSeconds(slashDuration);
+                slashHitbox.SetActive(false);
+            }
+
+            // If this is the last slash
+            if (i == totalSlashes - 1)
+            {
+                if (slashesDodged >= totalSlashes)
+                {
+                    Debug.Log("Zap Riot is staggered!");
+                    ZapRiot.SetTrigger("Stagger");
+                    yield return new WaitForSeconds(staggerTime);
+
+                    // **NEW: Ensure he goes back to idle after stagger ends**
+                    ZapRiot.SetTrigger("Idle");
+                }
+                else
+                {
+                    // If not staggered, return to idle immediately
+                    ZapRiot.SetTrigger("Idle");
+                }
+            }
+
+            yield return new WaitForSeconds(0.2f); // Small delay between slashes
         }
 
         Debug.Log("Zap Riot finished slashing. Returning to movement.");
@@ -136,7 +195,7 @@ public class ZapRiotController : MonoBehaviour
         float maxDashTime = 3f;
         float elapsedTime = 0f;
 
-        // ✅ Force him to stay at the correct height
+        //  Force him to stay at the correct height
         targetPosition.y = transform.position.y;
 
         while (Vector3.Distance(transform.position, targetPosition) > stopDistance && elapsedTime < maxDashTime)
@@ -159,7 +218,7 @@ public class ZapRiotController : MonoBehaviour
             float surfaceY = hit.point.y;
             float desiredHeight = surfaceY + heightOffset; // ✅ Keeps him above the record
 
-            // ✅ Smoothly adjust height without stalling movement
+            //  Smoothly adjust height without stalling movement
             transform.position = new Vector3(transform.position.x, desiredHeight, transform.position.z);
         }
         else
@@ -168,26 +227,7 @@ public class ZapRiotController : MonoBehaviour
         }
     }
 
-    private IEnumerator DashToPosition(Vector3 targetPosition)
-    {
-        float dashSpeed = 15f;
-        float stopDistance = 2f;
-        float maxDashTime = 3f;
-        float elapsedTime = 0f;
-
-        while (Vector3.Distance(transform.position, targetPosition) > stopDistance && elapsedTime < maxDashTime)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, dashSpeed * Time.deltaTime);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        Debug.Log("Dash complete!");
-
-        // ✅ AFTER dashing, set proper height above the record
-        MaintainHeightAboveRecord();
-    }
-
+ 
 
     private IEnumerator SpawnLightningTrail()
     {
@@ -270,6 +310,8 @@ public class ZapRiotController : MonoBehaviour
         yield return new WaitForSeconds(sphereDuration);
 
         // Step 3: Speed up the record
+        ZapRiot.SetBool("isZapping", true);
+        ZapRiot.Play("zap_hurt");
         Debug.Log("Zap Riot speeds up the record!");
         MusicHandler musicHandler = FindObjectOfType<MusicHandler>();
         if (musicHandler != null)
@@ -289,7 +331,7 @@ public class ZapRiotController : MonoBehaviour
         {
             musicHandler.SetBaseMultiplier(1f); // Reset to normal speed
         }
-
+        ZapRiot.SetBool("isZapping", false);
         isAttacking = false;
     }
 
@@ -297,6 +339,8 @@ public class ZapRiotController : MonoBehaviour
 
     public IEnumerator LightningAttack()
     {
+        ZapRiot.SetBool("isZapping", true);
+        ZapRiot.Play("zap_hurt");
         isAttacking = true;
 
         // Step 1: Move Zap Riot to the back position, maintaining height
@@ -350,6 +394,7 @@ public class ZapRiotController : MonoBehaviour
         // Step 3: Reset Behavior
         Debug.Log("Zap Riot ends the lightning solo!");
         isAttacking = false;
+        ZapRiot.SetBool("isZapping", false);
     }
 
     private IEnumerator LaunchLightning(Vector3 startPosition)

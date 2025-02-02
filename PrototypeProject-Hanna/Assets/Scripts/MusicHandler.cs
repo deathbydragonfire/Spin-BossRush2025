@@ -33,46 +33,85 @@ public class MusicHandler : MonoBehaviour
     IEnumerator Start()
     {
         Debug.Log("[MusicHandler] Waiting for scene to stabilize...");
-
-        // Small delay to allow everything to load in properly
         yield return new WaitForSeconds(0.2f);
 
         Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
         currentPlaybackSpeed = normalPlaybackSpeed;
         currentSpinSpeed = 100f;
         currentTempo = maxTempo;
-        currentTrackIndex = 0;
 
         if (bossManager != null && bossTracks.Count > 0)
         {
             trackBossMap.Clear();
-            for (int i = 0; i < bossTracks.Count; i++)
+            for (int i = 0; i < bossTracks.Count && i < bossManager.bosses.Count; i++)
             {
-                trackBossMap[bossTracks[i]] = bossManager.GetBossNameByIndex(i);
+                trackBossMap[bossTracks[i]] = bossManager.bosses[i].boss.name;
             }
 
-            yield return new WaitForSeconds(0.1f); // Additional delay before first track
-            PlayNextTrack();
+            // **Force the first track & boss to be DJ Emperor**
+            //  Ensure this only happens ONCE
+            if (!isInitialized)
+            {
+                isInitialized = true;  // **Set flag so it never re-initializes**
+
+                // **Force the first track & boss to be DJ Emperor**
+                currentTrackIndex = 0;
+                audioSource.Stop(); //  Stop any residual audio
+                yield return new WaitForSeconds(0.1f); //  Small delay to clear any old track
+
+                audioSource.clip = bossTracks[currentTrackIndex];
+                audioSource.Play();
+
+                string firstBossName = bossManager.bosses[currentTrackIndex].boss.name;
+                Debug.Log($"[MusicHandler] Forcing first boss: {firstBossName}");
+
+               
+                bossManager.ActivateBoss(firstBossName);
+            }
+
         }
     }
 
 
 
 
-
-    void Update()
+        void Update()
     {
         HandlePlayerInputs(); // Allow player inputs to adjust speed
         ApplyCombinedSpeed(); // Combine base multiplier and player multiplier
         RotateRecord(); // Rotate the record
         if (!SimplePauseMenu.IsGamePaused) // Only run this if NOT paused
         {
-            if (!audioSource.isPlaying && bossTracks.Count > 0 && !SimplePauseMenu.IsGamePaused)
+            if (!isInitialized || SimplePauseMenu.IsGamePaused) return; // **Prevent interference**
+
+            if (!audioSource.isPlaying && bossTracks.Count > 0)
             {
+                Debug.Log("[MusicHandler] Track ended. Moving to next boss...");
                 PlayNextTrack();
             }
 
 
+
+        }
+    }
+    IEnumerator InitializeMusic()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
+
+        if (bossManager != null && bossTracks.Count > 0)
+        {
+            trackBossMap.Clear();
+
+            // Ensure bossTracks & bosses match order
+            for (int i = 0; i < bossTracks.Count && i < bossManager.bosses.Count; i++)
+            {
+                trackBossMap[bossTracks[i]] = bossManager.bosses[i].boss.name;
+            }
+
+            yield return new WaitForSeconds(0.1f);
+            PlayNextTrack();
         }
     }
 
@@ -165,7 +204,10 @@ public class MusicHandler : MonoBehaviour
 
             if (bossManager != null)
             {
-                bossManager.DeactivateAllBosses(); // <---- Make sure all bosses are turned off first!
+                bossManager.DeactivateAllBosses();
+
+                // **Force currentBossIndex to match track index**
+                bossManager.SetCurrentBossIndex(currentTrackIndex);
                 bossManager.ActivateBoss(bossName);
             }
         }

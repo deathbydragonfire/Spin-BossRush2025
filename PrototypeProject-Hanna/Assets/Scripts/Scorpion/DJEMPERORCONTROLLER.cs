@@ -37,6 +37,9 @@ public class DJEmperorController : MonoBehaviour
     public UnityEngine.Transform poisonSpawnPoint; // Assign where the projectile should start
     public float poisonCooldown = 5f; // Cooldown between poison attacks
     private bool canPoison = true; // Cooldown tracker
+    public float eraStartDelay = 3f; // How long before he can use ERA ERA
+    public float trackStartTime; // When his track started
+
 
 
     public float pushPullDuration = 3f; // Duration of the push/pull effect
@@ -44,6 +47,12 @@ public class DJEmperorController : MonoBehaviour
 
     private bool isPerformingERA = false;
     private bool isStinging = false;
+
+    void Start()
+    {
+        
+        Dj_Emperor = GetComponentInChildren<Animator>(); // Get animator from sprite child object
+    }
 
     void Update()
     {
@@ -59,6 +68,14 @@ public class DJEmperorController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             PerformERAERA();
+        }
+    }
+    void Awake()
+    {
+        if (GetComponent<DJLogic>() == null)
+        {
+            Debug.LogWarning("[DJLogic] Missing on DJ Emperor! Adding dynamically.");
+            gameObject.AddComponent<DJLogic>(); //  Adds it at runtime
         }
     }
 
@@ -165,7 +182,8 @@ public class DJEmperorController : MonoBehaviour
     private IEnumerator PerformSlam()
     {
         isSlamming = true;
-
+        Dj_Emperor.SetBool("isSlamming", true);
+        Dj_Emperor.Play("dj_slam");
         // Optional: Play telegraph animation or sound
         Debug.Log("Slam telegraph!");
 
@@ -194,41 +212,60 @@ public class DJEmperorController : MonoBehaviour
         // Optional: Cooldown or delay before another slam can occur
         yield return new WaitForSeconds(2f);
         isSlamming = false;
+        Dj_Emperor.SetBool("isSlamming", false);
     }
-
-    public  IEnumerator ERAERASequence()
+    public IEnumerator ERAERASequence()
     {
+        while (Time.time - trackStartTime < eraStartDelay)
+        {
+            yield return null; // Wait until enough time has passed
+        }
+
         isPerformingERA = true;
+
+        // Start the animation and let it run while the attack is happening
+        Dj_Emperor.SetBool("isSpinning", true);
+        Dj_Emperor.Play("dj_spin");
+
+        // Allow the animation to run while the attack continues
+        float animationDuration = Dj_Emperor.GetCurrentAnimatorStateInfo(0).length;
+        StartCoroutine(ReturnToIdleAfterDelay(animationDuration)); // Schedule return to idle
 
         // Step 1: Slam
         Debug.Log("ERA ERA - Slam!");
         yield return StartCoroutine(PerformERASlam());
 
-        // Step 2: Push Record Forward
-        Debug.Log("ERA ERA - Push Record Forward!");
-        float pushDuration = 2f; // Duration of the push phase
-        AdjustRecordSpeed(1.5f); // Push forward (multiplier set to 1.5x normal speed)
-        yield return new WaitForSeconds(pushDuration);
-
-        // Step 3: Pull Record Toward DJ (Reverse spin)
+        // Step 2: Pull Record Toward DJ (Reverse spin)
         Debug.Log("ERA ERA - Pull Record Toward DJ!");
-        float pullDuration = 2f; // Duration of the pull phase
-        AdjustRecordSpeed(-1.5f); // Reverse spin
+        float pullDuration = 2f;
+        AdjustRecordSpeed(-1.5f);
         yield return new WaitForSeconds(pullDuration);
+
+        // Step 3: Push Record Forward
+        Debug.Log("ERA ERA - Push Record Forward!");
+        float pushDuration = 2f;
+        AdjustRecordSpeed(1.5f);
+        yield return new WaitForSeconds(pushDuration);
 
         // Step 4: Reset Record Speed to Normal
         Debug.Log("ERA ERA - Reset Record Speed!");
-        AdjustRecordSpeed(1f); // Reset to normal speed
+        AdjustRecordSpeed(1f);
 
-        // Cooldown before ERA ERA can be used again
         yield return new WaitForSeconds(eraCooldown);
-
         isPerformingERA = false;
+    }
+
+    // Helper function: Makes sure DJ Emperor returns to idle after the animation is done
+    private IEnumerator ReturnToIdleAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Dj_Emperor.SetBool("isSpinning", false); // Stop spinning
+        Dj_Emperor.Play("Idle"); // Return to idle
     }
 
 
 
-    public  IEnumerator PerformERASlam()
+    public IEnumerator PerformERASlam()
     {
         Debug.Log("Performing ERA-Slam!");
 
@@ -284,36 +321,60 @@ public class DJEmperorController : MonoBehaviour
         yield return null;
     }
 
-    public  IEnumerator StingRoutine()
+    public IEnumerator StingRoutine()
     {
         canSting = false;
 
-        // Spawn the sting above DJ EMPEROR
-        Vector3 spawnPosition = transform.position + new Vector3(0, 5f, 0); // Adjust height as needed
-        GameObject sting = Instantiate(stingPrefab, spawnPosition, Quaternion.identity);
+        int stingCount = 9; // Number of times the sting will be fired
+        float stingDelay = 0.3f; // Delay between each sting (adjust for balance)
 
-        // Move the sting toward the player
-        while (sting != null && Vector3.Distance(sting.transform.position, player.position) > 0.1f)
+        for (int i = 0; i < stingCount; i++)
         {
-            sting.transform.position = Vector3.MoveTowards(sting.transform.position, player.position, stingSpeed * Time.deltaTime);
+            // **Force-reset animation so it plays again**
+            Dj_Emperor.SetBool("isStinging", false);
+            yield return null; // Ensure Animator updates before re-triggering
+
+            // **Trigger the animation before each sting**
+        
+         
+
+            // Capture the player's position at this moment
+            Vector3 targetPosition = player.position;
+
+            // Wait for the animation to finish before firing
+            yield return new WaitForSeconds(Dj_Emperor.GetCurrentAnimatorStateInfo(0).length * 0.9f);
+
+            // Spawn the sting above DJ EMPEROR
+            Vector3 spawnPosition = transform.position + new Vector3(0, 5f, 0); // Adjust height as needed
+            GameObject sting = Instantiate(stingPrefab, spawnPosition, Quaternion.identity);
+
+            // Move the sting toward the locked position
+            StartCoroutine(MoveSting(sting, targetPosition));
+
+            // Small delay before next sting (to prevent instant looping)
+            yield return new WaitForSeconds(stingDelay);
+        }
+
+        // **Reset DJ Emperor to Idle when done**
+        Dj_Emperor.SetBool("isStinging", false);
+
+        // Cooldown before allowing the attack again
+        yield return new WaitForSeconds(stingCooldown);
+        canSting = true;
+    }
+
+    private IEnumerator MoveSting(GameObject sting, Vector3 targetPosition)
+    {
+        while (sting != null && Vector3.Distance(sting.transform.position, targetPosition) > 0.1f)
+        {
+            sting.transform.position = Vector3.MoveTowards(sting.transform.position, targetPosition, stingSpeed * Time.deltaTime);
             yield return null;
         }
 
-        // Deal damage if the sting reaches the player
-        if (sting != null && Vector3.Distance(sting.transform.position, player.position) <= 0.5f)
-        {
-            Debug.Log("Sting hit the player!");
-            player.GetComponent<Health>()?.TakeDamage(stingDamage); // Ensure the player has a Health component
-        }
-
-        // Destroy the sting
+        // Destroy the sting after reaching the location
         if (sting != null)
         {
             Destroy(sting);
         }
-
-        // Wait for cooldown
-        yield return new WaitForSeconds(stingCooldown);
-        canSting = true;
     }
 }
