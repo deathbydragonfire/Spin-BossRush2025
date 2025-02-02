@@ -32,10 +32,10 @@ public class MusicHandler : MonoBehaviour
     public bool isPaused = false; //  New flag to track pause state
     IEnumerator Start()
     {
-        Debug.Log("[MusicHandler] Waiting for scene to stabilize...");
+        //Debug.Log("[MusicHandler] Waiting for scene to stabilize...");
         yield return new WaitForSeconds(0.2f);
 
-        Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
+        //Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
         currentPlaybackSpeed = normalPlaybackSpeed;
         currentSpinSpeed = 100f;
         currentTempo = maxTempo;
@@ -98,7 +98,7 @@ public class MusicHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
 
-        Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
+        //Debug.Log("[MusicHandler] Scene stabilized. Initializing music.");
 
         if (bossManager != null && bossTracks.Count > 0)
         {
@@ -184,7 +184,7 @@ public class MusicHandler : MonoBehaviour
 
         if (currentTrackIndex == 0 && audioSource.isPlaying)
         {
-            Debug.LogWarning("[MusicHandler] Preventing unnecessary track skip on the first play.");
+            //Debug.LogWarning("[MusicHandler] Preventing unnecessary track skip on the first play.");
             return; // Ensures the first track isn't skipped on start
         }
 

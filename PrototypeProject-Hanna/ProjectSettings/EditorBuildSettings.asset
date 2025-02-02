@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 259c02ddc73ac11459a650adea8f4da5
   - enabled: 1
-    path: Assets/newHannaScene.unity
+    path: Assets/gameScene.unity
     guid: 67abfbaf61c05854087e46d4e3c4afa4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

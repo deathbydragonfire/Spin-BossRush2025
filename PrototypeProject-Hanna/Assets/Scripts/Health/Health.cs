@@ -4,111 +4,80 @@ using System.Collections.Generic;
 
 public abstract class Health : MonoBehaviour
 {
-    [SerializeField] public float maxHealth;
-    private float health;
-    public int currentHP = 100;
-
-    //  Persistent HP storage for all bosses
+    [SerializeField] public float maxHealth = 100f;
     private static Dictionary<string, float> savedBossHP = new Dictionary<string, float>();
 
-    public float CurrentHP
+    public float currentHP;
+
+    protected virtual void Start()
     {
-        get => health;
-        set
+        if (maxHealth <= 0)
         {
-            health = Mathf.Clamp(value, 0, maxHealth);
-            UIUpdate();
-
-            if (health <= 0)
-            {
-                HandleDeath();
-            }
-
-            //  **If this is a boss, save its HP**
-            if (savedBossHP.ContainsKey(gameObject.name))
-            {
-                savedBossHP[gameObject.name] = health;
-            }
-        }
-    }
-
-    void Start()
-    {
-        this.currentHP = 100; // Force-set HP to make sure it's not getting set to 0
-        Debug.Log("[Health] " + gameObject.name + " forced HP to 100.");
-
-        if (CurrentHP <= 0)
-        {
-            Debug.LogError($"[Health] {gameObject.name} has no starting HP! Defaulting to 100.");
-            CurrentHP = 100;
+            Debug.LogWarning($"[Health] {gameObject.name} has invalid maxHealth! Setting to default 100.");
+            maxHealth = 100f;
         }
 
+        if (savedBossHP.TryGetValue(gameObject.name, out float savedHP))
         {
-            Debug.Log($"[Health] {gameObject.name} has started with {CurrentHP} HP.");
-        }
-
-        //  **If the boss has saved HP, restore it**
-        if (savedBossHP.ContainsKey(gameObject.name))
-        {
-            health = savedBossHP[gameObject.name];
+            currentHP = savedHP;
+            Debug.Log($"[Health] {gameObject.name} restored to {currentHP} HP.");
         }
         else
         {
-            health = maxHealth; // If no saved value, start fresh
-            savedBossHP[gameObject.name] = maxHealth;
+            currentHP = maxHealth;
+            savedBossHP[gameObject.name] = currentHP;
+            Debug.Log($"[Health] {gameObject.name} started with {currentHP} HP.");
         }
+
         UIUpdate();
-    }
-    public void TakeBossDamage(float damage, GameObject attacker)
-    {
-        //  Only allow damage from the player's attack hitbox
-        if (attacker.CompareTag("PlayerAttack"))
-        {
-            Debug.Log($"{gameObject.name} (Boss) took {damage} damage from {attacker.name}!");
-            CurrentHP -= damage; //  Reduce HP
-        }
-        else
-        {
-            Debug.Log($"{gameObject.name} ignored damage from {attacker.name} (Not a PlayerAttack).");
-        }
     }
 
     public void TakeDamage(float damage)
     {
-        CurrentHP = Mathf.Max(health - damage, 0f);
+        currentHP = Mathf.Clamp(currentHP - damage, 0, maxHealth);
+        Debug.Log($"[Health] {gameObject.name} took {damage} damage. Remaining HP: {currentHP}");
+        CheckDeath();
+        SaveBossHP();
     }
 
-    public void TakeDamageByCurrentHP(float damage)
+    public void TakeDamageByCurrentHP(float percentage)
     {
-        CurrentHP = Mathf.Max(health - (health * (damage / 100f)), 0f);
+        float damage = currentHP * (percentage / 100f);
+        TakeDamage(damage);
     }
 
     public void TakeHeal(float heal)
     {
-        CurrentHP = Mathf.Min(health + heal, maxHealth);
+        currentHP = Mathf.Clamp(currentHP + heal, 0, maxHealth);
+        Debug.Log($"[Health] {gameObject.name} healed {heal} HP. New HP: {currentHP}");
+        SaveBossHP();
+    }
+
+    private void SaveBossHP()
+    {
+        if (savedBossHP.ContainsKey(gameObject.name))
+        {
+            savedBossHP[gameObject.name] = currentHP;
+        }
+    }
+
+    private void CheckDeath()
+    {
+        if (currentHP <= 0)
+        {
+            HandleDeath();
+        }
     }
 
     protected virtual void HandleDeath()
     {
         Debug.Log($"{gameObject.name} has died! (DEFAULT HANDLING - Should be overridden)");
-
-        // **When a boss dies, remove their saved HP so they reset next time**
-        if (savedBossHP.ContainsKey(gameObject.name))
-        {
-            savedBossHP.Remove(gameObject.name);
-        }
+        savedBossHP.Remove(gameObject.name);
+        Destroy(gameObject);
     }
 
     private void UIUpdate()
     {
-        Debug.Log($"[Health] {gameObject.name} HP: {health}");
-    }
-    public void InitializeHealth()
-    {
-        if (this.currentHP <= 0)
-        {
-            this.currentHP = 100; // Default HP
-            Debug.Log("[Health] Initialized HP for " + gameObject.name + " to 100.");
-        }
+        Debug.Log($"[Health] {gameObject.name} HP: {currentHP}/{maxHealth}");
     }
 }

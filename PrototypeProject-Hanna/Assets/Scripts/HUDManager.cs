@@ -7,6 +7,7 @@ public class HUDManager : MonoBehaviour
     public Image playerHealth;
     public Image BossHealth;
     public Image TempoSlider;
+    public PlayerHealth pHealth;
     public BossManager bossManager;
     public MusicHandler musicHandler;
 
@@ -16,19 +17,16 @@ public class HUDManager : MonoBehaviour
     //TODO: Player HP needs to actually exist, just plug it in here as shown for BossHP and it'll work
     private float p_health_max = 100;
     private float b_health_max = 100;
-    private float p_health_current = 80;
     
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        playerHealth.fillAmount = 0.3f;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        playerHealth.fillAmount = p_health_current / p_health_max;  //currently an arbitrary number for testing, replace with real HP.  
+        if (pHealth)
+        {
+            playerHealth.fillAmount = pHealth.currentHP / p_health_max;  //currently an arbitrary number for testing, replace with real HP.  
+        }
         
         if (bossManager)
         {

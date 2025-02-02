@@ -72,7 +72,7 @@ public class BossManager : MonoBehaviour
     }
     public void InitializeBosses()
     {
-        Debug.Log("[BossManager] Initializing bosses AFTER tracks are assigned.");
+        //Debug.Log("[BossManager] Initializing bosses AFTER tracks are assigned.");
 
         foreach (var bossData in bosses)
         {
@@ -86,7 +86,7 @@ public class BossManager : MonoBehaviour
     {
         if (bosses.Count == 0)
         {
-            Debug.Log("[BossManager] No more bosses left! Stopping music.");
+            //Debug.Log("[BossManager] No more bosses left! Stopping music.");
             audioSource.Stop();
             return;
         }
@@ -96,7 +96,7 @@ public class BossManager : MonoBehaviour
             animator.SetTrigger("NextBoss");
         }
 
-        Debug.Log($"[BossManager] Attempting to cycle from {bosses[currentBossIndex].boss.name}");
+        //Debug.Log($"[BossManager] Attempting to cycle from {bosses[currentBossIndex].boss.name}");
 
         // Disable effects for the current boss
         string currentBossTag = $"{bosses[currentBossIndex].boss.name}Effect";
@@ -109,7 +109,7 @@ public class BossManager : MonoBehaviour
         BossData currentBossData = bosses[currentBossIndex];
         if (!currentBossData.isDefeated)
         {
-            currentBossData.currentHP = currentBossData.boss.GetComponent<Health>().CurrentHP;
+            currentBossData.currentHP = currentBossData.boss.GetComponent<Health>().currentHP;
             currentBossData.boss.SetActive(false);
         }
 
@@ -118,14 +118,14 @@ public class BossManager : MonoBehaviour
         do
         {
             currentBossIndex = (currentBossIndex + 1) % bosses.Count;
-            Debug.Log($"[BossManager] Checking boss: {bosses[currentBossIndex].boss.name} (Defeated: {bosses[currentBossIndex].isDefeated})");
+            //Debug.Log($"[BossManager] Checking boss: {bosses[currentBossIndex].boss.name} (Defeated: {bosses[currentBossIndex].isDefeated})");
 
         } while (bosses[currentBossIndex].isDefeated && currentBossIndex != initialIndex);
 
         // **If all bosses are dead, stop music**
         if (bosses[currentBossIndex].isDefeated)
         {
-            Debug.Log("[BossManager] No more bosses left! Stopping music.");
+            //Debug.Log("[BossManager] No more bosses left! Stopping music.");
             audioSource.Stop();
             return;
         }
@@ -148,7 +148,7 @@ public class BossManager : MonoBehaviour
             // Stop the track if it's playing
             if (audioSource.clip == defeatedBoss.musicTrack)
             {
-                Debug.Log($"[BossManager] Stopping {audioSource.clip.name} since {boss.name} is defeated.");
+                //Debug.Log($"[BossManager] Stopping {audioSource.clip.name} since {boss.name} is defeated.");
                 audioSource.Stop();
             }
 
@@ -211,8 +211,8 @@ public class BossManager : MonoBehaviour
         Health bossHealth = bossData.boss.GetComponent<Health>();
         if (bossHealth != null)
         {
-            bossHealth.CurrentHP = bossData.currentHP; // Restore HP
-            Debug.Log($"[BossManager] {bossName} HP restored to {bossHealth.CurrentHP}");
+            bossHealth.currentHP = bossData.currentHP; // Restore HP
+            Debug.Log($"[BossManager] {bossName} HP restored to {bossHealth.currentHP}");
         }
 
         // **Step 4: Completely Restart AI Scripts**
@@ -247,7 +247,7 @@ public class BossManager : MonoBehaviour
         {
             bossAnimator.Rebind();
             bossAnimator.Play(bossData.spawnTriggerName, 0, 0);
-            Debug.Log($"[BossManager] Played spawn animation for {bossName}");
+            //Debug.Log($"[BossManager] Played spawn animation for {bossName}");
         }
 
         // **Step 7: Reset Visual Effects**
@@ -268,7 +268,7 @@ public class BossManager : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("SpawnComplete", true); // **Tells the animator to go Idle**
-            Debug.Log("[BossManager] Forced transition to Idle.");
+            //Debug.Log("[BossManager] Forced transition to Idle.");
         }
 
     }
@@ -295,6 +295,6 @@ public class BossManager : MonoBehaviour
 
     public float GetCurrentBossHP()
     {
-        return bosses[currentBossIndex].currentHP;
+        return bosses[currentBossIndex].boss.GetComponent<Health>().currentHP;
     }
 }

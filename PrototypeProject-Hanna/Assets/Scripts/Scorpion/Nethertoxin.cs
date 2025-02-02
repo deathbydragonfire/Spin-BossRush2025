@@ -8,6 +8,7 @@ public class Nethertoxin : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float damageRate;
     [SerializeField] private float radius;
+    
 
     private Transform originalParent; // To store the player's original parent
 
@@ -27,6 +28,8 @@ public class Nethertoxin : MonoBehaviour
         }
     }
 
+
+
     private void DealDamage()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
@@ -41,7 +44,7 @@ public class Nethertoxin : MonoBehaviour
             }
             else
             {
-                Debug.Log($"{collider.name} is NOT the player. No damage applied.");
+                //Debug.Log($"{collider.name} is NOT the player. No damage applied.");
             }
 
 
@@ -83,7 +86,7 @@ public class Nethertoxin : MonoBehaviour
                 break; // Exit early if Backstop is touched
             }
 
-            Debug.Log($"Timer countdown: {timer}");
+            //Debug.Log($"Timer countdown: {timer}");
             timer -= Time.deltaTime;
             yield return null;
         }

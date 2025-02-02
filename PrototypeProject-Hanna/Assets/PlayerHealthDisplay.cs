@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
-    [Header("Death Screen")]
-    public DeathScreenHandler deathScreenHandler;
+    public string deathScreen;
 
     protected override void HandleDeath()
     {
         Debug.Log("PLAYER HAS DIED!");
+        SceneManager.LoadScene(deathScreen); // Reload the current level
 
-        if (deathScreenHandler != null)
-        {
-            deathScreenHandler.TriggerDeathScreen();
-        }
-        else
-        {
-            Debug.LogError("DeathScreenHandler is not assigned!");
-        }
+
     }
 }

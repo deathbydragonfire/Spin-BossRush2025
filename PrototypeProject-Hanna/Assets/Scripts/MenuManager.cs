@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Starting Game...");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("newHannaScene"); // Replace with actual scene name
+        UnityEngine.SceneManagement.SceneManager.LoadScene("gameScene"); // Replace with actual scene name
     }
 
     public void QuitGame()

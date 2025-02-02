@@ -6,6 +6,7 @@ public class DJEMPERORHealth : Health
 
     protected override void HandleDeath()
     {
+        StartCoroutine(WaitAndDisable());
         Debug.Log($" {gameObject.name} has been defeated! Attempting to switch track...");
 
         Animator bossAnimator = GetComponentInChildren<Animator>();
@@ -31,7 +32,7 @@ public class DJEMPERORHealth : Health
         }
 
         // **Wait for death animation to finish before deactivating**
-        StartCoroutine(WaitAndDisable());
+        
     }
 
     private IEnumerator WaitAndDisable()

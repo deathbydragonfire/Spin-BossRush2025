@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnPattern(HazardPattern pattern)
     {
-        Debug.Log($"Starting pattern: {pattern.name}");
+        //Debug.Log($"Starting pattern: {pattern.name}");
 
         foreach (var spawn in pattern.spawnData)
         {
@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
 
             // Calculate spawn position
             Vector3 worldSpawnPosition = transform.TransformPoint(spawn.localPosition);
-            Debug.Log($"Spawning hazard prefab {spawn.hazardPrefab.name} at {worldSpawnPosition}");
+            //Debug.Log($"Spawning hazard prefab {spawn.hazardPrefab.name} at {worldSpawnPosition}");
 
             // Instantiate hazard
             GameObject spawnedObject = Instantiate(spawn.hazardPrefab, worldSpawnPosition, transform.rotation);
@@ -50,7 +50,7 @@ public class Spawner : MonoBehaviour
             if (spinningPlatform != null)
             {
                 spawnedObject.transform.SetParent(spinningPlatform, true);
-                Debug.Log("Hazard parented to spinning platform.");
+                //Debug.Log("Hazard parented to spinning platform.");
             }
 
             // Set kill time
@@ -59,11 +59,11 @@ public class Spawner : MonoBehaviour
             if (hazardScript != null)
             {
                 hazardScript.SetKillTime(killTime);
-                Debug.Log($"Set hazard kill time to {killTime}");
+                //Debug.Log($"Set hazard kill time to {killTime}");
             }
             else
             {
-                Debug.LogWarning("Hazard prefab does not have a Hazard script attached.");
+                //Debug.LogWarning("Hazard prefab does not have a Hazard script attached.");
             }
         }
 

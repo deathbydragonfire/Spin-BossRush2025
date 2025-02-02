@@ -8,6 +8,8 @@ public class Hazard : MonoBehaviour
     // Tag to identify the player
     public string playerTag = "Player";
 
+    public float damage = 5;
+
     private void Start()
     {
         // Automatically destroy the hazard after the default time
@@ -19,6 +21,7 @@ public class Hazard : MonoBehaviour
         // Check if the colliding object is the player
         if (other.CompareTag(playerTag))
         {
+            other.GetComponent<PlayerHealth>().TakeDamage(damage);
             DestroyHazard();
         }
     }
