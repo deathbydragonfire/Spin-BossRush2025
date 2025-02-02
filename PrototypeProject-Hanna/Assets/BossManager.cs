@@ -22,6 +22,8 @@ public class BossManager : MonoBehaviour
     private int currentBossIndex = 0; // Index of the currently active boss
     private bool isLooping = false; // Whether only one boss remains
 
+    public Animator animator;
+
     void Start()
     {
         // Initialize bosses
@@ -41,10 +43,6 @@ public class BossManager : MonoBehaviour
             CycleToNextBoss();
         }
 
-        if (Input.GetKeyDown(KeyCode.P)) //Debugging tool, remove me
-        {
-            CycleToNextBoss();
-        }
 
     }
     public void SetCurrentBossIndex(int index)
@@ -91,6 +89,11 @@ public class BossManager : MonoBehaviour
             Debug.Log("[BossManager] No more bosses left! Stopping music.");
             audioSource.Stop();
             return;
+        }
+
+        if (animator)
+        {
+            animator.SetTrigger("NextBoss");
         }
 
         Debug.Log($"[BossManager] Attempting to cycle from {bosses[currentBossIndex].boss.name}");
