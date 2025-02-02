@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 65762c0fc9a720046a1371e00560b2f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7243123126934982771
+    second: vamvamspawn0028_0
+  - first:
+      213: -7374932299197890607
+    second: vamvamspawn0028_1
+  - first:
+      213: 1225428018507687460
+    second: vamvamspawn0028_2
+  - first:
+      213: 9086458102703582019
+    second: vamvamspawn0028_3
+  - first:
+      213: 5246109546680584364
+    second: vamvamspawn0028_4
+  - first:
+      213: -1468398486855207534
+    second: vamvamspawn0028_5
+  - first:
+      213: -2543307835937703839
+    second: vamvamspawn0028_6
+  - first:
+      213: -6721902098353036596
+    second: vamvamspawn0028_7
+  - first:
+      213: 5572452392944738681
+    second: vamvamspawn0028_8
+  - first:
+      213: -1718223218671056073
+    second: vamvamspawn0028_9
+  - first:
+      213: -8752139428339250680
+    second: vamvamspawn0028_10
+  - first:
+      213: 8591020608206465818
+    second: vamvamspawn0028_11
+  - first:
+      213: 1898520982666279130
+    second: vamvamspawn0028_12
+  - first:
+      213: -8538386170263844712
+    second: vamvamspawn0028_13
+  - first:
+      213: 440514824595318736
+    second: vamvamspawn0028_14
+  - first:
+      213: -875116698238588643
+    second: vamvamspawn0028_15
+  - first:
+      213: 8295792822479664950
+    second: vamvamspawn0028_16
+  - first:
+      213: 7800867312190018411
+    second: vamvamspawn0028_17
+  - first:
+      213: -9081520952525345136
+    second: vamvamspawn0028_18
+  - first:
+      213: -7282122091354095789
+    second: vamvamspawn0028_19
+  - first:
+      213: -5836940713182230025
+    second: vamvamspawn0028_20
+  - first:
+      213: -2351383666543057933
+    second: vamvamspawn0028_21
+  - first:
+      213: 6357476765633341761
+    second: vamvamspawn0028_22
+  - first:
+      213: 4126975487853791971
+    second: vamvamspawn0028_23
+  - first:
+      213: 2063826165995554870
+    second: vamvamspawn0028_24
+  - first:
+      213: 7921452727504160422
+    second: vamvamspawn0028_25
+  - first:
+      213: 5173446228761989722
+    second: vamvamspawn0028_26
+  - first:
+      213: -3320251152438725416
+    second: vamvamspawn0028_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vamvamspawn0028_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 808
+        width: 77
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3705065bb1eb48460800000000000000
+      internalID: 7243123126934982771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 866
+        width: 40
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df31cfd52af6a990800000000000000
+      internalID: -7374932299197890607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_2
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 12
+        width: 690
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42626fc4a48910110800000000000000
+      internalID: 1225428018507687460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 802
+        width: 79
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34bed169085991e70800000000000000
+      internalID: 9086458102703582019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 699
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca88eae66dcedc840800000000000000
+      internalID: 5246109546680584364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 721
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295364a2b533f9be0800000000000000
+      internalID: -1468398486855207534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_6
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 717
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168377c8ffa54bcd0800000000000000
+      internalID: -2543307835937703839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 567
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2e6bcd7a107b2a0800000000000000
+      internalID: -6721902098353036596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 600
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9712f316de3555d40800000000000000
+      internalID: 5572452392944738681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 557
+        width: 95
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b884e0615a728e0800000000000000
+      internalID: -1718223218671056073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 481
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a062d8f872a8680800000000000000
+      internalID: -8752139428339250680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_11
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 511
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1be43ad9bf693770800000000000000
+      internalID: 8591020608206465818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_12
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 342
+        width: 54
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8f27266c6e85a10800000000000000
+      internalID: 1898520982666279130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_13
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 487
+        width: 16
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898c056340f818980800000000000000
+      internalID: -8538386170263844712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_14
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 433
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d72c4626e50d1600800000000000000
+      internalID: 440514824595318736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_15
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 448
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19e970eff5fad3f0800000000000000
+      internalID: -875116698238588643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 353
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637b22a7e93902370800000000000000
+      internalID: 8295792822479664950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 358
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63da0b5d7f324c60800000000000000
+      internalID: 7800867312190018411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 268
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ea5744fc4f7f180800000000000000
+      internalID: -9081520952525345136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_19
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 204
+        width: 34
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f70dd4a84b0fa90800000000000000
+      internalID: -7282122091354095789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_20
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 285
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f902c7c8550ffea0800000000000000
+      internalID: -5836940713182230025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_21
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 279
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3ab0173053e5fd0800000000000000
+      internalID: -2351383666543057933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_22
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 207
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149ef5b5f6b4a3850800000000000000
+      internalID: 6357476765633341761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_23
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 214
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea054e2756f54930800000000000000
+      internalID: 4126975487853791971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_24
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 155
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638425e96fe24ac10800000000000000
+      internalID: 2063826165995554870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 138
+        width: 39
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a64fe73947aeed60800000000000000
+      internalID: 7921452727504160422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_26
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 118
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5251f95fe5cbc740800000000000000
+      internalID: 5173446228761989722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vamvamspawn0028_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 76
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4fec51b291ce1d0800000000000000
+      internalID: -3320251152438725416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vamvamspawn0028_0: 7243123126934982771
+      vamvamspawn0028_1: -7374932299197890607
+      vamvamspawn0028_10: -8752139428339250680
+      vamvamspawn0028_11: 8591020608206465818
+      vamvamspawn0028_12: 1898520982666279130
+      vamvamspawn0028_13: -8538386170263844712
+      vamvamspawn0028_14: 440514824595318736
+      vamvamspawn0028_15: -875116698238588643
+      vamvamspawn0028_16: 8295792822479664950
+      vamvamspawn0028_17: 7800867312190018411
+      vamvamspawn0028_18: -9081520952525345136
+      vamvamspawn0028_19: -7282122091354095789
+      vamvamspawn0028_2: 1225428018507687460
+      vamvamspawn0028_20: -5836940713182230025
+      vamvamspawn0028_21: -2351383666543057933
+      vamvamspawn0028_22: 6357476765633341761
+      vamvamspawn0028_23: 4126975487853791971
+      vamvamspawn0028_24: 2063826165995554870
+      vamvamspawn0028_25: 7921452727504160422
+      vamvamspawn0028_26: 5173446228761989722
+      vamvamspawn0028_27: -3320251152438725416
+      vamvamspawn0028_3: 9086458102703582019
+      vamvamspawn0028_4: 5246109546680584364
+      vamvamspawn0028_5: -1468398486855207534
+      vamvamspawn0028_6: -2543307835937703839
+      vamvamspawn0028_7: -6721902098353036596
+      vamvamspawn0028_8: 5572452392944738681
+      vamvamspawn0028_9: -1718223218671056073
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
