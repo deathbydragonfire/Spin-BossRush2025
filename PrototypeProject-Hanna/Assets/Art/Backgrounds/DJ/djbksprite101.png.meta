@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      djbksprite101_0: -6390750231783418169
+      djbksprite101_1: -3024744082956345750
+      djbksprite101_2: -2152792375151270342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

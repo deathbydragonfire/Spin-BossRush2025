@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using static UnityEngine.RuleTile.TilingRuleOutput;
-using UnityEditor.Overlays;
+
+
 
 public class ZapRiotController : MonoBehaviour
 {

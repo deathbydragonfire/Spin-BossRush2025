@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vamBK018_0: 5089431046652092635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
